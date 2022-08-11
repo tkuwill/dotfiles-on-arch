@@ -33,6 +33,7 @@
 
 <details>
 <summary><b>System Details</b></summary>
+
 - **OS**: [archlinux](https://archlinux.org/) KISS !
 - **Shell**: [zsh](https://www.zsh.org/) COOL !
 - **WM**: [dwm](https://dwm.suckless.org/) 100/100
@@ -66,6 +67,7 @@
 
 <details>
 <summary><b>Packages list</b></summary>
+
 - `xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.
 - `tlp`: [TLP](https://linrunner.de/tlp/index.html) - Optimize Linux Laptop Battery Life.
 - `upower`: I use this in one of my scripts to record the **charge-cycles** and **capacity** of my laptop's **battery**.
