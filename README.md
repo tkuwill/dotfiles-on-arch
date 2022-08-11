@@ -17,7 +17,7 @@
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
-1. [Details](#details)
+1. [Details](#Details)
 2. [Features](#features)
 3. [Packages](#Packages)
 3. [Patch_used_in_dwm](#Patch_used_in_dwm)
@@ -28,7 +28,7 @@
 8. [My_Shell_Scripts](#My_Shell_Scripts)
 9. [Thanks](#Thanks)
 
-<a name="details"></a>
+<a name="Details"></a>
 ## Details ##
 > Here are my overall system details.
 
