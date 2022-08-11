@@ -30,6 +30,9 @@
 
 <a name="details"></a>
 ## Details ##
+
+<details>
+<summary><b>System Details</b></summary>
 - **OS**: [archlinux](https://archlinux.org/) KISS !
 - **Shell**: [zsh](https://www.zsh.org/) COOL !
 - **WM**: [dwm](https://dwm.suckless.org/) 100/100
@@ -48,15 +51,20 @@
 - **Image viewer**: [eom](https://github.com/mate-desktop/eom) My eye, your eye.
 - **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) Clean and intuitive !
 
+</details>
+
 <a name="features"></a>
 ## Features ##
 - Trying my best to be as KISS as possible.
 - All configs here are simply based on my favorite. 
 - More Pragmatism, Less Lookism. 
 
+
 <a name="Packages"></a>
 ## Packages ##
 > Only list something I think I may forget to install if I get a fresh install of archlinux.
+
+<details>
 <summary><b>Packages list</b></summary>
 - `xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.
 - `tlp`: [TLP](https://linrunner.de/tlp/index.html) - Optimize Linux Laptop Battery Life.
@@ -83,7 +91,7 @@
 - `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
 - `libmad`, `faad2`, `libao`, `libmpcdec`: Optional Deps of `cmus`.
 
-
+</details>
 
 <a name="Patch_used_in_dwm"></a>
 ## Patch used in dwm ##
