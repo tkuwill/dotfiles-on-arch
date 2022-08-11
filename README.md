@@ -20,10 +20,10 @@
 1. [Details](#details)
 2. [Features](#features)
 3. [Dependencies](#dependencies)
-3. [Patch used in dwm](#Patch used in dwm)
-4. [Patch used in st](#Patch used in st)
-5. [Patch used in slock](#Patch used in slock)
-6. [Patch used in dmenu](#Patch used in dmenu)
+3. [Patch_used_in_dwm](#Patch_used_in_dwm)
+4. [Patch_used_in_st](#Patch_used_in_st)
+5. [Patch_used_in_slock](#Patch_used_in_slock)
+6. [Patch_used_in_dmenu](#Patch_used_in_dmenu)
 7. [Special Configs](#Special Configs)
 8. [My Shell Scripts](#My Shell Scripts)
 9. [Thanks](#Thanks)
@@ -58,25 +58,25 @@
 -
 -
 
-<a name="Patch used in dwm"></a>
+<a name="Patch_used_in_dwm"></a>
 ## Patch used in dwm ##
 -
 -
 -
 
-<a name="Patch used in st"></a>
+<a name="Patch_used_in_st"></a>
 ## Patch used in st ##
 -
 -
 -
 
-<a name="Patch used in slock"></a>
+<a name="Patch_used_in_slock"></a>
 ## Patch used in slock ##
 -
 -
 -
 
-<a name="Patch used in dmenu"></a>
+<a name="Patch_used_in_dmenu"></a>
 ## Patch used in dmenu ##
 -
 -
