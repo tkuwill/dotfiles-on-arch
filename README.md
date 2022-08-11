@@ -30,27 +30,28 @@
 
 <a name="details"></a>
 ## Details ##
+> Here are my overall system details.
 
 <details>
 <summary><b>System Details</b></summary>
 
-- **OS**: [archlinux](https://archlinux.org/) KISS !
-- **Shell**: [zsh](https://www.zsh.org/) COOL !
-- **WM**: [dwm](https://dwm.suckless.org/) 100/100
-- **Terminal**: [st](https://st.suckless.org/) st is **st.**!
-- **Terminal multiplexer**:[tmux](https://github.com/tmux/tmux/wiki) Efficiency UP !
-- **Screen locker**: [slock](https://tools.suckless.org/slock/) THE Simplest !
-- **Application launcher**: [dmenu](https://tools.suckless.org/dmenu/) Suckless !
-- **Notification**: [Dunst](https://github.com/dunst-project/dunst) Won't miss from best friend !
-- **Video player**: [mpv](https://mpv.io/) Along with hwdec.
-- **Music player**: [cmus](https://cmus.github.io/) Super Lightweight !
-- **Email client**: [Thunderbird](https://www.mozilla.org/thunderbird/) My love !
-- **Clipboard**: [CopyQ](https://github.com/hluk/CopyQ) My Favorite !
-- **Screenshot tool**: [Flameshot](https://flameshot.org/) Awesome !
-- **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) Easy to use.
-- **Pdf viewer**: [MuPDF](https://mupdf.com/) Blazing fast !
-- **Image viewer**: [eom](https://github.com/mate-desktop/eom) My eye, your eye.
-- **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) Clean and intuitive !
+- **OS**: [archlinux](https://archlinux.org/) --KISS !
+- **Shell**: [zsh](https://www.zsh.org/) --COOL !
+- **WM**: [dwm](https://dwm.suckless.org/) --100/100
+- **Terminal**: [st](https://st.suckless.org/) --st is **st.**!
+- **Terminal multiplexer**:[tmux](https://github.com/tmux/tmux/wiki) --Efficiency UP !
+- **Screen locker**: [slock](https://tools.suckless.org/slock/) --THE Simplest !
+- **Application launcher**: [dmenu](https://tools.suckless.org/dmenu/) --Suckless !
+- **Notification**: [Dunst](https://github.com/dunst-project/dunst) --Won't miss from best friend !
+- **Video player**: [mpv](https://mpv.io/) --Along with hwdec.
+- **Music player**: [cmus](https://cmus.github.io/) --Super Lightweight !
+- **Email client**: [Thunderbird](https://www.mozilla.org/thunderbird/) --My love !
+- **Clipboard**: [CopyQ](https://github.com/hluk/CopyQ) --My Favorite !
+- **Screenshot tool**: [Flameshot](https://flameshot.org/) --Awesome !
+- **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use.
+- **Pdf viewer**: [MuPDF](https://mupdf.com/) --Blazing fast !
+- **Image viewer**: [eom](https://github.com/mate-desktop/eom) --My eye, your eye.
+- **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) --Clean and intuitive !
 
 </details>
 
