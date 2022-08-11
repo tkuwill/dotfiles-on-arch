@@ -24,8 +24,8 @@
 4. [Patch_used_in_st](#Patch_used_in_st)
 5. [Patch_used_in_slock](#Patch_used_in_slock)
 6. [Patch_used_in_dmenu](#Patch_used_in_dmenu)
-7. [Special Configs](#Special Configs)
-8. [My Shell Scripts](#My Shell Scripts)
+7. [Special_Configs](#Special_Configs)
+8. [My_Shell_Scripts](#My_Shell_Scripts)
 9. [Thanks](#Thanks)
 
 <a name="details"></a>
@@ -82,6 +82,23 @@
 -
 -
 
+<a name="Special_Configs"></a>
+## Special Configs ##
+-
+-
+-
+
+<a name="My_Shell_Scripts"></a>
+## My Shell Scripts ##
+-
+-
+-
+
+<a name="Thanks"></a>
+## Thanks ##
+-
+-
+-
 
 
 
