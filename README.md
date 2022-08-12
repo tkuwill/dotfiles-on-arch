@@ -139,32 +139,32 @@
 <details>
 <summary><b>Scripts list</b></summary>
 
-- **calendar.sh**: This script has options for **this month**, **this year** and **next twelve months**, which would show in **st** after selecting the option showed in **dmenu**.
+- [calendar.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/calendar.sh): This script has options for **this month**, **this year** and **next twelve months**, which would show in **st** after selecting the option showed in **dmenu**.
 
 ![](/screenshots/calendarsh.png)
 
 ![](/screenshots/calendar.png)
 
-- **donotdisturb.sh**: This script has options for **Do not disturb** and **Normal**. Required dependencies: `dunst` and `libnotify`. 
+- [donotdisturb.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/donotdisturb.sh): This script has options for **Do not disturb** and **Normal**. Required dependencies: `dunst` and `libnotify`. 
 
 ![](/screenshots/donotdisturbsh.png)
 
 ![](/screenshots/donotdisturb.png)
 
-- **player.sh**: This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Required dependencies: `dunst`, `libnotify` and `playerctl`.
+- [player.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/player.sh): This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Required dependencies: `dunst`, `libnotify` and `playerctl`.
 
 ![](/screenshots/playersh.png)
 
 ![](/screenshots/player.png)
 
-- **powermenu.sh**: This script can let you lock your laptop's screen, suspend, reboot or shutdown your computer in dmenu rather than type commands in terminal. Required dependencies: `dunst`, `libnotify` and `slock`. Also, due to the characteristic of `slock`, if you want to lock your screen and suspend simultaneously, you would need some special config which I would write down below. 
+- [powermenu.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/powermenu.sh): This script can let you lock your laptop's screen, suspend, reboot or shutdown your computer in dmenu rather than type commands in terminal. Required dependencies: `dunst`, `libnotify` and `slock`. Also, due to the characteristic of `slock`, if you want to lock your screen and suspend simultaneously, you would need some special config which I would write down below. 
 
 ![](/screenshots/powersh.png)
 
 ![](/screenshots/power.png)
 This is the lock screen. Using `slock`.
 
-- **sysinfo.sh**: This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
+- [sysinfo.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/sysinfo.sh): This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
 
 ![](/screenshots/sysinfosh.png)
 
@@ -231,10 +231,10 @@ systemctl enable slock@user.service
 <details>
 <summary><b>Scripts list</b></summary>
 
-- **batterycycle.sh**: It can record the battery cycle into batterycycle.log, then show the batterycycle.log with `bat`. Required dependencies: `upower` and `bat`.
-- **reminder.sh**: This script can read the mins and messages you input, then remind you with the messages you have input after the mins you have input, too. It uses `mpv` to play music as an alarm and shows messages by notification. Required dependencies: `libnotify`, `dunst` and `mpv`.
-- **timer.sh**: This script is very similar to **reminder.sh**. What really makes them different is that **timer.sh** is only a *timer*. Required dependencies: `libnotify`, `dunst` and `mpv`.
-- **loveplaylist.sh**: This script uses `mpv` to play music from a playlist which is just simply a `XX.m3u` or a `XX.txt`. The playlist `XX.m3u` or `XX.txt` is just a document which is full of urls copied from YouTube. Required dependencies: `mpv` and `yt-dlp`.
+- [batterycycle.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/batterycycle.sh): It can record the battery cycle into batterycycle.log, then show the batterycycle.log with `bat`. Required dependencies: `upower` and `bat`.
+- [reminder.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/reminder.sh): This script can read the mins and messages you input, then remind you with the messages you have input after the mins you have input, too. It uses `mpv` to play music as an alarm and shows messages by notification. Required dependencies: `libnotify`, `dunst` and `mpv`.
+- [timer.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/timer.sh): This script is very similar to **reminder.sh**. What really makes them different is that **timer.sh** is only a *timer*. Required dependencies: `libnotify`, `dunst` and `mpv`.
+- [loveplaylist.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/loveplaylist.sh): This script uses `mpv` to play music from a playlist which is just simply a `XX.m3u` or a `XX.txt`. The playlist `XX.m3u` or `XX.txt` is just a document which is full of urls copied from YouTube. Required dependencies: `mpv` and `yt-dlp`.
 
 </details>
 
@@ -242,6 +242,7 @@ systemctl enable slock@user.service
 ## Thanks ##
 - The format of the menu is inspired by [WillPower3309/awesome-dotfiles](https://github.com/WillPower3309/awesome-dotfiles).
 - The folding style of content is inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
+- The **BACK TO TOP** button is also inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
 - [Archwiki-slock](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
 - [flaticon](https://www.flaticon.com/)
 - [Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
