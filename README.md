@@ -46,7 +46,7 @@
 - **Shell**: [zsh](https://www.zsh.org/) --COOL !
 - **WM**: [dwm](https://dwm.suckless.org/) --100/100
 - **Terminal**: [st](https://st.suckless.org/) --st is **St.**!
-- **Terminal multiplexer**:[tmux](https://github.com/tmux/tmux/wiki) --Efficiency UP !
+- **Terminal multiplexer**: [tmux](https://github.com/tmux/tmux/wiki) --Efficiency UP !
 - **Screen locker**: [slock](https://tools.suckless.org/slock/) --THE Simplest !
 - **Application launcher**: [dmenu](https://tools.suckless.org/dmenu/) --Suckless !
 - **Notification**: [Dunst](https://github.com/dunst-project/dunst) --Won't miss from best friend !
