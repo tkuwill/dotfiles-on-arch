@@ -181,8 +181,9 @@ This is the lock screen. Using `slock`.
 
 - **slock lock on suspend** : You should create the following service which turns off the monitor and locks the screen. Credit from [Archwiki-slock-tips-and-tricks](https://wiki.archlinux.org/title/Slock#Tips_and_tricks).
 
+If your username is `user`, run: 
 ```sh
-EDITOR=vim sudoedit /etc/systemd/system/slock@.service
+EDITOR=vim sudoedit /etc/systemd/system/slock@user.service
 ```
 ```sh
 [Unit]
@@ -200,7 +201,7 @@ WantedBy=sleep.target
 ```
 BUT, this is for those who install `slock` from **AUR**. If you compiled `slock` by yourself, you have to create the following service.
 ```sh
-EDITOR=vim sudoedit /etc/systemd/system/slock@.service
+EDITOR=vim sudoedit /etc/systemd/system/slock@user.service
 ```
 ```sh
 [Unit]
@@ -216,7 +217,7 @@ ExecStart=/usr/local/bin/slock
 [Install]
 WantedBy=sleep.target
 ```
-No matter which you face, you should all enable the `slock@user.service` systemd unit for it to take effect for the username `user`.
+No matter which situation you face, you should all enable the `slock@user.service` systemd unit for it to take effect for the username `user`.
 ```sh
 systemctl enable slock@user.service
 ```
