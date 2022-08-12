@@ -10,14 +10,16 @@
 
 - This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
-- For the sake of longer battery runtime, I have **few configs** for beauty only.
+- For the sake of longer battery runtime, I have **few configs** for decoration.
 - All things here all have their duty to be here. (In my opinion.)
 - I would also provide a viewpoint for those who don't know what to install after a fresh install of **archlinux**.
 - I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
 - I also put the icons which I use for notifications. Almost are from [flaticon](https://www.flaticon.com/). For details of those icons, check the scripts you want to use.   
 - If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
-- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `zsh` in the `configs` folder. If you want to use those, feel free to use them.
+- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources` and `zsh` in the `configs` folder. If you want to use those, feel free to use them.
 - Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
+- If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
+- **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
@@ -70,12 +72,12 @@
 
 <a name="Packages"></a>
 ## Packages ##
-> Only list something I think I may forget to install if I get a fresh install of archlinux.
+> Only list something I think I may forget to install when I get a fresh install of archlinux.
 
 <details>
 <summary><b>Packages list</b></summary>
 
-- `pacman-contrib`: Contributed scripts and tools for pacman systems.
+- `pacman-contrib`: Contributed scripts and tools for pacman systems. (its command:`pacdiff`)
 - `xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.
 - `tlp`: [TLP](https://linrunner.de/tlp/index.html) - Optimize Linux Laptop Battery Life.
 - `upower`: I use this in one of my scripts to record the **charge-cycles** and **capacity** of my laptop's **battery**.
@@ -102,6 +104,7 @@
 - `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
 - `libmad`, `faad2`, `libao`, `libmpcdec`: Optional Deps of `cmus`.
 - `ntfs-3g`: NTFS-3G is an open source implementation of Microsoft NTFS that includes read and write support.
+- `ttf-symbola`: (From AUR) A font for symbol blocks of the Unicode Standard (TTF). If you don't install this, `st` would fail when opening a document with some symbol blocks.
 
 </details>
 
@@ -142,26 +145,26 @@
 
 ![](/screenshots/calendar.png)
 
-- **donotdisturb.sh**: This script has options for **Do not disturb** and **Normal**, which need dependencies: `dunst` and `libnotify`. 
+- **donotdisturb.sh**: This script has options for **Do not disturb** and **Normal**. Required dependencies: `dunst` and `libnotify`. 
 
 ![](/screenshots/donotdisturbsh.png)
 
 ![](/screenshots/donotdisturb.png)
 
-- **player.sh**: This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Need dependencies: `dunst`, `libnotify` and `playerctl`.
+- **player.sh**: This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Required dependencies: `dunst`, `libnotify` and `playerctl`.
 
 ![](/screenshots/playersh.png)
 
 ![](/screenshots/player.png)
 
-- **powermenu.sh**: This script can let you lock your laptop's screen, suspend, reboot or shutdown your computer in dmenu rather than type commands in terminal. Need dependencies: `dunst`, `libnotify` and `slock`. Also, due to the characteristic of `slock`, if you want to lock your screen and suspend simultaneously, you would need some special config which I would write down below. 
+- **powermenu.sh**: This script can let you lock your laptop's screen, suspend, reboot or shutdown your computer in dmenu rather than type commands in terminal. Required dependencies: `dunst`, `libnotify` and `slock`. Also, due to the characteristic of `slock`, if you want to lock your screen and suspend simultaneously, you would need some special config which I would write down below. 
 
 ![](/screenshots/powersh.png)
 
 ![](/screenshots/power.png)
 This is the lock screen. Using `slock`.
 
-- **sysinfo.sh**: This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Need dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
+- **sysinfo.sh**: This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
 
 ![](/screenshots/sysinfosh.png)
 
@@ -174,7 +177,7 @@ This is the lock screen. Using `slock`.
 > Some configs need to be set if you want to use dotfiles like mine.
 
 <details>
-<summary><b>Needed configs</b></summary>
+<summary><b>Required configs</b></summary>
 
 - **slock lock on suspend** : You should create the following service which turns off the monitor and locks the screen. Credit from [Archwiki-slock-tips-and-tricks](https://wiki.archlinux.org/title/Slock#Tips_and_tricks).
 
@@ -217,17 +220,22 @@ No matter which you face, you should all enable the `slock@user.service` systemd
 ```sh
 systemctl enable slock@user.service
 ```
-- 
--
--
 
 </details>
 
 <a name="My_Shell_Scripts"></a>
 ## My Shell Scripts ##
--
--
--
+> Here are some shell scripts written by me. They make my experience on **archlinux** more fantastic and prevent me from some bloated softwares.
+
+<details>
+<summary><b>Scripts list</b></summary>
+
+- **batterycycle.sh**: It can record the battery cycle into batterycycle.log, then show the batterycycle.log with `bat`. Required dependencies: `upower` and `bat`.
+- **reminder.sh**: This script can read the mins and messages you input, then remind you with the messages you have input after the mins you have input, too. It uses `mpv` to play music as an alarm and shows messages by notification. Required dependencies: `libnotify`, `dunst` and `mpv`.
+- **timer.sh**: This script is very similar to **reminder.sh**. What really makes them different is that **timer.sh** is only a *timer*. Required dependencies: `libnotify`, `dunst` and `mpv`.
+- **loveplaylist.sh**: This script uses `mpv` to play music from a playlist which is just simply a `XX.m3u` or a `XX.txt`. The playlist `XX.m3u` or `XX.txt` is just a document which is full of urls copied from YouTube. Required dependencies: `mpv` and `yt-dlp`.
+
+</details>
 
 <a name="Thanks"></a>
 ## Thanks ##
@@ -236,12 +244,12 @@ systemctl enable slock@user.service
 - [Archwiki-slock](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
 - [flaticon](https://www.flaticon.com/)
 - [Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
-- []()
+- The people who wrote some fantastic **information** or **codes** which I took a reference to.  
 
+---
 
+###### dotfiles for willdezenbookArch 
 
-
-
-
-
-dotfiles for willdezenbookArch 
+<pre align="center">
+<a href="#readme">BACK TO TOP</a>
+</pre>
