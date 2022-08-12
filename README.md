@@ -14,6 +14,10 @@
 - All things here all have their duty to be here. (In my opinion.)
 - I would also provide a viewpoint for those who don't know what to install after a fresh install of **archlinux**.
 - I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
+- I also put the icons which I use for notifications. Almost are from [flaticon](https://www.flaticon.com/). For details of those icons, check the scripts you want to use.   
+- If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
+- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `zsh` in the `configs` folder. If you want to use those, feel free to use them.
+- Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
@@ -48,6 +52,7 @@
 - **Music player**: [cmus](https://cmus.github.io/) --Super Lightweight !
 - **Email client**: [Thunderbird](https://www.mozilla.org/thunderbird/) --My love !
 - **Clipboard**: [CopyQ](https://github.com/hluk/CopyQ) --My Favorite !
+- **Tui for git**: [gitui](https://github.com/extrawurst/gitui) --Convenient !
 - **Screenshot tool**: [Flameshot](https://flameshot.org/) --Awesome !
 - **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use.
 - **Pdf viewer**: [MuPDF](https://mupdf.com/) --Blazing fast !
@@ -91,6 +96,7 @@
 - `p7zip`, `unrar`, `unzip`, `zip`: For the support of the formats. Installed with `unarchiver`.
 - `intel-media-driver` or `libva-intel-driver`: For hwdec of mpv.
 - `mpv-mpris`: Can let you control mpv via `playerctl`.
+    - If you use **archlinux**, now (2022/08/12) install `mpv` and `mpv-mpris` of community version, which work smoothly for me.
 - `yt-dlp`: For watching live-streaming on `mpv`.
 - `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
 - `libmad`, `faad2`, `libao`, `libmpcdec`: Optional Deps of `cmus`.
@@ -129,23 +135,42 @@
 <details>
 <summary><b>Scripts list</b></summary>
 
-- **calendar.sh**: This script has options for **this month**, **this year** and **next twelve months**, which would show in terminal after selecting the option showed in dwm.
+- **calendar.sh**: This script has options for **this month**, **this year** and **next twelve months**, which would show in **st** after selecting the option showed in **dmenu**.
+
+![](/screenshots/calendarsh.png)
 
 ![](/screenshots/calendar.png)
 
-- **donotdisturb.sh**: 
+- **donotdisturb.sh**: This script has options for **Do not disturb** and **Normal**, which need dependencies: `dunst` and `libnotify`. 
 
-![](/screenshots/mydwm.png)
+![](/screenshots/donotdisturbsh.png)
 
-- **player.sh**: 
-- **powermenu.sh**:  
-- **sysinfo.sh**: 
+![](/screenshots/donotdisturb.png)
+
+- **player.sh**: This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Need dependencies: `dunst`, `libnotify` and `playerctl`.
+
+![](/screenshots/playersh.png)
+
+![](/screenshots/player.png)
+
+- **powermenu.sh**: This script can let you lock your laptop's screen, suspend, reboot or shutdown your computer in dmenu rather than type commands in terminal. Need dependencies: `dunst`, `libnotify` and `slock`. Also, due to the characteristic of `slock`, if you want to lock your screen and suspend simultaneously, you would need some special config which I would write down below. 
+
+![](/screenshots/powersh.png)
+
+![](/screenshots/power.png)
+This is the lock screen. Using `slock`.
+
+- **sysinfo.sh**: This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Need dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
+
+![](/screenshots/sysinfosh.png)
+
+![](/screenshots/sysinfo.png)
 
 </details>
 
 <a name="Special_Configs"></a>
 ## Special Configs ##
--   
+- suspend [Archwiki-slock-tips-and-tricks](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
 -
 -
 
@@ -159,7 +184,10 @@
 ## Thanks ##
 - The format of the menu is inspired by [WillPower3309/awesome-dotfiles](https://github.com/WillPower3309/awesome-dotfiles).
 - The folding style of content is inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
-- 
+- [Archwiki-slock](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
+- [flaticon](https://www.flaticon.com/)
+- []()
+- []()
 
 
 
