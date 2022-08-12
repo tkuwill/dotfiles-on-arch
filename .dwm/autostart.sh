@@ -1,5 +1,6 @@
 #!/bin/sh
 # General stuff
+xrdb -merge ~/.Xresources &
 xfce4-power-manager &
 fcitx5 &
 copyq &
