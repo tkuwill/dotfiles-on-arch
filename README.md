@@ -24,9 +24,10 @@
 4. [Patch_used_in_st](#Patch_used_in_st)
 5. [Patch_used_in_slock](#Patch_used_in_slock)
 6. [Patch_used_in_dmenu](#Patch_used_in_dmenu)
-7. [Special_Configs](#Special_Configs)
-8. [My_Shell_Scripts](#My_Shell_Scripts)
-9. [Thanks](#Thanks)
+7. [My_scripts_using_dmenu](#My_scripts_using_dmenu)
+8. [Special_Configs](#Special_Configs)
+9. [My_Shell_Scripts](#My_Shell_Scripts)
+10. [Thanks](#Thanks)
 
 <a name="Details"></a>
 ## Details ##
@@ -38,7 +39,7 @@
 - **OS**: [archlinux](https://archlinux.org/) --KISS !
 - **Shell**: [zsh](https://www.zsh.org/) --COOL !
 - **WM**: [dwm](https://dwm.suckless.org/) --100/100
-- **Terminal**: [st](https://st.suckless.org/) --st is **st.**!
+- **Terminal**: [st](https://st.suckless.org/) --st is **St.**!
 - **Terminal multiplexer**:[tmux](https://github.com/tmux/tmux/wiki) --Efficiency UP !
 - **Screen locker**: [slock](https://tools.suckless.org/slock/) --THE Simplest !
 - **Application launcher**: [dmenu](https://tools.suckless.org/dmenu/) --Suckless !
@@ -93,36 +94,58 @@
 - `yt-dlp`: For watching live-streaming on `mpv`.
 - `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
 - `libmad`, `faad2`, `libao`, `libmpcdec`: Optional Deps of `cmus`.
+- `ntfs-3g`: NTFS-3G is an open source implementation of Microsoft NTFS that includes read and write support.
 
 </details>
 
 <a name="Patch_used_in_dwm"></a>
 ## Patch used in dwm ##
--
--
--
-
-<a name="Patch_used_in_st"></a>
-## Patch used in st ##
--
--
--
-
+- [dwm-alwayscenter-20200625-f04cac6.diff](https://dwm.suckless.org/patches/alwayscenter/dwm-alwayscenter-20200625-f04cac6.diff)
+- [dwm-autostart-20210120-cb3f58a.diff](https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff)
+- [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
+  
+<a name="Patch_used_in_st"></a> 
+## Patch used in st ##  
+- [st-anysize-0.8.4.diff](https://st.suckless.org/patches/anysize/st-anysize-0.8.4.diff)  
+- [st-delkey-20201112-4ef0cbd.diff](https://st.suckless.org/patches/delkey/st-delkey-20201112-4ef0cbd.diff)  
+- [st-w3m-0.8.3.diff](https://st.suckless.org/patches/w3m/st-w3m-0.8.3.diff)  
+   
 <a name="Patch_used_in_slock"></a>
 ## Patch used in slock ##
--
--
--
-
+- [slock-capscolor-20170106-2d2a21a.diff](https://tools.suckless.org/slock/patches/capscolor/slock-capscolor-20170106-2d2a21a.diff)  
+- [slock-message-20191002-b46028b.diff](https://tools.suckless.org/slock/patches/message/slock-message-20191002-b46028b.diff)  
+    
 <a name="Patch_used_in_dmenu"></a>
 ## Patch used in dmenu ##
--
--
--
+- [dmenu-border-4.9.diff](https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff)                   
+- [dmenu-center-4.8.diff](https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff) 
+- [dmenu-linesbelowprompt-and-fullwidth-20211014.diff](https://tools.suckless.org/dmenu/patches/lines-below-prompt/dmenu-linesbelowprompt-and-fullwidth-20211014.diff)                   
+    
+
+<a name="My_scripts_using_dmenu"></a>
+## My scripts using dmenu ##
+> Here are some scripts which can be triggered by the keybindings in **dwm**. Also, they enhance some user experience which dwm can't provide.
+
+<details>
+<summary><b>Scripts list</b></summary>
+
+- **calendar.sh**: This script has options for **this month**, **this year** and **next twelve months**, which would show in terminal after selecting the option showed in dwm.
+
+![](/screenshots/calendar.png)
+
+- **donotdisturb.sh**: 
+
+![](/screenshots/mydwm.png)
+
+- **player.sh**: 
+- **powermenu.sh**:  
+- **sysinfo.sh**: 
+
+</details>
 
 <a name="Special_Configs"></a>
 ## Special Configs ##
--
+-   
 -
 -
 
@@ -134,9 +157,9 @@
 
 <a name="Thanks"></a>
 ## Thanks ##
--
--
--
+- The format of the menu is inspired by [WillPower3309/awesome-dotfiles](https://github.com/WillPower3309/awesome-dotfiles).
+- The folding style of content is inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
+- 
 
 
 
