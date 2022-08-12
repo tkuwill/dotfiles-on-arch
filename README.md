@@ -75,6 +75,7 @@
 <details>
 <summary><b>Packages list</b></summary>
 
+- `pacman-contrib`: Contributed scripts and tools for pacman systems.
 - `xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.
 - `tlp`: [TLP](https://linrunner.de/tlp/index.html) - Optimize Linux Laptop Battery Life.
 - `upower`: I use this in one of my scripts to record the **charge-cycles** and **capacity** of my laptop's **battery**.
@@ -170,9 +171,57 @@ This is the lock screen. Using `slock`.
 
 <a name="Special_Configs"></a>
 ## Special Configs ##
-- suspend [Archwiki-slock-tips-and-tricks](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
+> Some configs need to be set if you want to use dotfiles like mine.
+
+<details>
+<summary><b>Needed configs</b></summary>
+
+- **slock lock on suspend** : You should create the following service which turns off the monitor and locks the screen. Credit from [Archwiki-slock-tips-and-tricks](https://wiki.archlinux.org/title/Slock#Tips_and_tricks).
+
+```sh
+EDITOR=vim sudoedit /etc/systemd/system/slock@.service
+```
+```sh
+[Unit]
+Description=Lock X session using slock for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/usr/bin/slock
+
+[Install]
+WantedBy=sleep.target
+```
+BUT, this is for those who install `slock` from **AUR**. If you compiled `slock` by yourself, you have to create the following service.
+```sh
+EDITOR=vim sudoedit /etc/systemd/system/slock@.service
+```
+```sh
+[Unit]
+Description=Lock X session using slock for user %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/usr/local/bin/slock
+
+[Install]
+WantedBy=sleep.target
+```
+No matter which you face, you should all enable the `slock@user.service` systemd unit for it to take effect for the username `user`.
+```sh
+systemctl enable slock@user.service
+```
+- 
 -
 -
+
+</details>
 
 <a name="My_Shell_Scripts"></a>
 ## My Shell Scripts ##
@@ -186,7 +235,7 @@ This is the lock screen. Using `slock`.
 - The folding style of content is inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
 - [Archwiki-slock](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
 - [flaticon](https://www.flaticon.com/)
-- []()
+- [Arch Linux 安装使用教程 - ArchTutorial - Arch Linux Studio](https://archlinuxstudio.github.io/ArchLinuxTutorial/#/)
 - []()
 
 
