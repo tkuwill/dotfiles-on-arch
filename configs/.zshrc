@@ -35,7 +35,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(python|startx|ls|cd|pwd|exit|cmus|la|bye|fff|ranger|mpv|yt-dlp|paru|yay|pavucontrol|rofi|./batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
+HISTORY_IGNORE="(|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
 bindkey -e
 # End of lines configured by zsh-newuser-install
 
