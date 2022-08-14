@@ -37,6 +37,16 @@ HISTSIZE=99999
 SAVEHIST=99999
 HISTORY_IGNORE="(|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
 bindkey -e
+bindkey "\e[3~" delete-char
+# for urxvt and uxterm
+bindkey "\e[7~" beginning-of-line
+bindkey "\e[8~" end-of-line
+# for tmux
+bindkey "\E[1~" beginning-of-line
+bindkey "\E[4~" end-of-line
+# for st terminal
+bindkey "^[[H" beginning-of-line
+bindkey "^[[4~" end-of-line 
 # End of lines configured by zsh-newuser-install
 
 alias lah="ls -lah --color=auto"
