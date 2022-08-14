@@ -1,4 +1,19 @@
+# Download music from YouTube
+function musicDownload() {
 
+echo -e "\e[34mInput the url of the song:"
+read urls
+echo -e "\e[35mInput the name of the song:"
+read name
+echo -e "\e[33mcd to Downloads"
+cd ~/Downloads
+
+echo -e "\e[32mNow downloading music from YouTube..."
+yt-dlp -f 'ba' -x --audio-format mp3 ${urls}  -o 'name.%(ext)s'
+mv name.mp3 ${name}.mp3
+
+echo "Download finished !!!"
+}
 
 # Load version control information
 autoload -Uz vcs_info
@@ -35,7 +50,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
+HISTORY_IGNORE="(|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
 bindkey -e
 bindkey "\e[3~" delete-char
 # for urxvt and uxterm
