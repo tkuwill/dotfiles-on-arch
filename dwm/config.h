@@ -91,11 +91,19 @@ static const char *downvol[] = {"/home/will/.dwm/volume.sh", "down", NULL};
 /* static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};*/
 static const char *mutevol[] = {"/home/will/.dwm/volume.sh", "mute", NULL};
 
+/* Control Media Players */
+static const char *next[] = {"playerctl", "next", NULL};
+static const char *prev[] = {"playerctl", "previous", NULL};
+static const char *play[] = {"playerctl", "play-pause", NULL};
 
 
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+        /*media control keys */
+	{ 0, XF86XK_AudioPlay, spawn, {.v = play }},
+	{ 0, XF86XK_AudioNext, spawn, {.v = next }},
+	{ 0, XF86XK_AudioPrev, spawn, {.v = prev }},
 	/*volume control keys */
 	{0, XF86XK_AudioMute, spawn, {.v = mutevol}},
 	{0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
