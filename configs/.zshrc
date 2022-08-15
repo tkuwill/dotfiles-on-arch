@@ -1,18 +1,42 @@
+# Description: reminder.
+function reminder() {    
+	echo "Input mins:"
+	read mins
+	echo "Input reminder messages:"
+	read msg
+	echo "Now time is $(date "+%T")"
+	echo "Set a timer for ${mins} minute(s)."
+	sleep ${mins}m && notify-send -u critical -t 10000 ${msg}
+	mpv ~/Music/lovesongs/God\ knows...\ \'\'The\ Melancholy\ of\ Haruhi\ Suzumiya\'\'.mp3 --start=10 --end=20 --keep-open=no --no-resume-playback --no-terminal --no-video
+
+}
+
+# Description: record the battery cycle into batterycycle.log, then show the batterycycle.log with bat.
+function batterycycle() {
+    echo -e "\e[34mWriting the battery record into batterycycle.log ..."
+    date "+%Y/%m/%d(%a) %T" >> /home/will/shellscripts/log/batterycycle.log && upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep 'charge-cycles' >> /home/will/shellscripts/log/batterycycle.log && upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep 'capacity' >> /home/will/shellscripts/log/batterycycle.log
+    echo -e "\e[34mfinished !"
+    sleep 1s
+    bat /home/will/shellscripts/log/batterycycle.log 
+}
+
 # Download music from YouTube
 function musicDownload() {
 
-echo -e "\e[34mInput the url of the song:"
-read urls
-echo -e "\e[35mInput the name of the song:"
-read name
-echo -e "\e[33mcd to Downloads"
-cd ~/Downloads
+    lastdir="$(pwd)"
+    echo -e "\e[34mInput the url of the song:"
+    read urls
+    echo -e "\e[35mInput the name of the song:"
+    read name
+    echo -e "\e[33mcd to Downloads"
+    cd ~/Downloads
 
-echo -e "\e[32mNow downloading music from YouTube..."
-yt-dlp -f 'ba' -x --audio-format mp3 ${urls}  -o 'name.%(ext)s'
-mv name.mp3 ${name}.mp3
+    echo -e "\e[32mNow downloading music from YouTube..."
+    yt-dlp -f 'ba' -x --audio-format mp3 ${urls}  -o 'name.%(ext)s'
+    mv name.mp3 ${name}.mp3
 
-echo "Download finished !!!"
+    cd "$lastdir"
+    echo "Download finished !!!"
 }
 
 # Load version control information
@@ -50,7 +74,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
+HISTORY_IGNORE="(reminder|batterycycle|sudo systemctl start bluetooth.service|sudo systemctl stop bluetooth.service|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|sudo htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui| ..)"
 bindkey -e
 bindkey "\e[3~" delete-char
 # for urxvt and uxterm
