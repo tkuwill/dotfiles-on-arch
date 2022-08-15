@@ -1,28 +1,28 @@
 # Description: Look up the word in the dict://dict.org
 function dict() {
-	echo "The word you want to search:"
+	echo -n "The word you want to search: "
 	read word
 	curl dict://dict.org/d:${word}
 }
 # Description: see the cheatsheet of a command.
 function cheatsheet() {
-	echo "Input the command that you want to see its cheatsheet:"
+	echo -n "Input the command that you want to see its cheatsheet: "
 	read com
 	curl cheat.sh/${com}
 }
 
 # Description: see weather locally or select a region.
 function weather() {
-	echo "Which region's weather do you want to know ?"
+	echo -n "Which region's weather do you want to know ? "
 	read region
 	curl https://wttr.in/${region}
 }
 
 # Description: reminder.
 function reminder() {    
-	echo "Input mins:"
+	echo -n "Input mins: "
 	read mins
-	echo "Input reminder messages:"
+	echo -n "Input reminder messages: "
 	read msg
 	echo "Now time is $(date "+%T")"
 	echo "Set a timer for ${mins} minute(s)."
@@ -44,9 +44,9 @@ function batterycycle() {
 function musicDownload() {
 
     lastdir="$(pwd)"
-    echo -e "\e[34mInput the url of the song:"
+    echo -n -e "\e[34mInput the url of the song: "
     read urls
-    echo -e "\e[35mInput the name of the song:"
+    echo -n -e "\e[35mInput the name of the song: "
     read name
     echo -e "\e[33mcd to Downloads"
     cd ~/Downloads
