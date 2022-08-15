@@ -1,3 +1,17 @@
+# Description: see the cheatsheet of a command.
+function cheatsheet() {
+	echo "Input the command that you want to see its cheatsheet:"
+	read com
+	curl cheat.sh/${com}
+}
+
+# Description: see weather locally or select a region.
+function weather() {
+	echo "Which region's weather do you want to know ?"
+	read region
+	curl https://wttr.in/${region}
+}
+
 # Description: reminder.
 function reminder() {    
 	echo "Input mins:"
