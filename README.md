@@ -16,10 +16,11 @@
 - I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
 - I also put the icons which I use for notifications. Almost are from [flaticon](https://www.flaticon.com/). For details of those icons, check the scripts you want to use.   
 - If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
-- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources` and `zsh` in the `configs` folder. If you want to use those, feel free to use them.
+- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources`, `zathura` and `zsh` in the `configs` folder. If you want to use those, feel free to use them.
 - Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
 - If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
+- I used [MuPDF](https://mupdf.com/) at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura](https://pwmt.org/projects/zathura/) now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too.
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
@@ -57,7 +58,7 @@
 - **Tui for git**: [gitui](https://github.com/extrawurst/gitui) --Convenient !
 - **Screenshot tool**: [Flameshot](https://flameshot.org/) --Awesome !
 - **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use.
-- **Pdf viewer**: [MuPDF](https://mupdf.com/) --Blazing fast !
+- **Pdf viewer**: [zathura](https://pwmt.org/projects/zathura/) --Blazing fast & Support Japanese search!
 - **Image viewer**: [eom](https://github.com/mate-desktop/eom) --My eye, your eye.
 - **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) --Clean and intuitive !
 
