@@ -1,0 +1,18 @@
+set selection-clipboard clipboard
+# One page per row by default
+set pages-per-row 1
+set scroll-page-aware "true"
+set adjust-open "best-fit"
+set font "SauceCodeProNerdFont 20"
+set statusbar-bg                "#073642" # base02
+set window-title-page true
+set window-title-basename true
+set open-first-page true
+set statusbar-page-percent true
+set statusbar-home-tilde true
+
+set zoom-center true
+
+map f toggle_fullscreen
+map [fullscreen] f toggle_fullscreen
+map <C-l> nohlsearch
