@@ -20,7 +20,7 @@
 - Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
 - If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
-- I used [MuPDF](https://mupdf.com/) at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura](https://pwmt.org/projects/zathura/) now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too.
+- I used [MuPDF](https://mupdf.com/) at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura](https://pwmt.org/projects/zathura/) now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too. I installed `zathura` and `zathura-pdf-mupdf` packages.
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
