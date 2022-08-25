@@ -1,0 +1,5 @@
+microsoft-edge-stable-bin
+nerd-fonts-dejavu-complete
+paru
+ttf-symbola
+virtualbox-ext-oracle
