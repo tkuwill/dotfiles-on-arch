@@ -152,7 +152,7 @@
 
 ![](/screenshots/donotdisturb.png)
 
-- [player.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/player.sh): This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Now it can play the url that you copied from YouTube or Twitch by `mpv`. Required dependencies: `dunst`, `libnotify`, `mpv`, `xclip` and `playerctl`.
+- [player.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/player.sh): This script can let you control media players which support [MPRIS](https://wiki.archlinux.org/title/MPRIS), like `cmus`, `mpv`, etc. Also, it can show what is playing in my `cmus` now. Now it can play the url that you copied from YouTube or Twitch by `mpv`. Required dependencies: `dunst`, `libnotify`, `mpv`, `copyq` and `playerctl`.
 
 ![](/screenshots/playersh.png)
 
