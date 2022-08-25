@@ -1,5 +1,5 @@
 #!/bin/sh
-# if you want to use this script of dmenu, you have to install "playerctl", "mpv" and "xclip" at first.
+# if you want to use this script of dmenu, you have to install "playerctl", "mpv" and "copyq" at first.
 
 function now_play {
     playerctl metadata --format "{{ title }} 
