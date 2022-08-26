@@ -57,9 +57,9 @@
 - **Clipboard**: [CopyQ](https://github.com/hluk/CopyQ) --My Favorite !
 - **Tui for git**: [gitui](https://github.com/extrawurst/gitui) --Convenient !
 - **Screenshot tool**: [Flameshot](https://flameshot.org/) --Awesome !
-- **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use.
-- **Pdf viewer**: [zathura](https://pwmt.org/projects/zathura/) --Blazing fast & Support Japanese search!
-- **Image viewer**: [eom](https://github.com/mate-desktop/eom) --My eye, your eye.
+- **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use !
+- **Pdf viewer**: [zathura](https://pwmt.org/projects/zathura/) --Blazing fast & Support Japanese search !
+- **Image viewer**: [ristretto](https://docs.xfce.org/apps/ristretto/start) --Simple & Smells good !
 - **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) --Clean and intuitive !
 
 </details>
