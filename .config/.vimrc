@@ -4,10 +4,16 @@ call plug#begin('~/.vim/plugged')
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
+" colortheme
+Plug 'morhetz/gruvbox'
 call plug#end()
 
 " BACKGROUND COLOR SETTING  --------------------------------------------------------------- {{{
-set background=dark
+
+
+let g:gruvbox_contrast_light = 'hard'
+colorscheme gruvbox
+set background=light
 
 set t_Co=256
 
