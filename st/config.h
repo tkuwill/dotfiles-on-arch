@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SauceCodeProNerdFont:bold:pixelsize=20:antialias=true:autohint=true";
+static char *font = "SauceCodeProNerdFont:bold:pixelsize=24:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -96,42 +96,35 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"cyan3",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	[0] = "#f9f5d7", /* hard contrast: #f9f5d7 / soft contrast: #f2e5bc / normal: #fbf1c7  */ 
+	[1] = "#cc241d", /* red     */
+	[2] = "#98971a", /* green   */
+	[3] = "#d79921", /* yellow  */
+	[4] = "#458588", /* blue    */
+	[5] = "#b16286", /* magenta */
+	[6] = "#689d6a", /* cyan    */
+	[7] = "#7c6f64", /* white   */
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"cyan",
-	"magenta",
-	"cyan",
-	"white",
+	[8]  = "#928374", /* black   */
+	[9]  = "#9d0006", /* red     */
+	[10] = "#79740e", /* green   */
+	[11] = "#b57614", /* yellow  */
+	[12] = "#076678", /* blue    */
+	[13] = "#8f3f71", /* magenta */
+	[14] = "#427b58", /* cyan    */
+	[15] = "#3c3836", /* white   */
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
 };
 
 
 /*
  * Default colors (colorname index)
- * foreground, background, cursor, reverse cursor
+ * foreground, background, cursor
  */
-unsigned int defaultfg = 258;
-unsigned int defaultbg = 259;
-unsigned int defaultcs = 256;
+unsigned int defaultfg = 15;
+unsigned int defaultbg = 0;
+unsigned int defaultcs = 15;
 static unsigned int defaultrcs = 257;
 
 /*
