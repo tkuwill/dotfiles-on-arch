@@ -1,2 +1,2 @@
 browser firefox 
-include /usr/share/doc/newsboat/contrib/colorschemes/solarized-light
+include ~/.newsboat/colorcli.config
