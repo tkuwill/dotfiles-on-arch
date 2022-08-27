@@ -1,2 +1,2 @@
 browser firefox 
-include /usr/share/doc/newsboat/contrib/colorschemes/gruvbox
+include /usr/share/doc/newsboat/contrib/colorschemes/solarized-light
