@@ -121,6 +121,7 @@
 - [st-anysize-0.8.4.diff](https://st.suckless.org/patches/anysize/st-anysize-0.8.4.diff)  
 - [st-delkey-20201112-4ef0cbd.diff](https://st.suckless.org/patches/delkey/st-delkey-20201112-4ef0cbd.diff)  
 - [st-w3m-0.8.3.diff](https://st.suckless.org/patches/w3m/st-w3m-0.8.3.diff)  
+- [st-gruvbox-light-0.8.5.diff](https://st.suckless.org/patches/gruvbox/st-gruvbox-light-0.8.5.diff)  
    
 <a name="Patch_used_in_slock"></a>
 ## Patch used in slock ##
