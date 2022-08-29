@@ -142,7 +142,7 @@
 <details>
 <summary><b>Scripts list</b></summary>
 
-- [calendar.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/calendar.sh): This script has options for **this month**, **this year** and **next twelve months**, which would show in **st** after selecting the option showed in **dmenu**.
+- [calendar.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/calendar.sh): This script has options for **this month**, **this year** and **next twelve months**, which would show in **urxvt** after selecting the option showed in **dmenu**. Required dependencies: `rxvt-unicode`.
 
 ![](/screenshots/calendarsh.png)
 
