@@ -40,17 +40,17 @@ set shortmess-=S
 " Formats the statusline ------------------------------------------------------------------- {{{
 set laststatus=2            " set the bottom status bar
 
-function! ModifiedColor()
-    if &mod == 1
-        hi statusline guibg=White ctermfg=233 guifg=OrangeRed4 ctermbg=230
-    else
-        hi statusline guibg=White ctermfg=233 guifg=DarkSlateGray ctermbg=230
-    endif
-endfunction
+" function! ModifiedColor()
+    " if &mod == 1
+        " hi statusline guibg=White ctermfg=233 guifg=OrangeRed4 ctermbg=230
+    " else
+        " hi statusline guibg=White ctermfg=233 guifg=DarkSlateGray ctermbg=230
+    " endif
+" endfunction
 
-au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
+" au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
 " default the statusline when entering Vim
-hi statusline guibg=DarkSlateGray ctermfg=233 guifg=White ctermbg=230
+" hi statusline guibg=DarkSlateGray ctermfg=233 guifg=White ctermbg=230
 
 set statusline=%F                           " file path and name
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
@@ -65,7 +65,7 @@ set statusline+=%r      "read only flag
 set statusline+=\ %=                        " align left
 set statusline+=Line:%l/%L[%p%%]            " line X of Y [percent of file]
 set statusline+=\ Col:%c                    " current column
-"set statusline+=\ Buf:%n                    " Buffer number
+set statusline+=\ Buf:%n                    " Buffer number
 "set statusline+=\ [%b][0x%B]\               " ASCII and byte code under cursor
 
 " }}}
@@ -86,3 +86,5 @@ set encoding=utf-8
 nnoremap <C-L> :noh<cr>
 nnoremap <C-S> :set nowrap<cr>
 nnoremap <C-X> :set wrap<cr>
+nnoremap <F5> :set background=light<cr>
+nnoremap <F4> :set background=dark<cr>
