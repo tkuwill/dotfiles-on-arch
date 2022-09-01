@@ -174,6 +174,12 @@ This is the lock screen. Using `slock`.
 
 ![](/screenshots/sysinfo.png)
 
+- [browser.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/browser.sh): This script can let you open browsers in certain zoom scale by adding `--force-device-scale-factor=n` in the option. `n` can be the zoom scale you want. Config `n` you want in the script at first, then you can open browser in that zoom scale. Can be used with `Edge` and `Chromium`.
+
+![](/screenshots/browserscript.png)
+
+![](/screenshots/browsersh.png)
+
 </details>
 
 <a name="Special_Configs"></a>
