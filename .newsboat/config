@@ -1,2 +1,2 @@
-browser firefox 
+browser chromium
 include ~/.newsboat/colorcli.config
