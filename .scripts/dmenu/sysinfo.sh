@@ -20,7 +20,7 @@ function battime {
 
 
 function cpu_temp {
-    sensors | grep 'Core 1' | cut -c 15-23
+    sensors | grep 'Core 1' | cut -c 17-23 | grep -Eo '[0-9][0-9].[0-9]'
 }
 
 function wifi {
@@ -28,7 +28,7 @@ function wifi {
 }
 
 function bat_temp {
-    acpi --thermal | cut -c 15-19
+    acpi --thermal | grep -Eo '[0-9][0-9].[0-9]'
 }
 
 function sysinfo {
@@ -41,7 +41,7 @@ function sysinfo {
     elif [[ $selected = "internet" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi) connected."  
     elif [[ $selected = "cpu_temp" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "CPU temp: $(cpu_temp) ."
+        notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "CPU temp: $(cpu_temp) °C."
     elif [[ $selected = "BAT_temp" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "BAT temp : $(bat_temp) °C."  
     elif [[ $selected = "Cancel" ]]; then 
