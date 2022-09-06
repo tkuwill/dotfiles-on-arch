@@ -20,12 +20,16 @@ function battime {
 
 
 function cpu_temp {
-    sensors | grep 'Core 0' | cut -c 16-23
+    sensors | grep 'Core 1' | cut -c 15-23
+}
+
+function bat_temp {
+    sensors > /tmp/sensors.txt && cat -n /tmp/sensors.txt | grep '12' | cut -c 21-29
 }
 
 
 function sysinfo {
-    options="Cancel\nMemory\nBAT-remaining\ncpu_temp"
+    options="Cancel\nMemory\nBAT-remaining\ncpu_temp\nBAT_temp"
     selected=$(echo -e $options | dmenu -i -p "System info")
     if [[ $selected = "Memory" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/ram.png -t 8000 "Mem is used : $(mem)  /  $(allmem)." 
@@ -33,6 +37,8 @@ function sysinfo {
         notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "BAT-time : $(battime) - remaining."  
     elif [[ $selected = "cpu_temp" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "CPU temp: $(cpu_temp) ."
+    elif [[ $selected = "BAT_temp" ]]; then 
+        notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "BAT temp : $(bat_temp) ."  
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
