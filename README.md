@@ -168,7 +168,7 @@
 ![](/screenshots/power.png)
 This is the lock screen. Using `slock`.
 
-- [sysinfo.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/sysinfo.sh): This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` and `lm_sensors`. 
+- [sysinfo.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/sysinfo.sh): This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` , `networkmanager` and `lm_sensors`. 
 
 ![](/screenshots/sysinfosh.png)
 
