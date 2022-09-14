@@ -4,7 +4,7 @@ function powermenu {
     options="Cancel\nLock\nSuspend\nShutdown\nRestart"
     selected=$(echo -e $options | dmenu -i -p "What do you want to do ?")
     if [[ $selected = "Shutdown" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/power.png -u critical -t 0 "Computer will be shutdown in 30 secs." && sleep 30s && poweroff
+        notify-send -i /home/will/Pictures/sysicon/power.png -u critical -t 0 "Computer will be shutdown in 30 secs." && sleep 30s && shutdown now
     elif [[ $selected = "Restart" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/restart.png -u critical -t 0 "Computer will be rebooted in 30 secs." && sleep 30s && reboot
     elif [[ $selected = "Suspend" ]]; then 
