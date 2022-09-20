@@ -21,6 +21,7 @@
 - If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
 - I used [MuPDF](https://mupdf.com/) at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura](https://pwmt.org/projects/zathura/) now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too. I installed `zathura` and `zathura-pdf-mupdf` packages.
+- I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)](https://www.youtube.com/watch?v=WoZNyea_gRI) and [dwm brightness control (show by dunst)](https://www.youtube.com/watch?v=PT7mz31DxSk). 
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 ## Contents ##
@@ -179,6 +180,14 @@ This is the lock screen. Using `slock`.
 ![](/screenshots/browserscript.png)
 
 ![](/screenshots/browsersh.png)
+
+- [caffeine.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/caffeine.sh): This script can let you prevent screen from going sleep automatically, like [Caffeine](https://launchpad.net/caffeine) on linux distros or [Amphetamine](https://apps.apple.com/tw/app/amphetamine/id937984704?mt=12) on macOS. Required dependencies: `dunst`, `libnotify` and `xorg-xset`.
+
+![](/screenshots/caffeinescript.png)
+
+![](/screenshots/caffeinesh1.png)
+
+![](/screenshots/caffeinesh2.png)
 
 </details>
 
