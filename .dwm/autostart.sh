@@ -2,7 +2,6 @@
 # General stuff
 xrdb -merge ~/.Xresources &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-xfce4-power-manager &
 fcitx5 &
 copyq &
 /usr/bin/dunst &
