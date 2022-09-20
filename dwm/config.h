@@ -94,6 +94,10 @@ static const char *downvol[] = {"/home/will/.dwm/volume.sh", "down", NULL};
 /* static const char *mutevol[] = {"/usr/bin/pactl", "set-sink-mute", "0", "toggle", NULL};*/
 static const char *mutevol[] = {"/home/will/.dwm/volume.sh", "mute", NULL};
 
+/* brightness control */
+static const char *upbri[] = {"/home/will/.dwm/screenlight.sh", "up", NULL};
+static const char *downbri[] = {"/home/will/.dwm/screenlight.sh", "down", NULL};
+
 /* Control Media Players */
 static const char *next[] = {"playerctl", "next", NULL};
 static const char *prev[] = {"playerctl", "previous", NULL};
@@ -103,14 +107,17 @@ static const char *play[] = {"playerctl", "play-pause", NULL};
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	/*brightness control keys */
+	{ 0, XF86XK_MonBrightnessDown, spawn, {.v = downbri}},
+	{ 0, XF86XK_MonBrightnessUp, spawn, {.v = upbri}},
         /*media control keys */
 	{ 0, XF86XK_AudioPlay, spawn, {.v = play }},
 	{ 0, XF86XK_AudioNext, spawn, {.v = next }},
 	{ 0, XF86XK_AudioPrev, spawn, {.v = prev }},
 	/*volume control keys */
-	{0, XF86XK_AudioMute, spawn, {.v = mutevol}},
-	{0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
-	{0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
+	{ 0, XF86XK_AudioMute, spawn, {.v = mutevol}},
+	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
+	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = player } },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = shottool } },
