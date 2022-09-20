@@ -84,6 +84,9 @@ static const char *player[] = {"/home/will/.scripts/dmenu/player.sh", NULL};
 /* browser menu */
 static const char *browser[] = {"/home/will/.scripts/dmenu/browser.sh", NULL};
 
+/* caffeine menu  */
+static const char *caffeine[] = {"/home/will/.scripts/dmenu/caffeine.sh", NULL};
+
 #include <X11/XF86keysym.h>
 
 /*volume control */
@@ -118,6 +121,7 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioMute, spawn, {.v = mutevol}},
 	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
 	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
+	{ MODKEY|ShiftMask,             XK_k,      spawn,          {.v = caffeine } },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = player } },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          {.v = shottool } },
