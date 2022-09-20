@@ -16,7 +16,7 @@
 - I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
 - I also put the icons which I use for notifications. Almost are from [flaticon](https://www.flaticon.com/). For details of those icons, check the scripts you want to use.   
 - If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
-- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources`, `zathura` and `zsh` in the `configs` folder. If you want to use those, feel free to use them.
+- I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources`, `zathura` and `zsh` in the `.config` folder. If you want to use those, feel free to use them.
 - Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
 - If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
@@ -80,7 +80,7 @@
 
 - `pacman-contrib`: Contributed scripts and tools for pacman systems. (its command:`pacdiff`)
 - `polkit-gnome`: A polkit authentication agent for GNOME package, especially for `gparted`.
-- `xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.
+- ~~`xfce4-power-manager`: I use this to control display brightness, which can let your brightness keys of your laptop work perfectly without complex config for binding keys for `xbacklight` or something similar. Also, it can let you manage suspend behavior on your laptop easily.~~
 - `tlp`: [TLP](https://linrunner.de/tlp/index.html) - Optimize Linux Laptop Battery Life.
 - `upower`: I use this in one of my scripts to record the **charge-cycles** and **capacity** of my laptop's **battery**.
 - `acpi`: I use in the script of my dwm top bar to show the charging status and the script triggered by dmenu to show remaining time.
