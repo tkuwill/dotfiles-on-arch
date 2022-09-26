@@ -1,6 +1,5 @@
 #!/bin/sh
 # General stuff
-xrdb -merge ~/.Xresources &
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 fcitx5 &
 copyq &
