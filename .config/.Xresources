@@ -1,3 +1,8 @@
+! cursor setting
+Xcursor.theme: ComixCursors-Orange
+Xcursor.size: 48
+
+
 ! urxvt name
 URxvt*termName: rxvt-unicode
 
@@ -34,35 +39,64 @@ URxvt.scrollBar: false
 URxvt*cursorBlink: true
 
 ! color theme
-*.foreground:#ffffff
-URxvt*background: [100]#000000
-URxvt*depth: 32
-*.cursorColor:#9f9f9f
+/* *.foreground:#ffffff */
+/* URxvt*background: [100]#000000 */
+/* URxvt*depth: 32 */
+/* *.cursorColor:#9f9f9f */
 ! black
-URxvt.color0  : #282A2E
-URxvt.color8  : #555555
+/* URxvt.color0  : #282A2E */
+/* URxvt.color8  : #555555 */
 ! red
-URxvt.color1  : #CC6666
-URxvt.color9  : #cb2460
+/* URxvt.color1  : #CC6666 */
+/* URxvt.color9  : #cb2460 */
 ! green
-URxvt.color2  : #9cd32d
-URxvt.color10 : #B5BD68
+/* URxvt.color2  : #9cd32d */
+/* URxvt.color10 : #B5BD68 */
 ! yellow
-URxvt.color3  : #f1df18
-URxvt.color11 : #f4bf75
+/* URxvt.color3  : #f1df18 */
+/* URxvt.color11 : #f4bf75 */
 ! blue
-URxvt.color4  : #00afd7
-URxvt.color12 : #77fff4
+/* URxvt.color4  : #00afd7 */
+/* URxvt.color12 : #77fff4 */
 ! magenta
-URxvt.color5  : #AA00AA
-URxvt.color13 : #FF55FF
+/* URxvt.color5  : #AA00AA */
+/* URxvt.color13 : #FF55FF */
 ! cyan
-URxvt.color6  : #00AAAA
-URxvt.color14 : #55FFFF
+/* URxvt.color6  : #00AAAA */
+/* URxvt.color14 : #55FFFF */
 ! white
-URxvt.color7  : #e7e7e7
-URxvt.color15 : #FFFFFF
+/* URxvt.color7  : #e7e7e7 */
+/* URxvt.color15 : #FFFFFF */
 
+
+URxvt*background: #f9f5d7
+! *background: #fbf1c7
+! ! soft contrast: *background: #f2e5bc
+URxvt*foreground: #3c3836
+! ! Black + DarkGrey
+URxvt*color0:  #fdf4c1
+URxvt*color8:  #928374
+! ! DarkRed + Red
+URxvt*color1:  #cc241d
+URxvt*color9:  #9d0006
+! ! DarkGreen + Green
+URxvt*color2:  #98971a
+URxvt*color10: #79740e
+! ! DarkYellow + Yellow
+URxvt*color3:  #d79921
+URxvt*color11: #b57614
+! ! DarkBlue + Blue
+URxvt*color4:  #AA00AA
+URxvt*color12: #076678
+! ! DarkMagenta + Magenta
+URxvt*color5:  #b16286
+URxvt*color13: #8f3f71
+! ! DarkCyan + Cyan
+URxvt*color6:  #689d6a
+URxvt*color14: #427b58
+! ! LightGrey + White
+URxvt*color7:  #7c6f64
+URxvt*color15: #3c3836
 URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
 
