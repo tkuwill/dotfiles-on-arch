@@ -19,4 +19,4 @@ static const char * message = "Suckless: Software that sucks less.";
 static const char * text_color = "#ffffff";
 
 /* text size (must be a valid size) */
-static const char * font_name = "-adobe-utopia-bold-i-normal--0-0-75-75-p-0-iso8859-15";
+static const char * font_name = "-adobe-courier-bold-r-normal--20-140-100-100-m-110-iso8859-9";
