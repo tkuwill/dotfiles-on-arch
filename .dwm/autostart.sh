@@ -89,7 +89,7 @@ dwm_alsa () {
 
 while true
 do
-    xsetroot -name "$(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
+    xsetroot -name " $(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
     sleep 1 
 done
 
