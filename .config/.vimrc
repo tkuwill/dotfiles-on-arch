@@ -82,6 +82,9 @@ set encoding=utf-8
 
 " }}}
 
+" Folding for markdown
+let g:markdown_folding = 1
+au FileType markdown setlocal foldlevel=1
 " keymapping
 nnoremap <C-L> :noh<cr>
 nnoremap <F8> :set nowrap<cr>
