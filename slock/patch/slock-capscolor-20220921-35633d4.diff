@@ -1,7 +1,8 @@
-From 95463f58beb669d9221881deac3b6df7d9c4f162 Mon Sep 17 00:00:00 2001
-From: Klemens Nanni <kl3@posteo.org>
-Date: Fri, 2 Sep 2016 14:53:30 +0200
-Subject: [PATCH] Indicate the state of CapsLock through a different color
+From da1721b1b4bb0aa8f94537ddd2a3eada1df00a30 Mon Sep 17 00:00:00 2001
+From: Max Schillinger <maxschillinger@web.de>
+Date: Wed, 21 Sep 2022 19:56:58 +0200
+Subject: [PATCH] Update capscolor patch to match the latest slock commit
+ (35633d4)
 
 ---
  config.def.h |  1 +
@@ -21,7 +22,7 @@ index 9855e21..6288856 100644
  
  /* treat a cleared input like a wrong password (color) */
 diff --git a/slock.c b/slock.c
-index d55eb3d..d7804f1 100644
+index 5ae738c..5f4fb7a 100644
 --- a/slock.c
 +++ b/slock.c
 @@ -18,6 +18,7 @@
@@ -65,7 +66,7 @@ index d55eb3d..d7804f1 100644
  			explicit_bzero(&buf, sizeof(buf));
 @@ -179,6 +185,9 @@ readpw(Display *dpy, struct xrandr *rr, struct lock **locks, int nscreens,
  				if (len)
- 					passwd[len--] = '\0';
+ 					passwd[--len] = '\0';
  				break;
 +			case XK_Caps_Lock:
 +				caps = !caps;
@@ -83,5 +84,5 @@ index d55eb3d..d7804f1 100644
  				for (screen = 0; screen < nscreens; screen++) {
  					XSetWindowBackground(dpy,
 -- 
-2.11.0
+2.37.3
 
