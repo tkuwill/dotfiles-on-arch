@@ -9,7 +9,7 @@ copyq &
 
 # caffeine
 print_caffeine(){
-    MODE=$(xset -q | grep 'DPMS is' | cut -c 11-19)
+    MODE=$(xset -q | grep 'DPMS is' | awk '{print $3}')
     if [ "$MODE" = "Disabled" ]; then
         printf ":零"
     elif [ "$MODE" = "Enabled" ]; then
