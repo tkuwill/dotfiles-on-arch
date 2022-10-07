@@ -66,12 +66,16 @@ precmd() { vcs_info }
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats 'on branch %b %m%u%c'
 
-
-# battery
-function battery {
-    acpi | cut -c 11-48
+function battime {
+    STATUS=$(cat /sys/class/power_supply/BAT0/status)
+        if [ "$STATUS" = "Discharging" ]; then
+	    acpi | awk '{print "BAT-time : " $5,$6"."}'
+        elif [ "$STATUS" = "Charging" ]; then
+	    acpi | awk '{print "BAT-time : " $5,$6,$7"."}'
+        elif [ "$STATUS" = "Full" ]; then
+	    acpi | sed '1 s/,//g' | awk '{print "Now BAT is "$3"."}'
+        fi
 }
-
 
 setopt promptsubst
 
@@ -94,7 +98,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(neofetch|vifm|dict|cheatsheet|weather|reminder|batterycycle|sudo systemctl start bluetooth.service|sudo systemctl stop bluetooth.service|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui ..)"
+HISTORY_IGNORE="(rm -rf|rm -rf .git|neofetch|vifm|dict|cheatsheet|weather|reminder|batterycycle|sudo systemctl start bluetooth.service|sudo systemctl stop bluetooth.service|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui ..)"
 bindkey -e
 bindkey "\e[3~" delete-char
 # for urxvt and uxterm
