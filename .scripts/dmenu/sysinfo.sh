@@ -7,11 +7,11 @@
 # You have to install lm_sensors, acpi, libnotify and a notification package (like dunst) in order to use this script.
 
 function mem {
-    free -h | grep 'Mem' | cut -c 28-32
+    free -h | grep 'Mem' | awk '{print $3}'
 }
 
 function allmem {
-    free -h | grep 'Mem' | cut -c 16-20
+    free -h | grep 'Mem' | awk '{print $2}'
 }
 
 function battime {
@@ -20,11 +20,15 @@ function battime {
 
 
 function cpu_temp {
-    sensors | grep 'Core 1' | cut -c 17-23 | grep -Eo '[0-9][0-9].[0-9]'
+    sensors | grep 'Core 1' | awk '{print $3}' | sed '1 s/+/\ /g'
 }
 
 function wifi {
-    nmcli device | grep 'wlan0          wifi' | cut -c 40-55
+    nmcli device | awk '{print $4,$5,$6,$7}' | sed '2 q' | sed '1 d'
+}
+
+function wifi_status {
+    nmcli device | awk '{print $3}' | sed '2 q' | sed '1 d'
 }
 
 function bat_temp {
@@ -39,9 +43,9 @@ function sysinfo {
     elif [[ $selected = "BAT-remaining" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "BAT-time : $(battime) - remaining."  
     elif [[ $selected = "internet" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi) connected."  
+        notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi) $(wifi_status)."  
     elif [[ $selected = "cpu_temp" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "CPU temp: $(cpu_temp) °C."
+        notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "CPU temp: $(cpu_temp)."
     elif [[ $selected = "BAT_temp" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "BAT temp : $(bat_temp) °C."  
     elif [[ $selected = "Cancel" ]]; then 
