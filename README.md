@@ -116,6 +116,7 @@
 - [dwm-alwayscenter-20200625-f04cac6.diff](https://dwm.suckless.org/patches/alwayscenter/dwm-alwayscenter-20200625-f04cac6.diff)
 - [dwm-autostart-20210120-cb3f58a.diff](https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff)
 - [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
+- [dwm-colorbar-6.3.diff](https://dwm.suckless.org/patches/colorbar/dwm-colorbar-6.3.diff)
   
 <a name="Patch_used_in_st"></a> 
 ## Patch used in st ##  
@@ -128,8 +129,9 @@
 <a name="Patch_used_in_slock"></a>
 ## Patch used in slock ##
 - [slock-capscolor-20170106-2d2a21a.diff](https://tools.suckless.org/slock/patches/capscolor/slock-capscolor-20170106-2d2a21a.diff)  
-- [slock-message-20191002-b46028b.diff](https://tools.suckless.org/slock/patches/message/slock-message-20191002-b46028b.diff)  
+- ~~[slock-message-20191002-b46028b.diff](https://tools.suckless.org/slock/patches/message/slock-message-20191002-b46028b.diff)~~  
     
+- [slock-dwmlogo-20210324.diff](https://tools.suckless.org/slock/patches/dwmlogo/slock-dwmlogo-20210324.diff)  
 <a name="Patch_used_in_dmenu"></a>
 ## Patch used in dmenu ##
 - [dmenu-border-4.9.diff](https://tools.suckless.org/dmenu/patches/border/dmenu-border-4.9.diff)                   
@@ -167,7 +169,9 @@
 ![](/screenshots/powersh.png)
 
 ![](/screenshots/power.png)
-This is the lock screen. Using `slock`.
+
+![](/screenshots/power2.png)
+These are the lock screen examples. Using `slock`.
 
 - [sysinfo.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/sysinfo.sh): This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` , `networkmanager` and `lm_sensors`. 
 
