@@ -170,8 +170,15 @@
 
 ![](/screenshots/power.png)
 
+> This is slock patched with[slock-message-20191002-b46028b.diff](https://tools.suckless.org/slock/patches/message/slock-message-20191002-b46028b.diff).
+
 ![](/screenshots/power2.png)
-These are the lock screen examples. Using `slock`.
+
+> This is slock patched with[slock-dwmlogo-20210324.diff](https://tools.suckless.org/slock/patches/dwmlogo/slock-dwmlogo-20210324.diff). With `logosize = 75`.  
+
+![](/screenshots/power3.png)
+
+> This is slock patched with[slock-dwmlogo-20210324.diff](https://tools.suckless.org/slock/patches/dwmlogo/slock-dwmlogo-20210324.diff). With `logosize = 125`.  
 
 - [sysinfo.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/sysinfo.sh): This script can let you check your systematic information of your computer, like **memory**, **battery remaining** and **temperature of cpu**. Required dependencies: `dunst`, `libnotify`, `acpi` , `networkmanager` and `lm_sensors`. 
 
