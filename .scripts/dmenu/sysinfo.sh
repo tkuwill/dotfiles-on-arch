@@ -4,6 +4,7 @@
 # battery.png is from <a href="https://www.flaticon.com/free-icons/full-battery" title="full battery icons">Full battery icons created by Pixel perfect - Flaticon</a>.
 # cpu.png is from <a href="https://www.flaticon.com/free-icons/thermometer" title="thermometer icons">Thermometer icons created by Smashicons - Flaticon</a>.
 # wifi.png is from <a href="https://www.flaticon.com/free-icons/wifi" title="wifi icons">Wifi icons created by Gregor Cresnar - Flaticon</a>.
+# no-wifi.png is from <a href="https://www.flaticon.com/free-icons/no-internet" title="no internet icons">No internet icons created by Fajrul Fitrianto - Flaticon</a>
 # You have to install lm_sensors, acpi, libnotify and a notification package (like dunst) in order to use this script.
 
 function mem {
@@ -28,11 +29,11 @@ function cpu_temp {
 }
 
 function wifi {
-    FIG=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $5}')
-        if [ "$FIG" = "" ]; then
-	    nmcli device | sed '2 q' | sed '1 d' | awk '{print $4,$3}'
-         else
-            nmcli device | sed '2 q' | sed '1 d' | awk '{print $4,$5,$3}'
+    STATUS=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $3}')
+        if [ "$STATUS" = "connected" ]; then
+	    nmcli device | sed '2 q' | sed '1 d' | awk '{print $4,$5,$3}'
+        elif [ "$STATUS" = "disconnected" ]; then
+            nmcli device | sed '2 q' | sed '1 d' | awk '{print $2,$3}'
         fi
 }
 
@@ -49,7 +50,12 @@ function sysinfo {
     elif [[ $selected = "BAT-remaining" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(battime)"  
     elif [[ $selected = "internet" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi)"  
+    STATUS=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $3}')
+        if [ "$STATUS" = "connected" ]; then
+	    notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi)"  
+        elif [ "$STATUS" = "disconnected" ]; then
+	    notify-send -i /home/will/Pictures/sysicon/no-wifi.png -t 8000 "$(wifi)"  
+        fi
     elif [[ $selected = "cpu_temp" ]]; then 
         notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "$(cpu_temp)"
     elif [[ $selected = "BAT_temp" ]]; then 
