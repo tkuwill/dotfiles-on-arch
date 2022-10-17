@@ -8,6 +8,7 @@
 
 ![](/screenshots/mydwm.png)
 
+- Wallpaper is from [李擎洲：九尾·妖狐](https://www.bilibili.com/video/BV1iN4y1F7pm/?spm_id_from=333.788&vd_source=5e9324525c7fcba6f84d5eb5fedf7f53).
 - This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
 - For the sake of longer battery runtime, I have **few configs** for decoration.
