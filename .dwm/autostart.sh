@@ -1,6 +1,7 @@
 #!/bin/sh
 # General stuff
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+feh --bg-fill /home/will/Pictures/sysicon/wallpaper.png &
 fcitx5 &
 copyq &
 /usr/bin/dunst &
