@@ -63,6 +63,7 @@
 - **Pdf viewer**: [zathura](https://pwmt.org/projects/zathura/) --Blazing fast & Support Japanese search !
 - **Image viewer**: [ristretto](https://docs.xfce.org/apps/ristretto/start) --Simple & Smells good !
 - **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) --Clean and intuitive !
+- **Cursor theme**: [xcursor-comix](https://archlinux.org/packages/community/any/xcursor-comix/) --CUTE !
 
 </details>
 
@@ -118,6 +119,7 @@
 - [dwm-autostart-20210120-cb3f58a.diff](https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff)
 - [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
 - [dwm-colorbar-6.3.diff](https://dwm.suckless.org/patches/colorbar/dwm-colorbar-6.3.diff)
+- [dwm-scratchpad-6.2.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-6.2.diff)
   
 <a name="Patch_used_in_st"></a> 
 ## Patch used in st ##  
