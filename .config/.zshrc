@@ -1,3 +1,12 @@
+# Description: Adjust cmus volume
+function vol() {
+	echo -n "cmus Volume (from 0.0~1.0): "
+	read fig
+        playerctl -p cmus volume ${fig}
+        notify-send -i /home/will/Pictures/sysicon/volume-up.png -t 4500 "cmus Volume ${fig}"
+
+}
+
 # Description: Look up the word in the dict://dict.org
 function dict() {
 	echo -n "The word you want to search: "
