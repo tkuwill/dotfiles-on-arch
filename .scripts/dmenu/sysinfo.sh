@@ -15,11 +15,11 @@ function mem {
 function battime {
     STATUS=$(cat /sys/class/power_supply/BAT0/status)
         if [ "$STATUS" = "Discharging" ]; then
-	    acpi | awk '{print "BAT-time : " $5,$6"."}'
+	    acpi | grep 'Battery 0' | awk '{print "BAT-time : " $5,$6"."}'
         elif [ "$STATUS" = "Charging" ]; then
-	    acpi | awk '{print "BAT-time : " $5,$6,$7"."}'
+	    acpi | grep 'Battery 0' | awk '{print "BAT-time : " $5,$6,$7"."}'
         elif [ "$STATUS" = "Full" ]; then
-	    acpi | sed '1 s/,//g' | awk '{print "Now BAT is "$3"."}'
+	    acpi | grep 'Battery 0'| sed '1 s/,//g' | awk '{print "Now BAT is "$3"."}'
         fi
 }
 
