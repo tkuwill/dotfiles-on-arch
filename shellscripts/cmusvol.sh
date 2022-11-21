@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-PS3="What you want in cmus:"
+PS3="What you want in cmus: "
 
 items=("Vol" "Loop_current_track" "Loop_all_playlist" "quit")
 select opt in "${items[@]}" 
