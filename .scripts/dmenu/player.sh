@@ -12,7 +12,7 @@ function urls {
 
 
 function player {
-    options="Cancel\nPlay-pause\nNext\nPrev\nNow_playing\nOpen_with_mpv"
+    options="Cancel\nPlay-pause\nNext\nPrev\nNow_playing\nOpen_with_mpv\ncmus_option"
     selected=$(echo -e $options | dmenu -i -p "playerctl")
     if [[ $selected = "Play-pause" ]]; then 
         playerctl play-pause    
@@ -24,6 +24,8 @@ function player {
         notify-send -i /home/will/Pictures/sysicon/music.png -t 5000 "$(now_play)"
     elif [[ $selected = "Open_with_mpv" ]]; then 
 	mpv $(urls)
+    elif [[ $selected = "cmus_option" ]]; then 
+        st -t scratchpadname -g 32x10 -e zsh -c '/home/will/shellscripts/cmusvol.sh; zsh'
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
