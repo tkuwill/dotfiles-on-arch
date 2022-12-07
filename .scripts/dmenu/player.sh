@@ -10,6 +10,10 @@ function urls {
     copyq read
 }
 
+function burls {
+    copyq read | cut -c 1-44
+}
+
 
 function player {
     options="Cancel\nPlay-pause\nNext\nPrev\nNow_playing\nOpen_with_mpv_Yt\nOpen_with_mpv_BiliBili\ncmus_option"
@@ -25,7 +29,7 @@ function player {
     elif [[ $selected = "Open_with_mpv_Yt" ]]; then 
 	mpv $(urls)
     elif [[ $selected = "Open_with_mpv_BiliBili" ]]; then 
-	mpv --referrer="https://www.bilibili.com" $(urls)
+	mpv --referrer="https://www.bilibili.com" $(burls)
     elif [[ $selected = "cmus_option" ]]; then 
         st -t scratchpadname -g 32x10 -e zsh -c '/home/will/shellscripts/cmusvol.sh; zsh'
     elif [[ $selected = "Cancel" ]]; then 
