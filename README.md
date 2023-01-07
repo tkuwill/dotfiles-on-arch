@@ -8,23 +8,31 @@
 
 ![](/screenshots/mydwm.png)
 
-- Wallpaper is from [李擎洲：九尾·妖狐](https://www.bilibili.com/video/BV1iN4y1F7pm/?spm_id_from=333.788&vd_source=5e9324525c7fcba6f84d5eb5fedf7f53).
+- Wallpaper is from [李擎洲：九尾·妖狐][].
 - This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
 - For the sake of longer battery runtime, I have **few configs** for decoration.
 - All things here all have their duty to be here. (In my opinion.)
 - I would also provide a viewpoint for those who don't know what to install after a fresh install of **archlinux**.
 - I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
-- I also put the icons which I use for notifications. Almost are from [flaticon](https://www.flaticon.com/). For details of those icons, check the scripts you want to use.   
+- I also put the icons which I use for notifications. Almost are from [flaticon][]. For details of those icons, check the scripts you want to use.   
 - If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
 - I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources`, `zathura` and `zsh` in the `.config` folder. If you want to use those, feel free to use them.
-- Almost all configs use [SauceCodePro Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete).
-- If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config](https://github.com/tkuwill/My-dwm-dotfiles-My-st-config). Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
+- Almost all configs use [SauceCodePro Nerd Font][].
+- If you want to know the steps to configure `st`, `dwm`, `dmenu` and `slock`, you can check this [tkuwill/My-dwm-dotfiles-My-st-config][]. Although it is mainly about `st`, but like changing some codes in `config.mk`, patching **suckless softwares** and some concept of recompiling **suckless softwares** are all the same.
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
-- I used [MuPDF](https://mupdf.com/) at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura](https://pwmt.org/projects/zathura/) now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too. I installed `zathura` and `zathura-pdf-mupdf` packages.
-- I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)](https://www.youtube.com/watch?v=WoZNyea_gRI) and [dwm brightness control (show by dunst)](https://www.youtube.com/watch?v=PT7mz31DxSk). 
+- I used [MuPDF][] at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura][] now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too. I installed `zathura` and `zathura-pdf-mupdf` packages.
+- I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)][] and [dwm brightness control (show by dunst)][]. 
 - If you also have some questions like above, maybe it is good for you to have a look!
 
+[李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/?spm_id_from=333.788&vd_source=5e9324525c7fcba6f84d5eb5fedf7f53 
+[flaticon]: https://www.flaticon.com/
+[SauceCodePro Nerd Font]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete
+[tkuwill/My-dwm-dotfiles-My-st-config]: https://github.com/tkuwill/My-dwm-dotfiles-My-st-config
+[MuPDF]: https://mupdf.com/
+[zathura]: https://pwmt.org/projects/zathura/
+[volume notification in dwm (by dunst)]: https://www.youtube.com/watch?v=WoZNyea_gRI
+[dwm brightness control (show by dunst)]: https://www.youtube.com/watch?v=PT7mz31DxSk
 ## Contents ##
 1. [Details](#Details)
 2. [Features](#features)
