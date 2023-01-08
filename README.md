@@ -53,25 +53,45 @@
 <details>
 <summary><b>System Details</b></summary>
 
-- **OS**: [archlinux](https://archlinux.org/) --KISS !
-- **Shell**: [zsh](https://www.zsh.org/) --COOL !
-- **WM**: [dwm](https://dwm.suckless.org/) --100/100
-- **Terminal**: [st](https://st.suckless.org/) --st is **St.**!
-- **Terminal multiplexer**: [tmux](https://github.com/tmux/tmux/wiki) --Efficiency UP !
-- **Screen locker**: [slock](https://tools.suckless.org/slock/) --THE Simplest !
-- **Application launcher**: [dmenu](https://tools.suckless.org/dmenu/) --Suckless !
-- **Notification**: [Dunst](https://github.com/dunst-project/dunst) --Won't miss from best friend !
-- **Video player**: [mpv](https://mpv.io/) --Along with hwdec.
-- **Music player**: [cmus](https://cmus.github.io/) --Super Lightweight !
-- **Email client**: [Thunderbird](https://www.mozilla.org/thunderbird/) --My love !
-- **Clipboard**: [CopyQ](https://github.com/hluk/CopyQ) --My Favorite !
-- **Tui for git**: [gitui](https://github.com/extrawurst/gitui) --Convenient !
-- **Screenshot tool**: [Flameshot](https://flameshot.org/) --Awesome !
-- **Archiving and compression**: [unarchiver](https://archlinux.org/packages/community/x86_64/unarchiver/) --Easy to use !
-- **Pdf viewer**: [zathura](https://pwmt.org/projects/zathura/) --Blazing fast & Support Japanese search !
-- **Image viewer**: [ristretto](https://docs.xfce.org/apps/ristretto/start) --Simple & Smells good !
-- **File manager**: [Thunar](https://docs.xfce.org/xfce/thunar/start) --Clean and intuitive !
-- **Cursor theme**: [xcursor-comix](https://archlinux.org/packages/community/any/xcursor-comix/) --CUTE !
+- **OS**: [archlinux][] --KISS !
+- **Shell**: [zsh][] --COOL !
+- **WM**: [dwm][] --100/100
+- **Terminal**: [st][] --st is **St.**!
+- **Terminal multiplexer**: [tmux][] --Efficiency UP !
+- **Screen locker**: [slock][] --THE Simplest !
+- **Application launcher**: [dmenu][] --Suckless !
+- **Notification**: [Dunst][] --Won't miss from best friend !
+- **Video player**: [mpv][] --Along with hwdec.
+- **Music player**: [cmus][] --Super Lightweight !
+- **Email client**: [Thunderbird][] --My love !
+- **Clipboard**: [CopyQ][] --My Favorite !
+- **Tui for git**: [gitui][] --Convenient !
+- **Screenshot tool**: [Flameshot][] --Awesome !
+- **Archiving and compression**: [unarchiver][] --Easy to use !
+- **Pdf viewer**: [zathura][] --Blazing fast & Support Japanese search !
+- **Image viewer**: [ristretto][] --Simple & Smells good !
+- **File manager**: [Thunar][] --Clean and intuitive !
+- **Cursor theme**: [xcursor-comix][] --CUTE !
+
+[archlinux]: https://archlinux.org/
+[zsh]: https://www.zsh.org/
+[dwm]: https://dwm.suckless.org/
+[st]: https://st.suckless.org/
+[tmux]: https://github.com/tmux/tmux/wiki
+[slock]: https://tools.suckless.org/slock/
+[dmenu]: https://tools.suckless.org/dmenu/
+[Dunst]: https://github.com/dunst-project/dunst
+[mpv]: https://mpv.io/
+[cmus]: https://cmus.github.io/
+[Thunderbird]: https://www.mozilla.org/thunderbird/
+[CopyQ]: https://github.com/hluk/CopyQ
+[gitui]: https://github.com/extrawurst/gitui
+[Flameshot]: https://flameshot.org/
+[unarchiver]: https://archlinux.org/packages/community/x86_64/unarchiver/
+[zathura]: https://pwmt.org/projects/zathura/
+[ristretto]: https://docs.xfce.org/apps/ristretto/start
+[Thunar]: https://docs.xfce.org/xfce/thunar/start
+[xcursor-comix]: https://archlinux.org/packages/community/any/xcursor-comix/
 
 </details>
 
