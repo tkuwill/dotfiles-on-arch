@@ -25,7 +25,7 @@
 - I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)][] and [dwm brightness control (show by dunst)][]. 
 - If you also have some questions like above, maybe it is good for you to have a look!
 
-[李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/?spm_id_from=333.788&vd_source=5e9324525c7fcba6f84d5eb5fedf7f53 
+[李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 [flaticon]: https://www.flaticon.com/
 [SauceCodePro Nerd Font]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete
 [tkuwill/My-dwm-dotfiles-My-st-config]: https://github.com/tkuwill/My-dwm-dotfiles-My-st-config
