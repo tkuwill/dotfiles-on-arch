@@ -32,4 +32,3 @@ select opt in "${items[@]}"
               ;;
               esac
 	      done
-
