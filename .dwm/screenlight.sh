@@ -15,13 +15,13 @@ function get_brightness {
 function send_notification {
     brightness=`get_brightness`
     # Send the notification
-     dunstify -i /home/will/Pictures/sysicon/brightness-up.png -t 8000 -r 2593 -u normal -h int:value:"$brightness" "Brightness: ${brightness}%"
+     dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/brightness-up.png -t 8000 -r 2593 -u normal -h int:value:"$brightness" "Brightness: ${brightness}%"
 }
 
 function send_notification1 {
     brightness=`get_brightness`
     # Send the notification
-     dunstify -i /home/will/Pictures/sysicon/brightness-down.png -t 8000 -r 2593 -u normal -h int:value:"$brightness" "Brightness: ${brightness}%"
+     dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/brightness-down.png -t 8000 -r 2593 -u normal -h int:value:"$brightness" "Brightness: ${brightness}%"
 }
 case $1 in
     up)

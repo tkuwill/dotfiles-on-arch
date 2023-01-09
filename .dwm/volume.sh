@@ -23,7 +23,7 @@ function send_notification {
     # https://en.wikipedia.org/wiki/Box-drawing_character
     bar=$(seq -s "─" $(($volume / 2)) | sed 's/[0-9]//g')
     # Send the notification
-     dunstify -i /home/will/Pictures/sysicon/volume-up.png -t 8000 -r 2593 -u normal -h int:value:"$volume" "Volume: ${volume}%"
+     dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/volume-up.png -t 8000 -r 2593 -u normal -h int:value:"$volume" "Volume: ${volume}%"
 }
 
 function send_notification1 {
@@ -32,8 +32,13 @@ function send_notification1 {
     # https://en.wikipedia.org/wiki/Box-drawing_character
     bar=$(seq -s "─" $(($volume / 2)) | sed 's/[0-9]//g')
     # Send the notification
-     dunstify -i /home/will/Pictures/sysicon/volume-down.png -t 8000 -r 2593 -u normal -h int:value:"$volume" "Volume: ${volume}%"
+     dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/volume-down.png -t 8000 -r 2593 -u normal -h int:value:"$volume" "Volume: ${volume}%"
 }
+
+function sendmute {
+     dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/mute.png -t 8000 -r 2593 -u normal "Volume: Mute"
+}
+
 case $1 in
     up)
 	# Set the volume on (if it was muted)
@@ -50,8 +55,8 @@ case $1 in
     mute)
     	# Toggle mute
 	amixer -D pulse set Master 1+ toggle > /dev/null
-	if is_mute ; then
-        dunstify -i /home/will/Pictures/sysicon/mute.png -t 8000 -r 2593 -u normal "Volume: Mute"
+	if [[ is_mute ]]; then
+        sendmute
     else
         send_notification
 	fi
