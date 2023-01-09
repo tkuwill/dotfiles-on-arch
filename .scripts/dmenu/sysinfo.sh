@@ -46,20 +46,20 @@ function sysinfo {
     options="Cancel\nMemory\nBAT-remaining\ninternet\ncpu_temp\nBAT_temp"
     selected=$(echo -e $options | dmenu -i -p "System info")
     if [[ $selected = "Memory" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/ram.png -t 8000 "$(mem)" 
+        dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/ram.png -t 8000 "$(mem)" 
     elif [[ $selected = "BAT-remaining" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(battime)"  
+        dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(battime)"  
     elif [[ $selected = "internet" ]]; then 
     STATUS=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $3}')
         if [ "$STATUS" = "connected" ]; then
-	    notify-send -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi)"  
+	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wifi)"  
         elif [ "$STATUS" = "disconnected" ]; then
-	    notify-send -i /home/will/Pictures/sysicon/no-wifi.png -t 8000 "$(wifi)"  
+	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/no-wifi.png -t 8000 "$(wifi)"  
         fi
     elif [[ $selected = "cpu_temp" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/cpu.png -t 5000 "$(cpu_temp)"
+        dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/cpu.png -t 5000 "$(cpu_temp)"
     elif [[ $selected = "BAT_temp" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(bat_temp)"  
+        dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(bat_temp)"  
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
