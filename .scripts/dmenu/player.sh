@@ -25,7 +25,7 @@ function player {
     elif [[ $selected = "Prev" ]]; then 
         playerctl previous
     elif [[ $selected = "Now_playing" ]]; then 
-        notify-send -i /home/will/Pictures/sysicon/music.png -t 5000 "$(now_play)"
+        dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/music.png -t 5000 "$(now_play)"
     elif [[ $selected = "Open_with_mpv_Yt" ]]; then 
 	mpv $(urls)
     elif [[ $selected = "Open_with_mpv_BiliBili" ]]; then 
