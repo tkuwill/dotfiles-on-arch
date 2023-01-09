@@ -443,6 +443,11 @@ foreground = "#4C4F69"
 [history-ignore-2]
     appname = center
     history_ignore=yes
+
+[history-ignore-3]
+    appname = flameshot
+    history_ignore=yes
+
 #[skip-display]
 #    # This notification will not be displayed, but will be included in the history
 #    summary = "foobar"
