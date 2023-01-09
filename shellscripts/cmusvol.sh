@@ -11,17 +11,17 @@ select opt in "${items[@]}"
 	      echo -n  "cmus Volume (from 0.0~1.0): " 
 	      read fig
 	      playerctl -p cmus volume ${fig}
-	      notify-send -i /home/will/Pictures/sysicon/volume-up.png -t 4500 "cmus Volume ${fig}"
+	      dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/volume-up.png -t 4500 "cmus Volume ${fig}"
               break
 	      ;;
 	    Loop_current_track)
 	      playerctl -p cmus loop track
-	      notify-send -i /home/will/Pictures/sysicon/music.png -t 4500 "cmus Repeat Current Track"
+	      dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/music.png -t 4500 "cmus Repeat Current Track"
               break
 	      ;;
 	    Loop_all_playlist)
 	      playerctl -p cmus loop playlist
-	      notify-send -i /home/will/Pictures/sysicon/music.png -t 4500 "cmus Repeat All Playlist"
+	      dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/music.png -t 4500 "cmus Repeat All Playlist"
               break
 	      ;;
             quit)
