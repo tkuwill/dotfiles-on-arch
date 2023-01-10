@@ -55,7 +55,7 @@ case $1 in
     mute)
     	# Toggle mute
 	amixer -D pulse set Master 1+ toggle > /dev/null
-	if [[ is_mute ]]; then
+	if is_mute ; then
         sendmute
     else
         send_notification
