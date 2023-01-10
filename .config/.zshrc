@@ -126,8 +126,6 @@ alias la="ls -la --color=auto"
 alias ls -la="ls -la --color=auto"
 alias ls="ls --color=auto"
 alias chromium="chromium --force-device-scale-factor=1.3"
-alias sudoedit="EDITOR=nvim sudoedit"
-alias nvimdiff="nvim -d"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
