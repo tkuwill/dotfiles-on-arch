@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
+Plug 'ap/vim-css-color'
 " colortheme
 Plug 'morhetz/gruvbox'
 call plug#end()
@@ -85,6 +86,7 @@ set encoding=utf-8
 " Folding for markdown
 let g:markdown_folding = 1
 au FileType markdown setlocal foldlevel=1
+
 " keymapping
 nnoremap <C-L> :noh<cr>
 nnoremap <F8> :set nowrap<cr>
