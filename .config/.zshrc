@@ -36,7 +36,7 @@ function reminder() {
 	echo "Now time is $(date "+%T")"
 	echo "Set a timer for ${mins} minute(s)."
 	sleep ${mins}m && notify-send -u critical -t 10000 ${msg}
-	mpv ~/Music/lovesongs/God\ knows...\ \'\'The\ Melancholy\ of\ Haruhi\ Suzumiya\'\'.mp3 --start=10 --end=20 --keep-open=no --no-resume-playback --no-terminal --no-video
+	mpv ~/Music/lovesongs/God\ knows...\ \'\'The\ Melancholy\ of\ Haruhi\ Suzumiya\'\'.mp3 --start=10 --end=20 --keep-open=no --no-resume-playback --no-terminal --no-video --volume=70
 
 }
 
@@ -126,6 +126,8 @@ alias la="ls -la --color=auto"
 alias ls -la="ls -la --color=auto"
 alias ls="ls --color=auto"
 alias chromium="chromium --force-device-scale-factor=1.3"
+alias sudoedit="EDITOR=nvim sudoedit"
+alias nvimdiff="nvim -d"
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
