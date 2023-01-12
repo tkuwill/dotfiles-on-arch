@@ -283,6 +283,68 @@ No matter which situation you face, you should all enable the `slock@user.servic
 systemctl enable slock@user.service
 ```
 
+<summary><b>Some special configs</b></summary>
+
+- cursor : See [Cursor themes][]. I set mine by `.Xresources` and `~/.config/gtk-3.0/settings.ini`. For 1920x1080 resolution add the config below.
+
+```sh
+.Xresources 
+
+! cursor setting
+Xcursor.theme: ComixCursors-Orange
+Xcursor.size: 48
+
+Also, add codes below in `~/.xinitrc`.
+
+xrdb -merge ~/.Xresources
+
+---
+
+~/.config/gtk-3.0/settings.ini 
+
+[Settings]
+gtk-icon-theme-name = Adwaita
+gtk-theme-name = Adwaita
+gtk-font-name = Noto Sans CJK TC Medium 12
+gtk-cursor-theme-name = ComixCursors-Orange
+
+
+```
+
+- Browser's scale : See [Chromium][].
+- Input method : In order to be able to [input Chinese][] in all programs, add the codes below: 
+
+`EDITOR=vim sudoedit /etc/environment`
+
+```sh 
+
+GTK_IM_MODULE=fcitx
+QT_IM_MODULE=fcitx
+XMODIFIERS=@im=fcitx
+SDL_IM_MODULE=fcitx
+
+```
+- Power button action : See [Power management][]. Edit `/etc/systemd/logind.conf`. Uncommented that you want to config in order to make it work.
+
+```sh 
+...
+#InhibitDelayMaxSec=5
+#UserStopDelaySec=10
+HandlePowerKey=ignore
+HandlePowerKeyLongPress=poweroff
+#HandleRebootKey=reboot
+...
+#RebootKeyIgnoreInhibited=no
+HoldoffTimeoutSec=10s
+#IdleAction=ignore
+...
+```
+
+[Chromium]: https://wiki.archlinux.org/title/chromium#Tab_font_size_is_too_large
+[Cursor themes]: https://wiki.archlinux.org/title/Cursor_themes
+[input Chinese]: https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/DE&App?id=_11安装输入法
+[Power management]: https://wiki.archlinux.org/title/Power_management#ACPI_events
+
 </details>
 
 <a name="My_Shell_Scripts"></a>
