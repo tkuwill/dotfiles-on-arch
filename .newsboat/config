@@ -1,3 +1,13 @@
 auto-reload yes
 browser chromium
 include ~/.newsboat/colorcli.config
+
+unbind-key j 
+unbind-key J
+unbind-key k
+unbind-key K
+
+bind-key j down
+bind-key J next-feed
+bind-key k up
+bind-key K prev-feed
