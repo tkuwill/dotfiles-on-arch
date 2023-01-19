@@ -14,7 +14,7 @@ select opt in "${items[@]}"
 	      read url
 	      echo -n "The Quality you want(audio_only,160p,360p,720p,1080p60...): "
 	      read qua
-	      streamlink -p mpv --twitch-disable-ads ${url} ${qua}
+	      streamlink -p mpv --twitch-disable-ads ${url} ${qua} &
               break
 	      ;;
 	    bilibili)
@@ -22,7 +22,7 @@ select opt in "${items[@]}"
 	      read url
 	      echo -n "The Quality you want(worst,best): "
 	      read qua
-	      streamlink -p mpv ${url} ${qua}
+	      streamlink -p mpv ${url} ${qua} &
               break
 	      ;;
             quit)
