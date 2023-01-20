@@ -113,7 +113,8 @@ static const char *next[] = {"playerctl", "next", NULL};
 static const char *prev[] = {"playerctl", "previous", NULL};
 static const char *play[] = {"playerctl", "play-pause", NULL};
 
-
+/* Show keybindings */
+static const char *showkcmd[] = {"st", "-t", scratchpadname, "-g", "90x25", "-e", "zsh", "-c", "bat ~/Desktop/willdezenbookArch_dotfiles/memo/dwmKeybinding.md; zsh", NULL};
 
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
@@ -141,6 +142,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_grave,  togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY,                       XK_s,  togglescratch,  {.v = showkcmd } },
 	{ MODKEY|ShiftMask,             XK_grave,  togglescratch,  {.v = cmusvolcmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
