@@ -1,6 +1,6 @@
 " Plugins will be downloaded under the specified directory.
 call plug#begin('~/.vim/plugged')
-" other plugin
+" other plugins
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
@@ -28,6 +28,8 @@ set ruler
 set number
 syntax on
 set hlsearch
+set ignorecase
+set smartcase
 set softtabstop=4
 set listchars=tab:>~,space:.
 set cindent
@@ -87,11 +89,13 @@ set encoding=utf-8
 let g:markdown_folding = 1
 au FileType markdown setlocal foldlevel=1
 
+" mapleleader config to space (default: \)
+" let mapleader = "\<space>"
 " keymapping
 
 nnoremap <C-L> :noh<cr>
-nnoremap <F11> :set paste<cr>
-nnoremap <F12> :set nopaste<cr>
+" nnoremap <F11> :set paste<cr>
+" nnoremap <F12> :set nopaste<cr>
 nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
 nnoremap <F5> :set background=light<cr>
