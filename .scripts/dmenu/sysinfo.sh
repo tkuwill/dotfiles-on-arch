@@ -43,7 +43,7 @@ function bat_temp {
 }
 
 function sysinfo {
-    options="Cancel\nMemory\nBAT-remaining\ninternet\ncpu_temp\nBAT_temp"
+    options="Cancel\nMemory\nBAT-remaining\ninternet\ncpu_temp\nBAT_temp\nKeybindings"
     selected=$(echo -e $options | dmenu -i -p "System info")
     if [[ $selected = "Memory" ]]; then 
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/ram.png -t 8000 "$(mem)" 
@@ -60,6 +60,8 @@ function sysinfo {
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/cpu.png -t 5000 "$(cpu_temp)"
     elif [[ $selected = "BAT_temp" ]]; then 
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(bat_temp)"  
+    elif [[ $selected = "Keybindings" ]]; then 
+        st -t KeyBindings -e zsh -c 'bat ~/Desktop/willdezenbookArch_dotfiles/memo/dwmKeybinding.md; zsh'
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
