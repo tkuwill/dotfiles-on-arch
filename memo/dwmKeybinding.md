@@ -22,4 +22,4 @@
 
 1. Quit dwm: Meta-shift-u
 2. kill program: Meta-shift-c 
-
+3. Show this cheatsheet: Meta-s
