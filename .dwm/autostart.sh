@@ -1,6 +1,8 @@
 #!/bin/sh
 # General stuff
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+eval `ssh-agent -s` &
+ssh-add &
 feh --bg-fill /home/will/Pictures/sysicon/wallpaper.png &
 fcitx5 &
 copyq &
