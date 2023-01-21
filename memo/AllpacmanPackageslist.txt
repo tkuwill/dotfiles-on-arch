@@ -232,6 +232,7 @@ kwindowsystem 5.102.0-1
 l-smash 2.14.5-2
 lame 3.100-4
 lapack 3.11.0-1
+lazygit 0.36.0-1
 lcms2 2.14-2
 ldns 1.8.3-2
 lensfun 1:0.3.3-1
