@@ -72,6 +72,7 @@
 - **Image viewer**: [ristretto][] --Simple & Smells good !
 - **File manager**: [Thunar][] --Clean and intuitive !
 - **Cursor theme**: [xcursor-comix][] --CUTE !
+- **System monitor**: [conky][] --Highly customizable !
 
 [archlinux]: https://archlinux.org/
 [zsh]: https://www.zsh.org/
@@ -92,6 +93,7 @@
 [ristretto]: https://docs.xfce.org/apps/ristretto/start
 [Thunar]: https://docs.xfce.org/xfce/thunar/start
 [xcursor-comix]: https://archlinux.org/packages/community/any/xcursor-comix/
+[conky]: https://github.com/brndnmtthws/conky
 
 </details>
 
