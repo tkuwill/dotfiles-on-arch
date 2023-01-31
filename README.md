@@ -398,7 +398,7 @@ MODULES=(i915)
 [input Chinese]: https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/DE&App?id=_11安装输入法
 [Power management]: https://wiki.archlinux.org/title/Power_management#ACPI_events
 [GRUB background image and bitmap fonts]: https://wiki.archlinux.org/title/GRUB/Tips_and_tricks#Background_image_and_bitmap_fonts
-[tty font][]: https://wiki.archlinux.org/title/Linux_console#Fonts
+[tty font]: https://wiki.archlinux.org/title/Linux_console#Fonts
 [terminus-font]: https://archlinux.org/packages/community/any/terminus-font/
 [persistent configuration]: https://wiki.archlinux.org/title/Linux_console#Persistent_configuration
 [Early KMS start]: https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start
