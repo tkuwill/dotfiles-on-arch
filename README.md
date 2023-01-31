@@ -289,6 +289,8 @@ systemctl enable slock@user.service
 
 </details>
 
+
+<details>
 <summary><b>Other special configs</b></summary>
 
 - cursor : See [Cursor themes][]. I set mine by `.Xresources` and `~/.config/gtk-3.0/settings.ini`. For 1920x1080 resolution add the config below.
@@ -350,9 +352,10 @@ HoldoffTimeoutSec=10s
 ```bash
 ### sudo grub-mkfont /path/to/the/font/you/want/to/use --size=30 --output=/boot/grub/fonts/fontName.ps2
 sudo grub-mkfont /usr/share/fonts/noto-cjk/NotoSerifCJK-Bold.ttc --size=30 --output=/boot/grub/fonts/Notocjk30.ps2
+```
+If the command `grub-mkfont` doesn't produce any output, you make it. Then edit `/etc/default/grub`.
 
-### If the command `grub-mkfont` doesn't produce any output, you make it. Then edit `/etc/default/grub`.
-
+```bash
 sudoedit /etc/default/grub
 
 ...
