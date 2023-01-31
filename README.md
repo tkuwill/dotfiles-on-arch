@@ -133,13 +133,15 @@
     - `fcitx5-lua`
 - `p7zip`, `unrar`, `unzip`, `zip`: For the support of the formats. Installed with `unarchiver`.
 - `intel-media-driver` or `libva-intel-driver`: For hwdec of mpv.
+- `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
 - `mpv-mpris`: Can let you control mpv via `playerctl`.
     - If you use **archlinux**, now (2022/08/12) install `mpv` and `mpv-mpris` of community version, which work smoothly for me.
 - `yt-dlp`: For watching live-streaming on `mpv`.
-- `intel_gpu_top`: To check if your intel gpu can do hardware acceleration properly.
+- `streamlink`: For watching live-streaming with some special config.
 - `libmad`, `faad2`, `libao`, `libmpcdec`: Optional Deps of `cmus`.
 - `ntfs-3g`: NTFS-3G is an open source implementation of Microsoft NTFS that includes read and write support.
 - `ttf-symbola`: (From AUR) A font for symbol blocks of the Unicode Standard (TTF). If you don't install this, `st` would fail when opening a document with some symbol blocks.
+- `terminus-font`: For **bigger** fonts which can be used in `tty`.
 
 </details>
 
@@ -285,7 +287,9 @@ No matter which situation you face, you should all enable the `slock@user.servic
 systemctl enable slock@user.service
 ```
 
-<summary><b>Some special configs</b></summary>
+</details>
+
+<summary><b>Other special configs</b></summary>
 
 - cursor : See [Cursor themes][]. I set mine by `.Xresources` and `~/.config/gtk-3.0/settings.ini`. For 1920x1080 resolution add the config below.
 
@@ -341,11 +345,63 @@ HoldoffTimeoutSec=10s
 #IdleAction=ignore
 ...
 ```
+- Grub menu's font setting: See [GRUB background image and bitmap fonts][]. If you would like to use a font you like in `GRUB menu`, you can follow the steps below to make it be a `bitmap font` because the font used in `GRUB menu` must be a `bitmap font`. 
+
+```bash
+### sudo grub-mkfont /path/to/the/font/you/want/to/use --size=30 --output=/boot/grub/fonts/fontName.ps2
+sudo grub-mkfont /usr/share/fonts/noto-cjk/NotoSerifCJK-Bold.ttc --size=30 --output=/boot/grub/fonts/Notocjk30.ps2
+
+### If the command `grub-mkfont` doesn't produce any output, you make it. Then edit `/etc/default/grub`.
+
+sudoedit /etc/default/grub
+
+...
+#GRUB_BACKGROUND="/path/to/wallpaper"
+#GRUB_THEME="/path/to/gfxtheme"
+GRUB_FONT="/boot/grub/fonts/Notocjk30.ps2"
+...
+```
+
+After editing `/etc/default/grub`, you must **re-generate** `GRUB menu` to apply the change.
+
+```bash
+sudo grub-install --target=x86_64-efi --efi-directory=/efi --bootloader-id=GRUB
+sudo grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+- TTY Font's config: See [tty font][]. Also, the commands `showconsolefont` and `setfont FONTNAME` **MUST be done** in **tty**. You have to install [terminus-font][] at first if you want to use **bigger** fonts in `tty`. 
+
+```bash
+sudoedit /etc/vconsole.conf 
+
+FONT=ter-132b
+```
+Then run the command below:
+
+```bash
+sudo mkinitcpio -P
+```
+Sometimes, you will have to load the graphics driver earlier, see [persistent configuration][] and [Early KMS start][] for more detailed description.
+
+```bash
+sudoedit /etc/mkinitcpio.conf
+...
+MODULES=(i915)
+...
+
+```
+
+
 
 [Chromium]: https://wiki.archlinux.org/title/chromium#Tab_font_size_is_too_large
 [Cursor themes]: https://wiki.archlinux.org/title/Cursor_themes
 [input Chinese]: https://archlinuxstudio.github.io/ArchLinuxTutorial/#/rookie/DE&App?id=_11安装输入法
 [Power management]: https://wiki.archlinux.org/title/Power_management#ACPI_events
+[GRUB background image and bitmap fonts]: https://wiki.archlinux.org/title/GRUB/Tips_and_tricks#Background_image_and_bitmap_fonts
+[tty font][]: https://wiki.archlinux.org/title/Linux_console#Fonts
+[terminus-font]: https://archlinux.org/packages/community/any/terminus-font/
+[persistent configuration]: https://wiki.archlinux.org/title/Linux_console#Persistent_configuration
+[Early KMS start]: https://wiki.archlinux.org/title/Kernel_mode_setting#Early_KMS_start
 
 </details>
 
