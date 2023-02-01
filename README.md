@@ -8,6 +8,7 @@
 
 ![](/screenshots/mydwm.png)
 
+- Here is some [skills][] of using `zsh` and `vim`.
 - Wallpaper is from [李擎洲：九尾·妖狐][].
 - This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
@@ -25,6 +26,7 @@
 - I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)][] and [dwm brightness control (show by dunst)][]. 
 - If you also have some questions like above, maybe it is good for you to have a look!
 
+[skills]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/memo/Skills.md
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 [flaticon]: https://www.flaticon.com/
 [SauceCodePro Nerd Font]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete
