@@ -13,6 +13,18 @@
     - In normal mode, `gt` : Go to next tab.
     - In normal mode, `gT` : Go to previous tab.
 
+## zsh skills in emacs mode
+
+1. Editing multiline command, press `Esc+Enter` or `Alt+Enter` to insert the new line.
+2. Press `<C-x><C-e>` to open the default editor to edit commands. It's useful when the command is too long. You have to add some [configs][] in order to use this feature.
+3. `<C-p>` for the previos command.
+4. `<C-n>` for the command after pressing `<C-p>`.
+5. `<C-u>` for delete the line in terminal.
+6. `<C-e>` for going to the end of the line.
+7. `<C-a>` for going to the beginning of the line.
+
+[configs]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.config/.zshrc#L111
+
 ## vifm skills
 
 1. `za` : toggle dot files visibility.
