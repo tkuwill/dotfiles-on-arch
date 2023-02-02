@@ -31,6 +31,7 @@
  
 ## gitui skills
 1. Due to the authentication [issue][] of [rust][], when you want to `push` in `gitui`, you have to do `eval `ssh-agent -s` ` and `ssh-add` at first, or you can't push by `gitui`.
+
 [issue]: https://bbs.archlinux.org/viewtopic.php?id=270560
 [rust]: https://sathia27.github.io/posts/2021/08/19/rust-cargo-resolve-authentication-issue.html
 
@@ -47,7 +48,7 @@ It is recommended because you can easily get updates to the package via `git pul
 ```bash
 cd package_name
 ```
-Then check `PKGBUILD` carefully. If the maintainer doesn't update the package, you can update that by yourself. In most cases, whatyou have to change are `pkgver=XXX` and `sha256sums` (or `sha512sums`) in `PKGBUILD`. You can go to the **information page of that package**, and click `View Changes` to get the info of how to updating that package.
+Then check `PKGBUILD` carefully. If the maintainer doesn't update the package, you can update that by yourself. In most cases, whatyou have to change are `pkgver=XXX` and `sha256sums` (or `sha512sums`) in `PKGBUILD`. You can go to the **information page of that package**, and click **View Changes** to get the info of how to updating that package.
 
 Also, reading the comment of that package always lets you know the info of that package, too. For example, the url of getting `sha256sums` or the repo of that package.
 
@@ -57,7 +58,7 @@ Then you can make the package. Run `makepkg` as a normal user.
 ```bash
 makepkg -si -c
 ```
-`-c`/`--clean` cleans up temporary build files after the build, as they are no longer needed. These files are usually needed only when debugging the build process. I highly recommend that you have to add `-c` flag because it will save a lot of space. In my case, `microsoft-edge-stable-bin` when built without `-c`, the directory took up almost `1GB`. When built with `-c` it only took up `321MB`.
+`-c`/`--clean` cleans up temporary build files after the build, as they are no longer needed. These files are usually needed only when debugging the build process. I highly recommend that you have to add `-c` flag because it will save a lot of space. In my case, `microsoft-edge-stable-bin` when built without `-c`, the directory took up almost **1GB**. When built with `-c` it only took up **321MB**.
 
 `-i`/`--install` installs the package if it is built successfully. 
 
