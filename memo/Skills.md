@@ -30,7 +30,7 @@
 1. `za` : toggle dot files visibility.
  
 ## gitui skills
-1. Due to the authentication [issue][] of [rust][], when you want to `push` in `gitui`, you have to do `eval `ssh-agent -s` ` and `ssh-add` at first, or you can't push by `gitui`.
+1. Due to the authentication [issue][] of [rust][], when you want to `push` in `gitui`, you have to do ```eval `ssh-agent -s` ``` and `ssh-add` at first, or you can't push by `gitui`.
 
 [issue]: https://bbs.archlinux.org/viewtopic.php?id=270560
 [rust]: https://sathia27.github.io/posts/2021/08/19/rust-cargo-resolve-authentication-issue.html
