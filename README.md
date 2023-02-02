@@ -8,7 +8,7 @@
 
 ![](/screenshots/mydwm.png)
 
-- Here is some [skills][] of using `zsh` and `vim`.
+- Here is some [skills][] of using `zsh`, `vim` and installing **AUR** packages manually.
 - Wallpaper is from [李擎洲：九尾·妖狐][].
 - This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
