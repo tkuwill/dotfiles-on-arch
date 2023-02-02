@@ -30,9 +30,45 @@
 1. `za` : toggle dot files visibility.
  
 ## gitui skills
-
 1. Due to the authentication [issue][] of [rust][], when you want to `push` in `gitui`, you have to do `eval `ssh-agent -s` ` and `ssh-add` at first, or you can't push by `gitui`.
-
-
 [issue]: https://bbs.archlinux.org/viewtopic.php?id=270560
 [rust]: https://sathia27.github.io/posts/2021/08/19/rust-cargo-resolve-authentication-issue.html
+
+## The procedure of [installing AUR packages][] 
+##### Credit from [Arch User Repository][]
+
+1. Acquire build files 
+```bash
+git clone https://aur.archlinux.org/package_name.git
+```
+It is recommended because you can easily get updates to the package via `git pull`. You can also subscribe the [RSS][] of AUR recent updated packages to get the info of update.
+
+2. Build the package
+```bash
+cd package_name
+```
+Then check `PKGBUILD` carefully. If the maintainer doesn't update the package, you can update that by yourself. In most cases, whatyou have to change are `pkgver=XXX` and `sha256sums` (or `sha512sums`) in `PKGBUILD`. You can go to the **information page of that package**, and click `View Changes` to get the info of how to updating that package.
+
+Also, reading the comment of that package always lets you know the info of that package, too. For example, the url of getting `sha256sums` or the repo of that package.
+
+After editting `PKGBUILD`, run `makepkg --printsrcinfo > .SRCINFO` to update `.SRCINFO`.
+
+Then you can make the package. Run `makepkg` as a normal user.
+```bash
+makepkg -si -c
+```
+`-c`/`--clean` cleans up temporary build files after the build, as they are no longer needed. These files are usually needed only when debugging the build process. I highly recommend that you have to add `-c` flag because it will save a lot of space. In my case, `microsoft-edge-stable-bin` when built without `-c`, the directory took up almost `1GB`. When built with `-c` it only took up `321MB`.
+
+`-i`/`--install` installs the package if it is built successfully. 
+
+3. Upgrading packages
+
+In the directory containing the package's `PKGBUILD`, you must first update the files and changes by using the command
+```bash
+git pull
+```
+then follow the previous build and install instructions.
+
+[installing AUR packages]: https://wiki.archlinux.org/title/Arch_User_Repository#Acquire_build_files
+[RSS]: https://aur.archlinux.org/rss/modified
+[Arch User Repository]: https://wiki.archlinux.org/title/Arch_User_Repository
