@@ -1,7 +1,7 @@
 ## Useful vim skills
 
 1. buffers
-    - In command mode, `bd` : Close the buffer you are in currently. Remove it from the buffers list.a
+    - In command mode, `bd` : Close the buffer you are in currently. Remove it from the buffers list.
     - In command mode, `bn` : Go to the **next** buffer.
     - In command mode, `bp` : Go to the **previous** buffer.
 2. Paste words from system's clipboard: Use `"+p` in **normal mode**. (In archlinux, you should install `gvim` package to have the clipboard feature.) Lowercase `p` pasting the word after the curosr. Uppercase `P` pasting the word before the cursor.
