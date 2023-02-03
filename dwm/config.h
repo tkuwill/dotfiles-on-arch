@@ -68,7 +68,7 @@ static const char *dmenucmd[] = { "dmenu_run", "-fn", dmenufont, "-nb", col_gray
 static const char *termcmd[]  = { "st", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "45x15", NULL };
-static const char *cmusvolcmd[] = { "st", "-t", scratchpadname, "-g", "32x10", "-e", "zsh", "-c", "/home/will/shellscripts/cmusvol.sh; zsh", NULL };
+static const char *cmusvolcmd[] = { "st", "-t", scratchpadname, "-g", "45x15", "-e", "zsh", "-c", "/home/will/shellscripts/cmusvol.sh; zsh", NULL };
 /*screenshot*/
 static const char *shotcmd[]  = { "flameshot", "full", NULL };
 static const char *shotzcmd[]  = { "flameshot", "gui", NULL };
