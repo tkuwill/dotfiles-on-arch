@@ -421,7 +421,12 @@ MODULES=(i915)
 - [reminder.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/reminder.sh): This script can read the mins and messages you input, then remind you with the messages you have input after the mins you have input, too. It uses `mpv` to play music as an alarm and shows messages by notification. Required dependencies: `libnotify`, `dunst` and `mpv`.
 - [timer.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/timer.sh): This script is very similar to **reminder.sh**. What really makes them different is that **timer.sh** is only a *timer*. Required dependencies: `libnotify`, `dunst` and `mpv`.
 - [loveplaylist.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/loveplaylist.sh): This script uses `mpv` to play music from a playlist which is just simply a `XX.m3u` or a `XX.txt`. The playlist `XX.m3u` or `XX.txt` is just a document which is full of urls copied from YouTube. Required dependencies: `mpv` and `yt-dlp`.
-- [cmusvol.sh][]: This is a script for adjusting `volume or play mode` in `cmus` triggered by keybinding in my `dwm` config.
+- [cmusvol.sh][]: This is a script for adjusting **volume** or **play mode** in `cmus` triggered by keybinding in my `dwm` config. Now I re-write it and make it a **TUI menu**. Required dependencies: `dialog`, `cmus`, `playctl` and `dunst`.
+
+![](/screenshots/cmusvol.png)
+
+![](/screenshots/cmusvol2.png)
+
 - [notificationcenter.sh][]: This is a script for showing all notifications shown before. **Because I use `dunst` not only as notification daemon but also as the indicator of volume and screen backlight, it is recommended that you set up the rules of `dunst` at first. Like the indicator of volume and so on. Set the rules to [ignore][] them.**
 - [liveStream.sh][]: This script can let you watch live-stream just by pasting the url and the quality of live in terminal rather than input a long command.
 
