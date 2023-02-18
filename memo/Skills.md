@@ -12,6 +12,11 @@
     - In command mode, use **tabedit file** to open the file in a new tab.
     - In normal mode, `gt` : Go to next tab.
     - In normal mode, `gT` : Go to previous tab.
+7. Folding
+    - `zo` : Open the current folding.
+    - `zc` : Close the current folding.
+    - `zm` : Close **all** foldings in the file.
+    - `zr` : Open **all** foldings in the file.
 
 ## zsh skills in emacs mode
 
