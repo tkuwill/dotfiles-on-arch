@@ -1,12 +1,3 @@
-# Description: Adjust cmus volume
-function vol() {
-	echo -n "cmus Volume (from 0.0~1.0): "
-	read fig
-        playerctl -p cmus volume ${fig}
-        notify-send -i /home/will/Pictures/sysicon/volume-up.png -t 4500 "cmus Volume ${fig}"
-
-}
-
 # Description: Look up the word in the dict://dict.org
 function dict() {
 	echo -n "The word you want to search: "
@@ -49,24 +40,6 @@ function batterycycle() {
     bat /home/will/shellscripts/log/batterycycle.log 
 }
 
-# Download music from YouTube
-function musicDownload() {
-
-    lastdir="$(pwd)"
-    echo -n -e "\e[34mInput the url of the song: "
-    read urls
-    echo -n -e "\e[35mInput the name of the song: "
-    read name
-    echo -e "\e[33mcd to Downloads"
-    cd ~/Downloads
-
-    echo -e "\e[32mNow downloading music from YouTube..."
-    yt-dlp -f 'ba' -x --audio-format mp3 ${urls}  -o 'name.%(ext)s'
-    mv name.mp3 ${name}.mp3
-
-    cd "$lastdir"
-    echo "Download finished !!!"
-}
 
 # Load version control information
 autoload -Uz vcs_info
@@ -135,9 +108,14 @@ alias chromium="chromium --force-device-scale-factor=1.3"
 alias liveStream="/home/will/shellscripts/liveStream.sh"
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 
+TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# npm package
+export PATH=~/.npm-packages/bin:$PATH
+export NODE_PATH=~/.npm-packages/lib/node_modules
 
 # For colorful man 
 export LESS_TERMCAP_mb=$'\e[1;32m'
