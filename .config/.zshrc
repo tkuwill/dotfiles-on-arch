@@ -68,11 +68,15 @@ PROMPT='%F{14} %~ ${vcs_info_msg_0_} %f
 
 # RPROMPT='%F{225}[%?]%f|%F{15}%*%f|%F{38}$(battery)%f'
 
+# See prompt theme
+autoload -Uz promptinit
+promptinit
 
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/will/.zshrc'
 
 zstyle ':completion:*' menu yes select
+# bindkeys and alias and some configs should be put after compinit.
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
