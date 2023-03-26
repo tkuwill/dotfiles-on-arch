@@ -100,3 +100,10 @@ nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
 nnoremap <F5> :set background=light<cr>
 nnoremap <F4> :set background=dark<cr>
+
+" This will make esc key respond faster when having the config below.
+set ttimeoutlen=100
+" Change the input method to English when leaving insert mode.Then recover IME used in the buffer when entering insert mode.
+let fcitx5state=system("fcitx5-remote")
+autocmd InsertLeave * :silent let fcitx5state=system("fcitx5-remote")[0] | silent !fcitx5-remote -c
+autocmd InsertEnter * :silent if fcitx5state == 2 | call system("fcitx5-remote -o") | endif
