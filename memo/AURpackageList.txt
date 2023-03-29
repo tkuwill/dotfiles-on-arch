@@ -1,4 +1,18 @@
-microsoft-edge-stable-bin 109.0.1518.70-1
-otf-symbola 14.00-1
+microsoft-edge-stable-bin 111.0.1661.54-1
 ttf-symbola 14.00-1
-virtualbox-ext-oracle 7.0.6-1
+otf-symbola 14.00-1
+
+virtualbox-ext-oracle 7.0.6-3
+
+
+# ja-->en dict
+tagainijisho 1.2.2-1
+
+
+# English dictionary
+artha 1.0.5-1
+
+## dependencies of artha
+wordnet-cli 3.1-4
+wordnet-common 3.1-4
+wordnet-tk 3.1-4
