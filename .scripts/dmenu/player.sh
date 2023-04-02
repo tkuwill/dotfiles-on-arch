@@ -31,7 +31,7 @@ function player {
     elif [[ $selected = "Open_with_mpv_BiliBili" ]]; then 
 	mpv --referrer="https://www.bilibili.com" $(burls)
     elif [[ $selected = "cmus_option" ]]; then 
-        urxvt -T CmusOption -g 32x10 -e zsh -c '/home/will/shellscripts/cmusvol.sh; zsh'
+        st -t CmusOption -e zsh -c '/home/will/shellscripts/cmusvol.sh; zsh'
     elif [[ $selected = "Live-streaming" ]]; then 
         urxvt -T LiveStreaming -g 32x10 -e zsh -c '/home/will/shellscripts/liveStream.sh; zsh'
     elif [[ $selected = "Cancel" ]]; then 
