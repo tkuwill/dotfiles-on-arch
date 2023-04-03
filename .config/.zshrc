@@ -116,6 +116,9 @@ TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# fzf
+source /usr/share/fzf/key-bindings.zsh
+source /usr/share/fzf/completion.zsh
 
 # npm package
 export PATH=~/.npm-packages/bin:$PATH
