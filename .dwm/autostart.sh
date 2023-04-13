@@ -1,12 +1,28 @@
 #!/bin/sh
 # General stuff
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-feh --bg-fill /home/will/Pictures/sysicon/wallpaper.png &
+feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
 fcitx5 &
 copyq &
+conky &
 /usr/bin/dunst &
 /home/will/.dwm/lowbatremind.sh &
 # xsetroot for dwm
+
+# Show Input method
+
+print_ime(){
+    MODE=$(fcitx5-remote -n)
+    if [ "$MODE" = "keyboard-us" ]; then
+	printf ":us"
+    elif [ "$MODE" = "pinyin" ]; then
+	printf ":zh"
+    elif [ "$MODE" = "mozc" ]; then
+	printf ":jp"
+    fi
+
+}
+
 
 # caffeine
 print_caffeine(){
@@ -90,7 +106,7 @@ dwm_alsa () {
 
 while true
 do
-    xsetroot -name " $(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
+    xsetroot -name " $(print_caffeine)|$(print_ime)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
     sleep 1 
 done
 
