@@ -98,8 +98,10 @@ nnoremap <C-L> :noh<cr>
 " nnoremap <F12> :set nopaste<cr>
 nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
-nnoremap <F5> :set background=light<cr>
-nnoremap <F4> :set background=dark<cr>
+" spelling check in English
+set spelllang=en,cjk
+nnoremap <F5> :set spell<cr>
+nnoremap <F4> :set nospell<cr>
 
 " This will make esc key respond faster when having the config below.
 set ttimeoutlen=100
