@@ -39,7 +39,6 @@ set ai
 set shortmess-=S
 " }}}
 
-" set laststatus=2
 " Some funky status bar code its seems
 " https://stackoverflow.com/questions/9065941/how-can-i-change-vim-status-line-colour
 " Formats the statusline ------------------------------------------------------------------- {{{
