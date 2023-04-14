@@ -5,17 +5,16 @@ Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
+Plug 'Yggdroot/indentLine'
 " colortheme
-Plug 'morhetz/gruvbox'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
 " BACKGROUND COLOR SETTING  --------------------------------------------------------------- {{{
 
 
-let g:gruvbox_contrast_light = 'hard'
-colorscheme gruvbox
 set background=light
-
+colorscheme PaperColor
 set t_Co=256
 
 " }}}
@@ -53,7 +52,7 @@ set laststatus=2            " set the bottom status bar
 
 " au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
 " default the statusline when entering Vim
-" hi statusline guibg=DarkSlateGray ctermfg=233 guifg=White ctermbg=230
+"hi statusline guibg=DarkSlateGray ctermfg=233 guifg=White ctermbg=230
 
 set statusline=%F                           " file path and name
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
