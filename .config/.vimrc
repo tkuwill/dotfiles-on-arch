@@ -6,8 +6,11 @@ Plug 'mattn/emmet-vim'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
+Plug 'preservim/nerdtree'
 " colortheme
 Plug 'NLKNguyen/papercolor-theme'
+" vim-devicon SHOULD be the LAST one
+Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
 " BACKGROUND COLOR SETTING  --------------------------------------------------------------- {{{
@@ -92,6 +95,7 @@ au FileType markdown setlocal foldlevel=1
 " let mapleader = "\<space>"
 " keymapping
 
+nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <C-L> :noh<cr>
 " nnoremap <F11> :set paste<cr>
 " nnoremap <F12> :set nopaste<cr>
