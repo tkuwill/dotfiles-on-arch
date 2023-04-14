@@ -2,7 +2,7 @@
 # General stuff
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
-fcitx5 &
+# fcitx5 -d &
 copyq &
 conky &
 /usr/bin/dunst &
@@ -17,6 +17,8 @@ print_ime(){
 	printf ":us"
     elif [ "$MODE" = "pinyin" ]; then
 	printf ":zh"
+    elif [ "$MODE" = "rime" ]; then
+	printf ":ZH"
     elif [ "$MODE" = "mozc" ]; then
 	printf ":jp"
     fi
