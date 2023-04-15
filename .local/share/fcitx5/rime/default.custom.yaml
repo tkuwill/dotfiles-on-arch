@@ -1,4 +1,7 @@
 patch:
-  "menu/page_size": 9
   schema_list:
-    - schema: terra_pinyin
+    - schema: terra_pinyin  # 地球拼音可打聲調的拼音
+  "menu/page_size": 9
+  "key_binder/bindings":
+    - { when: paging, accept: bracketleft, send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }
