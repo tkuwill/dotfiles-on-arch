@@ -13,6 +13,21 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
 
+" indentline config (disable the conceal for JSON and markdown)
+let g:vim_json_conceal=0
+let g:markdown_syntax_conceal=0
+
+" Gvim config
+"if has('gui_running')
+"  set guioptions-=T  " no toolbar
+"  if has('gui_win32')
+"    set guifont=SauceCodeProNerdFontBold:h22:cANSI
+"  else
+"    set guifont=Sauce\ Code\ Pro\ Nerd\ Font\ Bold\ 22
+"
+"  endif
+"endif
+
 " BACKGROUND COLOR SETTING  --------------------------------------------------------------- {{{
 
 
@@ -94,7 +109,7 @@ au FileType markdown setlocal foldlevel=1
 " let mapleader = "\<space>"
 " keymapping
 
-nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeToggle<CR>
 nnoremap <C-L> :noh<cr>
 " nnoremap <F11> :set paste<cr>
 " nnoremap <F12> :set nopaste<cr>
