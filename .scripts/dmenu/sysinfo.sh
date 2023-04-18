@@ -29,15 +29,6 @@ function cpu_temp {
     sensors | grep 'Core 1' | sed '1 s/+/\ /g' | awk '{print "CPU temp : "$3"."}'
 }
 
-# function wifi {
-#     STATUS=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $3}')
-#         if [ "$STATUS" = "connected" ]; then
-# 	    # nmcli device wifi | grep '*' | awk '{print $3 " " "Signal:" " " $8}'
-# 	    # nmcli device | sed '2 q' | sed '1 d' | awk '{print $4,$5,$3}' 
-#         elif [ "$STATUS" = "disconnected" ]; then
-#             nmcli device | sed '2 q' | sed '1 d' | awk '{print $2,$3}'
-#         fi
-# }
 
  function wlan {
     iwconfig wlan0 | sed '1 q' | awk '{print $4}' | sed -e 's/ESSID:"// ' | sed -e 's/"//' && iwconfig wlan0 | sed -n "6p" | awk '{ print $2}'
@@ -58,11 +49,11 @@ function sysinfo {
     elif [[ $selected = "BAT-remaining" ]]; then 
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/battery.png -t 8000 "$(battime)"  
     elif [[ $selected = "internet" ]]; then 
-    STATUS=$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $3}')
+    STATUS=$(nmcli device | grep 'wlan0          wifi' | awk '{print $3}')
         if [ "$STATUS" = "connected" ]; then
-	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wlan) connected" 
+	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/wifi.png -t 8000 "$(wlan) Connected" 
         elif [ "$STATUS" = "disconnected" ]; then
-	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/no-wifi.png -t 8000 "$(nmcli device | sed '2 q' | sed '1 d' | awk '{print $2,$3}')"  
+	    dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/no-wifi.png -t 8000 "$(nmcli device | grep 'wlan0          wifi' | awk '{print $2,$3}')"  
         fi
     elif [[ $selected = "cpu_temp" ]]; then 
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/cpu.png -t 5000 "$(cpu_temp)"
