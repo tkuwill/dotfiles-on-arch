@@ -131,6 +131,7 @@
     - `fcitx5-mozc` (for Japanese) 
     - `fcitx5-chewing` (for Chinese)
     - `fcitx5-chinese-addons` (for Chinese) 
+    - `fcitx5-rime` (for Chinese) 
     - `fcitx5-configtool` (GUI config tool)  
     - `fcitx5-lua`
 - `p7zip`, `unrar`, `unzip`, `zip`: For the support of the formats. Installed with `unarchiver`.
