@@ -1,3 +1,7 @@
+# Description: Check your country when use vpn
+function vpnCountry() {
+	curl ifconfig.co/country
+}
 # Description: Look up the word in the dict://dict.org
 function dict() {
 	echo -n "The word you want to search: "
