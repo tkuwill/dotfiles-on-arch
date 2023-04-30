@@ -1,7 +1,3 @@
-# Description: Check your country when use vpn
-function vpnCountry() {
-	curl ifconfig.co/country
-}
 # Description: Look up the word in the dict://dict.org
 function dict() {
 	echo -n "The word you want to search: "
@@ -115,6 +111,9 @@ alias ls="ls --color=auto"
 alias chromium="chromium --force-device-scale-factor=1.3"
 alias liveStream="/home/will/shellscripts/liveStream.sh"
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
+alias vpnLocation="curl ipinfo.io/country"
+alias vpnCountry="curl ifconfig.co/country"
+
 
 TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
