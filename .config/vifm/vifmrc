@@ -160,6 +160,8 @@ fileviewer <text/*> env -uCOLORTERM bat --color always --wrap never --pager neve
 
 " PDFs
 filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c
+fileviewer *.pdf
+  \ pdftotext %c -
 
 " ePUBs
 filextype {*.epub},<application/epub> cr3 %c %i 
