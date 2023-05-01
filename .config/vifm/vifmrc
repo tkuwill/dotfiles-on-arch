@@ -162,7 +162,7 @@ fileviewer <text/*> env -uCOLORTERM bat --color always --wrap never --pager neve
 filextype {*.pdf},<application/pdf> zathura %c %i &, apvlv %c, xpdf %c
 
 " ePUBs
-filextype *.epub $HOME/bin/utils/open %c %i &
+filextype {*.epub},<application/epub> cr3 %c %i 
 fileviewer *.epub
         \ %pc
 
@@ -188,7 +188,7 @@ filextype {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
           \*.as[fx]},
          \<video/*>
         \ {Play using mpv}
-        \ mpv %c %s ,
+        \ mpv %c %i ,
 fileviewer {*.avi,*.mp4,*.wmv,*.dat,*.3gp,*.ogv,*.mkv,*.mpg,*.mpeg,*.vob,
 fileviewer <video/*>
         \ %pc
@@ -205,7 +205,7 @@ filextype {*.odt,*.doc,*.docx,*.xls,*.xlsx,*.odp,*.pptx,*.ppt},
          \<application/vnd.openxmlformats-officedocument.*,
           \application/msword,
           \application/vnd.ms-excel>
-        \ libreoffice %f &
+        \ libreoffice %c %i
 " Archives
 fileviewer *.zip,*.jar,*.war,*.ear,*.oxt zip -sf %c
 fileviewer *.tgz,*.tar.gz tar -tzf %c
