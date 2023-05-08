@@ -84,7 +84,7 @@ compinit
 HISTFILE=~/.zsh_history
 HISTSIZE=99999
 SAVEHIST=99999
-HISTORY_IGNORE="(vim|rm -rf|rm -rf .git|neofetch|vifm|dict|cheatsheet|weather|reminder|batterycycle|sudo systemctl start bluetooth.service|sudo systemctl stop bluetooth.service|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui|lazygit ..)"
+HISTORY_IGNORE="(|shutdown now|vim|rm -rf|rm -rf .git|neofetch|vifm|dict|cheatsheet|weather|reminder|batterycycle|sudo systemctl start bluetooth.service|sudo systemctl stop bluetooth.service|musicDownload|newsboat|free|uname -r|uname -a|free -h|df|df -h|htop|vim .vimrc|nmtui|sudo intel_gpu_top|tmux kill-session -t 1|cd ..|vim .zshrc|vim .zsh_history|bat .zsh_history|source .zshrc|python|startx|ls|cd|pwd|exit|cmus|la|bye|ping www.google.com|mpv|yt-dlp|paru|pavucontrol|./shellscripts/batterycycle.sh|tmux|alsamixer|acpi|gitui|lazygit|)"
 # set zsh to emacs mode
 bindkey -e
 
@@ -126,6 +126,8 @@ source /usr/share/fzf/completion.zsh
 # npm package
 export PATH=~/.npm-packages/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
+# pip python package
+export PATH=/home/will/.local/bin:$PATH
 
 # For colorful man 
 export LESS_TERMCAP_mb=$'\e[1;32m'
@@ -137,3 +139,5 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 # Use vim as a pager for man
 export MANPAGER="/bin/sh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
+# For QT program font size
+#export QT_SCALE_FACTOR=1.25
