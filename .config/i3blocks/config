@@ -1,0 +1,26 @@
+# Caffeine
+[caffeine]
+command=xset -q | grep 'DPMS is' | awk '{print " : "$1,$3}'
+interval=1
+# Mute
+[mute]
+command=amixer sget Master | tail -n1 | sed -r "s/.*\[(.*)\]/\1/" | awk '{print "Sound " $1}'
+interval=1
+# Volume
+[volume]
+command=amixer get Master | tail -n1 | sed -r "s/.*\[(.*)%\].*/\1/" | awk '{print "Vol: " $1"%"}'
+interval=1
+# Battery
+[battery]
+command=cat /sys/class/power_supply/BAT0/capacity | awk '{print "BAT: " $1"%"}'
+interval=10
+# battery status
+[Batstatus]
+command=cat /sys/class/power_supply/BAT0/status
+interval=3
+# Update time every 1 seconds
+[time]
+command=date "+%Y/%m/%d(%a) 愈%T"
+interval=1
+
+
