@@ -232,6 +232,8 @@ bar {
 	separator #31e8f5
 	# class           border  backgr.  text
 	focused_workspace #fcbf54 #fcbf54 #000000
+	active_workspace  #FFFFFF #45413b #FFFFFF
+	inactive_workspace #FFFFFF  #45413b #FFFFFF
     }
 	# status_command i3status --config ~/.config/i3status/config 
 	status_command i3blocks  
