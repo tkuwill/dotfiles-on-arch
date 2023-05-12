@@ -6,6 +6,7 @@
 	<h1>dwm & i3 dotfiles</h1>
 </div>
 
+![](/screenshots/mydwm2.png)
 ![](/screenshots/mydwm.png)
 <div align="center">
 	<h6>dwm</h6>
@@ -166,6 +167,7 @@
 - [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
 - [dwm-colorbar-6.3.diff](https://dwm.suckless.org/patches/colorbar/dwm-colorbar-6.3.diff)
 - [dwm-scratchpad-6.2.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-6.2.diff)
+- [dwm-systray-6.4.diff](https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff)
   
 <a name="Patch_used_in_st"></a> 
 ## Patch used in st ##  
