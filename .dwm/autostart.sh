@@ -5,7 +5,6 @@ feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG &
 # fcitx5 -d &
 copyq &
 conky &
-/usr/bin/dunst &
 /home/will/.dwm/lowbatremind.sh &
 # xsetroot for dwm
 
@@ -39,7 +38,7 @@ print_caffeine(){
 # dwm_date
 
 print_date(){
-	echo $(date "+%Y-%m-%d（%a）%T")
+	echo $(date "+%m-%d（%a）%T")
 }
 
 # by joestandring/dwm-bar
@@ -58,9 +57,9 @@ dwm_battery () {
         fi
     else
         if [ "$STATUS" = "Charging" ]; then
-            printf "ﴞ %s%% %s" "$CHARGE" "$STATUS"
+            printf "ﴞ %s%% %s" "$CHARGE" 
         else
-            printf " %s%% %s" "$CHARGE" "$STATUS"
+            printf " %s%% %s" "$CHARGE" 
         fi
     fi
     printf "%s\n" "$SEP2"
