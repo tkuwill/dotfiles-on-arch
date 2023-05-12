@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "curtail",  NULL,       NULL,       0,            1,           -1 },
 	{ "fcitx5", NULL, NULL,    0,            1,           -1 },
 	{ "copyq", NULL,     NULL,       0,            1,           -1 },
+	{ "Nm-connection-editor", NULL, "Network Connections", 0, 1, -1 },
 };
 
 /* layout(s) */
