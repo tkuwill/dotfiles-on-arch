@@ -189,6 +189,7 @@ for_window [window_role="About"] floating enable
 for_window [class="copyq"] floating enable move absolute position center
 for_window [class="fcitx5"] floating enable move absolute position center
 for_window [title="scratchpadname"] floating enable move absolute position center
+for_window [title="Network Connections"] floating enable move absolute position center
 
 # reload the configuration file
 bindsym $mod+Shift+r reload
