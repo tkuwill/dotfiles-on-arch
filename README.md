@@ -1,16 +1,25 @@
 <div align="center">
 	<img src="/screenshots/dwm.png">
+	<img width="100pt" src="/screenshots/i3.png">
 </div>
-
 <div align="center">
-	<h1>dwm dotfiles</h1>
+	<h1>dwm & i3 dotfiles</h1>
 </div>
 
 ![](/screenshots/mydwm.png)
+<div align="center">
+	<h6>dwm</h6>
+</div>
+
+![](/screenshots/myi3.png)
+<div align="center">
+	<h6>i3</h6>
+</div>
+
 
 - Here is some [skills][] of using `zsh`, `vim` and installing **AUR** packages manually.
-- Wallpaper is from [李擎洲：九尾·妖狐][].
-- This is my dwm dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
+- Wallpapers are from [李擎洲：九尾·妖狐][] and [彭雄渾][].
+- These are my **dwm and i3** dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
 - For the sake of longer battery runtime, I have **few configs** for decoration.
 - All things here all have their duty to be here. (In my opinion.)
@@ -28,6 +37,7 @@
 
 [skills]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/memo/Skills.md
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
+[彭雄渾]: https://artouch.com/art-views/content-3244.html
 [flaticon]: https://www.flaticon.com/
 [SauceCodePro Nerd Font]: https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/SourceCodePro/Regular/complete
 [tkuwill/My-dwm-dotfiles-My-st-config]: https://github.com/tkuwill/My-dwm-dotfiles-My-st-config
@@ -57,7 +67,7 @@
 
 - **OS**: [archlinux][] --KISS !
 - **Shell**: [zsh][] --COOL !
-- **WM**: [dwm][] --100/100
+- **WM**: [dwm][] and [i3][]--100/100
 - **Terminal**: [st][] --st is **St.**!
 - **Terminal multiplexer**: [tmux][] --Efficiency UP !
 - **Screen locker**: [slock][] --THE Simplest !
@@ -78,6 +88,7 @@
 
 [archlinux]: https://archlinux.org/
 [zsh]: https://www.zsh.org/
+[i3]: https://i3wm.org/
 [dwm]: https://dwm.suckless.org/
 [st]: https://st.suckless.org/
 [tmux]: https://github.com/tmux/tmux/wiki
@@ -439,8 +450,7 @@ MODULES=(i915)
 </details>
 
 <a name="Thanks"></a>
-## Thanks ##
-- The format of the menu is inspired by [WillPower3309/awesome-dotfiles](https://github.com/WillPower3309/awesome-dotfiles).
+## Thanks ## - The format of the menu is inspired by [WillPower3309/awesome-dotfiles](https://github.com/WillPower3309/awesome-dotfiles).
 - The folding style of content is inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
 - The **BACK TO TOP** button is also inspired by [owl4ce/dotfiles](https://github.com/owl4ce/dotfiles).
 - [Archwiki-slock](https://wiki.archlinux.org/title/Slock#Tips_and_tricks)
