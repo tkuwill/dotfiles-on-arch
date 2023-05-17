@@ -30,7 +30,8 @@ exec copyq
 exec conky
 exec_always /home/will/.dwm/lowbatremind.sh 
 exec_always xrdb -merge ~/.Xresources
-
+#Polybar
+exec_always --no-startup-id polybar &
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
@@ -83,6 +84,10 @@ floating_modifier $mod
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
 tiling_drag modifier titlebar
+
+# Disable title bar
+default_border pixel 10
+default_floating_border pixel 10
 
 # start a terminal
 bindsym $mod+Shift+Return exec st
@@ -198,7 +203,8 @@ bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 # bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+u exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+u exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+u exec i3-msg exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -227,19 +233,22 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# bar toggle, hide or show
+# bindsym $mod+b bar mode toggle
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-bar {
-        font pango: SauceCodeProNerdFont Bold 16
-    colors {
-	separator #31e8f5
-	# class           border  backgr.  text
-	focused_workspace #fcbf54 #fcbf54 #000000
-	active_workspace  #FFFFFF #45413b #FFFFFF
-	inactive_workspace #FFFFFF  #45413b #FFFFFF
-    }
-	# status_command i3status --config ~/.config/i3status/config 
-	status_command i3blocks  
+# bar {
+#         font pango: SauceCodeProNerdFont Bold 16
+# 	position top
+#     colors {
+# 	separator #31e8f5
+# 	# class           border  backgr.  text
+# 	focused_workspace #fcbf54 #fcbf54 #000000
+# 	active_workspace  #FFFFFF #45413b #FFFFFF
+# 	inactive_workspace #FFFFFF  #45413b #FFFFFF
+#     }
+# 	# status_command i3status --config ~/.config/i3status/config 
+# 	status_command i3blocks  
 
 
-}
+# }
