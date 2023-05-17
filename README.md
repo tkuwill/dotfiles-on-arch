@@ -13,6 +13,11 @@
 </div>
 
 ![](/screenshots/myi3.png)
+> Use i3blocks.
+
+![](/screenshots/myi32.png)
+> Use polybar.
+
 <div align="center">
 	<h6>i3</h6>
 </div>
