@@ -8,6 +8,7 @@ session=${1:-dwm}
 
 case $session in
     i3|i3wm           ) exec i3;;
+    bsp|bspwm           ) exec bspwm;;
     # No known session, try to run it as command
     *                 ) exec $1;;
 esac
