@@ -31,7 +31,7 @@ exec conky
 exec_always /home/will/.dwm/lowbatremind.sh 
 exec_always xrdb -merge ~/.Xresources
 #Polybar
-exec_always --no-startup-id polybar &
+exec_always --no-startup-id polybar --config=~/.config/polybar/i3config.ini &
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
 
