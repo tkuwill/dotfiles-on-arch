@@ -1,0 +1,110 @@
+# bspwm-specific Hotkeys
+
+# Change focus
+super + {j,k}
+    bspc node --focus {next.local,prev.local}
+
+# Move window
+# super + shift + {j,k}
+    # bspc node -s {next.local,prev.local}
+
+# Close window
+super + shift + c
+    bspc node -c
+
+# Focus master
+super + space
+    bspc node --focus west.local
+
+# Promote to master
+# super + Return
+    # bspc node -s biggest.local
+super + Return
+    bspc node -s west.local
+
+# Change desktop
+super + {1-9,0}
+    bspc desktop --focus ^{1-9,10}
+
+# Move to desktop
+super + shift + {1-9,0}
+    bspc node --to-desktop ^{1-9,10}
+
+# Change monitor
+super + {comma,period}
+    bspc monitor -f {next,prev}
+
+# Move to monitor
+super + shift + {comma,period}
+    bspc node -m {next,prev}
+
+# Fullscreen toggle
+super + m
+    bspc desktop --layout next
+# floating
+super + {t,f}
+	bspc node -t {tiled,pseudo_tiled,floating}
+# Resize
+super + {h,l}
+    bspwm_node_resize {west,east}
+
+# move a floating window
+super + {Left,Down,Up,Right}
+	bspc node -v {-20 0,0 20,0 -20,20 0}
+#
+# wm independent hotkeys
+#
+# volume control
+XF86AudioRaiseVolume 
+	/home/will/.dwm/volume.sh up 
+XF86AudioLowerVolume 
+	/home/will/.dwm/volume.sh down 
+XF86AudioMute 
+	/home/will/.dwm/volume.sh mute 
+# screen-backlight control
+XF86MonBrightnessUp 
+	/home/will/.dwm/screenlight.sh up
+XF86MonBrightnessDown 
+	/home/will/.dwm/screenlight.sh down
+# media keys
+XF86AudioPlay 
+	playerctl play-pause
+XF86AudioNext 
+	playerctl next
+XF86AudioPrev 
+	playerctl previous
+# custom keybindings
+super + shift + s 
+	/home/will/.scripts/dmenu/powermenu.sh
+super + shift + l 
+	/home/will/.scripts/dmenu/calendar.sh
+super + shift + b 
+	/home/will/.scripts/dmenu/sysinfo.sh
+super + shift + d 
+	/home/will/.scripts/dmenu/donotdisturb.sh
+super + shift + o 
+	/home/will/.scripts/dmenu/browser.sh
+super + shift + k 
+	/home/will/.scripts/dmenu/caffeine.sh
+super + shift + p 
+	/home/will/.scripts/dmenu/player.sh
+# screenshot 
+super + shift + q 
+	flameshot launcher
+super + shift + a 
+	flameshot full
+super + shift + z 
+	flameshot gui
+# terminal emulator
+super + shift + Return
+	st
+
+# program launcher
+super + p
+	dmenu_run
+# make sxhkd reload its configuration files:
+super + Escape
+	pkill -USR1 -x sxhkd
+# quit/restart bspwm
+super + shift + {u,r}
+	bspc {quit,wm -r}

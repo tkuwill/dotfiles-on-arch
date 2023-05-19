@@ -1,0 +1,39 @@
+#! /bin/sh
+
+# pgrep -x sxhkd > /dev/null || sxhkd &
+sxhkd -c ~/.config/sxhkd/bspwm-sxhkdrc &
+
+bspc monitor -d 1 2 3 4 5 6 7 8 9 
+
+bspc config border_width        10
+bspc config window_gap          0
+
+bspc config split_ratio          0.55
+bspc config borderless_monocle   false
+bspc config gapless_monocle      true
+bspc config focus_follows_pointer   true
+bspc config removal_adjustment      false
+bspc config focused_border_color \#fcbf54
+# autostart 
+
+~/.config/bspwm/masterlayout.sh&
+bspc config external_rules_command  ~/.config/bspwm/external_rules.sh
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG
+/home/will/.dwm/lowbatremind.sh &
+xrdb -merge ~/.Xresources
+copyq &
+nm-applet &
+polybar &
+xsetroot -cursor_name left_ptr &
+
+# floating windows rules
+bspc rule -a Gimp state=floating follow=on
+# bspc rule -a Chromium desktop='^2'
+# bspc rule -a mplayer2 state=floating
+bspc rule -a fcitx5-config-qt state=floating
+bspc rule -a Nm-connection-editor state=floating
+bspc rule -a copyq state=floating
+bspc rule -a curtail state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
