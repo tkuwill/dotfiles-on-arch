@@ -2,7 +2,7 @@
 
 # Change focus
 super + {j,k}
-    bspc node --focus {next.local,prev.local}
+    bspc node --focus {south.local,north.local}
 
 # Move window
 # super + ctrl + {j,k}
@@ -12,9 +12,12 @@ super + {j,k}
 super + shift + c
     bspc node -c
 
-# Focus master
+# Focus master (Left)
 super + space
     bspc node --focus west.local
+# Focus stack (right)
+super + shift + space
+    bspc node --focus east.local
 
 # Promote to master
 # super + Return
