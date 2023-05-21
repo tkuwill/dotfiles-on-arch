@@ -23,9 +23,17 @@
 </div>
 
 
+![](/screenshots/mybsp.png)
+
+<div align="center">
+	<h6>bspwm</h6>
+</div>
+
 - Here is some [skills][] of using `zsh`, `vim` and installing **AUR** packages manually.
+- bspwm's config is from [ghomasHudson/bspwm-dwm][]. And add some customized change like keybindings to open dmenu's scripts.
+- If you want to learn bspwm, check this: [Bspwm Basics][].
 - Wallpapers are from [李擎洲：九尾·妖狐][] and [彭雄渾][].
-- These are my **dwm and i3** dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
+- These are my **dwm, i3 and bspwm** dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
 - For the sake of longer battery runtime, I have **few configs** for decoration.
 - All things here all have their duty to be here. (In my opinion.)
@@ -42,6 +50,8 @@
 - If you also have some questions like above, maybe it is good for you to have a look!
 
 [skills]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/memo/Skills.md
+[Bspwm Basics]: https://dharmx.is-a.dev/bspwm-basics/
+[ghomasHudson/bspwm-dwm]: https://github.com/ghomasHudson/bspwm-dwm
 [李擎洲：九尾·妖狐]: https://www.bilibili.com/video/BV1iN4y1F7pm/
 [彭雄渾]: https://artouch.com/art-views/content-3244.html
 [flaticon]: https://www.flaticon.com/

@@ -2,7 +2,9 @@
 
 # Change focus
 super + {j,k}
-    bspc node --focus {south.local,north.local}
+    bspc node --focus {next.local,prev.local}
+# super + {j,k}
+    # bspc node --focus {south.local,north.local}
 
 # Move window
 # super + ctrl + {j,k}
