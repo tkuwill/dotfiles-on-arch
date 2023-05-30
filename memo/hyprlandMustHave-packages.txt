@@ -1,0 +1,16 @@
+hyprland 
+hyprpaper # for wallpaper
+xorg-xwayland
+xdg-desktop-portal-hyprland
+grim  # screenshot tools
+slurp # screenshot tools
+foot 
+foot-terminfo
+swaylock
+tofi # AUR
+otf-font-awesome # Font Awesome
+waybar
+wl-clipboard # wayland clipboard support
+cliphist     # wayland clipboard support 
+physlock  # a screenlocker which can be used in both wayland and X11
+
