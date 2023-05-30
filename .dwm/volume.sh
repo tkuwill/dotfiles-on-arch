@@ -1,7 +1,7 @@
 #!/bin/bash
-# volume up icon is from <a href="https://www.flaticon.com/free-icons/volume-up" title="volume up icons">Volume up icons created by Freepik - Flaticon</a>.
-# volume down icon is from "https://www.flaticon.com/free-icons/volume-down" title="volume down icons">Volume down icons created by Freepik - Flaticon
-# volume mute icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Icon Hubs - Flaticon</a>.
+# volume up icon is from https://icon-icons.com/icon/volume-1/70826.
+# volume down icon is from https://icon-icons.com/icon/volume/71055. 
+# volume mute icon is from https://icon-icons.com/icon/mute/71139.
 # Credit from https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a & https://wiki.archlinux.org/title/Dunst  .
 
 # You can call this script like this:

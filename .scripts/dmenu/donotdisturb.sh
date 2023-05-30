@@ -2,7 +2,7 @@
 # bell.png is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by apien - Flaticon</a>
 # bell-ring.png is from <a href="https://www.flaticon.com/free-icons/notification" title="notification icons">Notification icons created by Freepik - Flaticon</a>.
 #   
-# chat.png is from https://www.flaticon.com/free-icons/sms . 
+# chat.png is from https://uxwing.com/speaking-bubbles-line-icon. 
 
 
 function notification {

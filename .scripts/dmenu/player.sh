@@ -1,4 +1,5 @@
 #!/bin/sh
+# music.png is from https://icon-icons.com/icon/battery-3/64867.
 # if you want to use this script of dmenu, you have to install "playerctl", "mpv" and "copyq" at first.
 
 function now_play {

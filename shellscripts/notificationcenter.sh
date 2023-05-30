@@ -1,5 +1,5 @@
 #!/bin/zsh
-
+# chat icon is from https://uxwing.com/speaking-bubbles-line-icon.
 function cen {
     dunstctl count history   
 }

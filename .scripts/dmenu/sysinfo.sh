@@ -1,12 +1,10 @@
 #!/bin/sh
-# ram.png is from <a href="https://www.flaticon.com/free-icons/ram" title="ram icons">Ram icons created by Freepik - Flaticon</a>.
-# music.png is from <a href="https://www.flaticon.com/free-icons/google-play-music" title="google play music icons">Google play music icons created by Mayor Icons - Flaticon</a>
-# battery.png is from <a href="https://www.flaticon.com/free-icons/full-battery" title="full battery icons">Full battery icons created by Pixel perfect - Flaticon</a>.
-# cpu.png is from <a href="https://www.flaticon.com/free-icons/thermometer" title="thermometer icons">Thermometer icons created by Smashicons - Flaticon</a>.
-# wifi.png is from <a href="https://www.flaticon.com/free-icons/wifi" title="wifi icons">Wifi icons created by Gregor Cresnar - Flaticon</a>.
-# no-wifi.png is from <a href="https://www.flaticon.com/free-icons/no-internet" title="no internet icons">No internet icons created by Fajrul Fitrianto - Flaticon</a>
+# ram.png is from https://uxwing.com/ram-memory-icon.
+# battery.png is from https://icon-icons.com/icon/battery-3/64867.
+# cpu.png is from https://uxwing.com/cpu-icon.
+# wifi.png is from https://icon-icons.com/icon/wifi-medium-signal-symbol-1/56451.
+# no-wifi.png is from https://uxwing.com/no-wifi-icon.
 # You have to install lm_sensors, acpi, libnotify and a notification package (like dunst) in order to use this script.
-	    # nmcli device | sed '2 q' | sed '1 d' | awk '{print $4,$5,$3}' 
 
 function mem {
     free -h | grep 'Mem' | awk '{print "Mem is used : "$3" / "$2"."}'

@@ -1,6 +1,6 @@
 #!/bin/bash
-# backlight up icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.
-# backlight down icon is from <a href="https://www.flaticon.com/free-icons/ui" title="ui icons">Ui icons created by Marz Gallery - Flaticon</a>.
+# backlight up icon is from https://icon-icons.com/icon/add-brightness/71794.
+# backlight down icon is from https://icon-icons.com/icon/less-brightness/71622.
 # Credit from https://gist.github.com/sebastiencs/5d7227f388d93374cebdf72e783fbd6a & https://wiki.archlinux.org/title/Dunst  .
 
 # You can call this script like this:
