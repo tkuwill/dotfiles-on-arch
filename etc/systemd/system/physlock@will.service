@@ -1,0 +1,13 @@
+[Unit]
+Description=Lock session using physlock for will %i
+Before=sleep.target
+
+[Service]
+User=%i
+Environment=DISPLAY=:0
+ExecStartPre=/usr/bin/xset dpms force suspend
+ExecStart=/usr/bin/physlock -p "Welcome Back will !"
+
+[Install]
+WantedBy=sleep.target
+
