@@ -1,8 +1,8 @@
 artha 1.0.5-1
-microsoft-edge-stable-bin 112.0.1722.48-1
 otf-symbola 14.00-1
 simplescreenrecorder 0.4.4-2
 tagainijisho 1.2.2-1
+tofi 0.9.1-2
 ttf-symbola 14.00-1
 virtualbox-ext-oracle 7.0.8-1
 wordnet-cli 3.1-4
