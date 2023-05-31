@@ -1,9 +1,10 @@
 hyprland 
 hyprpaper # for wallpaper
 xorg-xwayland
-xdg-desktop-portal-hyprland
+xdg-desktop-portal-hyprland # for screen sharing & recording
 grim  # screenshot tools
 slurp # screenshot tools
+swappy # A Wayland native snapshot editing tool
 foot 
 foot-terminfo
 swaylock
