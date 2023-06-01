@@ -38,7 +38,7 @@
 - Here is some [skills][] of using `zsh`, `vim` and installing **AUR** packages manually.
 - bspwm's config is from [ghomasHudson/bspwm-dwm][]. And add some customized change like keybindings to open dmenu's scripts.
 - If you want to learn bspwm, check this: [Bspwm Basics][].
-- Wallpapers are from [李擎洲：九尾·妖狐][] and [彭雄渾][].
+- Wallpapers are from [李擎洲：九尾·妖狐][], [彭雄渾][] and [Free 4k Wallpaper Photos][].
 - These are my **Hyprland**, **dwm, i3 and bspwm** dotfiles used on my **ASUS Zenbook 14 UX425JA**. 
 - Also, it is more like a *litte memo* for what I have installed rather than a install guideline.
 - For the sake of longer battery runtime, I have **few configs** for decoration.
@@ -53,8 +53,12 @@
 - **If you want to use my dotfiles, you would have to change the directory written in mine to yours.**
 - I used [MuPDF][] at first. It is very fast but it can't search for Chinese and Japanese. So I turn to [zathura][] now. **Zathura** doesn't have edit tool but it can search for language except English. Also, it is very fast, too. I installed `zathura` and `zathura-pdf-mupdf` packages.
 - I also made notifications triggered by `dunst` when adjusting volume or monitor brightness. Here are the video examples on YouTube: [volume notification in dwm (by dunst)][] and [dwm brightness control (show by dunst)][]. 
+- On Hyprland, I use customized tofi scripts to make **clipboard** and **screenshot tool**, which I call them [Clip][] and [Shot][] below.
 - If you also have some questions like above, maybe it is good for you to have a look!
 
+[Free 4k Wallpaper Photos]: https://www.pexels.com/photo/brown-and-green-mountain-view-photo-842711/
+[Shot]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/shot.sh
+[Clip]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/clip.sh
 [skills]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/memo/Skills.md
 [Bspwm Basics]: https://dharmx.is-a.dev/bspwm-basics/
 [ghomasHudson/bspwm-dwm]: https://github.com/ghomasHudson/bspwm-dwm
@@ -90,18 +94,18 @@
 
 - **OS**: [archlinux][] --KISS !
 - **Shell**: [zsh][] --COOL !
-- **WM**: [dwm][] and [i3][]--100/100
-- **Terminal**: [st][] --st is **St.**!
+- **WM**: [Hyprland][], [bspwm][], [dwm][] and [i3][]--100/100
+- **Terminal**: [foot][] & [st][] --**St's foot --very powerful** !
 - **Terminal multiplexer**: [tmux][] --Efficiency UP !
-- **Screen locker**: [slock][] --THE Simplest !
-- **Application launcher**: [dmenu][] --Suckless !
+- **Screen locker**: [swaylock][] & [slock][] --THE Simplest !
+- **Application launcher**: [tofi][] & [dmenu][] --Hacking !
 - **Notification**: [Dunst][] --Won't miss from best friend !
 - **Video player**: [mpv][] --Along with hwdec.
 - **Music player**: [cmus][] --Super Lightweight !
 - **Email client**: [Thunderbird][] --My love !
-- **Clipboard**: [CopyQ][] --My Favorite !
+- **Clipboard**: [Clip][] & [CopyQ][] --My Favorite !
 - **Tui for git**: [lazygit][] --Convenient !
-- **Screenshot tool**: [Flameshot][] --Awesome !
+- **Screenshot tool**: [Shot][] & [Flameshot][] --Awesome !
 - **Archiving and compression**: [unarchiver][] --Easy to use !
 - **Pdf viewer**: [zathura][] --Blazing fast & Support Japanese search !
 - **Image viewer**: [ristretto][] --Simple & Smells good !
@@ -109,6 +113,13 @@
 - **Cursor theme**: [xcursor-comix][] --CUTE !
 - **System monitor**: [conky][] --Highly customizable !
 
+[Shot]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/shot.sh
+[Clip]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/clip.sh
+[tofi]: https://github.com/philj56/tofi
+[swaylock]: https://github.com/swaywm/swaylock
+[foot]: https://codeberg.org/dnkl/foot
+[Hyprland]: https://hyprland.org/
+[bspwm]: https://github.com/baskerville/bspwm
 [archlinux]: https://archlinux.org/
 [zsh]: https://www.zsh.org/
 [i3]: https://i3wm.org/
@@ -179,6 +190,9 @@
 - `ntfs-3g`: NTFS-3G is an open source implementation of Microsoft NTFS that includes read and write support.
 - `ttf-symbola`: (From AUR) A font for symbol blocks of the Unicode Standard (TTF). If you don't install this, `st` would fail when opening a document with some symbol blocks.
 - `terminus-font`: For **bigger** fonts which can be used in `tty`.
+- **For the packages used in Wayland, please see [hyprlandMustHave-packages][] .**
+
+[hyprlandMustHave-packages]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/memo/hyprlandMustHave-packages.txt
 
 </details>
 

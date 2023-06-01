@@ -5,10 +5,10 @@ xdg-desktop-portal-hyprland # for screen sharing & recording
 grim  # screenshot tools
 slurp # screenshot tools
 swappy # A Wayland native snapshot editing tool
-foot 
+foot # Terminal emulator for wayland
 foot-terminfo
-swaylock
-tofi # AUR
+swaylock # screenlocker for wayland
+tofi # In AUR. A program launcher.
 otf-font-awesome # Font Awesome
 waybar
 wl-clipboard # wayland clipboard support
