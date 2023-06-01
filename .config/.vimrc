@@ -38,12 +38,16 @@ set t_Co=256
 " }}}
 
 " General config --------------------------------------------------------------------------- {{{
+" hi CursorLine ctermfg=NONE ctermbg=226 cterm=NONE
+" hi CursorColumn ctermfg=NONE ctermbg=226 cterm=NONE
 set cursorline
+set cursorcolumn
 set wildmenu
 set splitbelow splitright
 set ruler
 set number
 syntax on
+" hi Search cterm=NONE ctermfg=232 ctermbg=70
 set hlsearch
 set ignorecase
 set smartcase
@@ -59,17 +63,17 @@ set shortmess-=S
 " Formats the statusline ------------------------------------------------------------------- {{{
 set laststatus=2            " set the bottom status bar
 
-" function! ModifiedColor()
-    " if &mod == 1
-        " hi statusline guibg=White ctermfg=233 guifg=OrangeRed4 ctermbg=230
-    " else
-        " hi statusline guibg=White ctermfg=233 guifg=DarkSlateGray ctermbg=230
-    " endif
-" endfunction
+ " function! ModifiedColor()
+ "     if &mod == 1
+ "         hi statusline ctermfg=233  ctermbg=230
+ "     else
+ "         hi statusline ctermfg=233  ctermbg=230
+ "     endif
+ " endfunction
 
 " au InsertLeave,InsertEnter,BufWritePost   * call ModifiedColor()
-" default the statusline when entering Vim
-"hi statusline guibg=DarkSlateGray ctermfg=233 guifg=White ctermbg=230
+ " " default the statusline when entering Vim
+" hi statusline ctermfg=233 ctermbg=230
 
 set statusline=%F                           " file path and name
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, "file encoding
