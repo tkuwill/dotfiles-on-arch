@@ -1,4 +1,4 @@
-font = Sauce Code Pro Nerd Font Bold
+font = Noto Sans CJK TC Bold
 corner-radius = 0
 outline-color = #D3D1B9
 outline-width = 3
@@ -8,7 +8,7 @@ background-color = #66d0e3
 text-color = #0A3
 selection-color = #F9E675
 prompt-text = "Go : "
-num-results = 9
+num-results = 7
 hide-cursor = false
 width = 840
 height = 380

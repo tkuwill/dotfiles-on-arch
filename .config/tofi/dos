@@ -1,4 +1,4 @@
-font = VT323
+font = Noto Sans CJK TC
 corner-radius = 0
 outline-color = #D3D1B9
 outline-width = 3
@@ -10,5 +10,5 @@ selection-color = #F9E675
 prompt-text = "🖇️: "
 num-results = 9
 hide-cursor = false
-width = 640
-height = 480
+width = 700
+height = 530
