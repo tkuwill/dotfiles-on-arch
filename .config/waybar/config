@@ -5,10 +5,30 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "custom/copy", "pulseaudio"],
+    "modules-left": ["wlr/workspaces", "custom/copy", "pulseaudio"],
     "modules-center": ["hyprland/window"],
-    "modules-right": ["battery", "tray", "clock"],
+    "modules-right": ["idle_inhibitor", "battery", "tray", "clock"],
     // Modules configuration
+     "wlr/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "on-click": "activate",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+	"1": "1",
+	"2": "2",
+	"3": "3",
+	"4": "4",
+	"5": "5",
+	"6": "6",
+	"7": "7",
+	"8": "8",
+	"9": "9",
+     }
+    },
     "custom/shwork": {
         "format": "Sp.",
         "on-click-left": "/home/will/.config/tofi/scripts/shworktofi.sh"
