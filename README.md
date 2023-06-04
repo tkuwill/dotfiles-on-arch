@@ -35,6 +35,17 @@
 	bspwm
 </div>
 
+## Things you should know before reading ##
+
+1. Some programs can only run normally in **X11**. Some can only run normally in **Wayland**. Check the dependencies before using them.
+    - For example, [dmenu][] is for **X11**, while [tofi][] is for **Wayland**.
+2. WMs (**window manager** on X11, on Wayland they are just called **compositors**) are **not easy** to config for a beginner in Linux. If you met some problems, please *R.T.F.M* at first.
+
+[dmenu]: https://tools.suckless.org/dmenu/
+[tofi]: https://github.com/philj56/tofi
+
+---
+
 - Here is some [skills][] of using `zsh`, `vim` and installing **AUR** packages manually.
 - bspwm's config is from [ghomasHudson/bspwm-dwm][]. And add some customized change like keybindings to open dmenu's scripts.
 - If you want to learn bspwm, check this: [Bspwm Basics][].
@@ -44,7 +55,7 @@
 - For the sake of longer battery runtime, I have **few configs** for decoration.
 - All things here all have their duty to be here. (In my opinion.)
 - I would also provide a viewpoint for those who don't know what to install after a fresh install of **archlinux**.
-- I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first!
+- I *might forget* to list something that has to be installed first before using my dotfiles, so if you want to use these, check first !
 - I also put the icons which I use for notifications. Almost are from [flaticon][]. For details of those icons, check the scripts you want to use.   
 - If you want to use these icons without rewrite the code of scripts, you have to put `sysicon` folder into `~/Pictures/sysicon`.
 - I also put the configs of `cmus`, `dunst`, `gitui`, `mpv`, `tmux`, `vim`, `.xinitrc`, `.Xresources`, `zathura` and `zsh` in the `.config` folder. If you want to use those, feel free to use them.
@@ -75,15 +86,16 @@
 1. [Details](#Details)
 2. [Features](#features)
 3. [Packages](#Packages)
-4. [dwm](#dwm)
+4. [suckless's_packages](#suckless's_packages)
     1. [Patch_used_in_dwm](#Patch_used_in_dwm)
     2. [Patch_used_in_st](#Patch_used_in_st)
     3. [Patch_used_in_slock](#Patch_used_in_slock)
     4. [Patch_used_in_dmenu](#Patch_used_in_dmenu)
 5. [My_scripts_using_dmenu](#My_scripts_using_dmenu)
-6. [Special_Configs](#Special_Configs)
-7. [My_Shell_Scripts](#My_Shell_Scripts)
-8. [Thanks](#Thanks)
+6. [My_scripts_using_tofi](#My_scripts_using_tofi)
+7. [Special_Configs](#Special_Configs)
+8. [My_Shell_Scripts](#My_Shell_Scripts)
+9. [Thanks](#Thanks)
 
 <a name="Details"></a>
 ## Details ##
@@ -196,8 +208,12 @@
 
 </details>
 
-<a name="dwm"></a>
-## dwm ##
+<a name="suckless's_packages"></a>
+## suckless's packages ##
+
+<details>
+<summary><b>Details of packages </b></summary>
+
 <a name="Patch_used_in_dwm"></a>
 ### Patches used in dwm ###
 
@@ -250,6 +266,9 @@
 - [dmenu-center-4.8.diff](https://tools.suckless.org/dmenu/patches/center/dmenu-center-4.8.diff) 
 - [dmenu-linesbelowprompt-and-fullwidth-20211014.diff](https://tools.suckless.org/dmenu/patches/lines-below-prompt/dmenu-linesbelowprompt-and-fullwidth-20211014.diff)                   
   
+</details>
+
+
 </details>
 
 <a name="My_scripts_using_dmenu"></a>
@@ -512,6 +531,31 @@ MODULES=(i915)
 [liveStream.sh]: https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/shellscripts/liveStream.sh
 
 </details>
+
+<a name="My scripts using tofi"></a>
+## My scripts using tofi ##
+> Here are some scripts run by tofi. Some are very similar to dmenu's scripts, so I only introduce some special ones here.
+
+<details>
+<summary><b>Scripts list</b></summary>
+
+- [clientswitcher.sh][]: This script can let you switch clients by tofi.
+![](/screenshots/clientswitcher.png)
+- [clip.sh][]: This script can let you view the clipboard shown by tofi. I also wrote [a custom module][] on **waybar** circled by the red circle. In my config, click it by mouse's right button, it will show up. Also, [double click][] it by middle button can delete all history in the clipboard. 
+![](/screenshots/clip.png)
+- [shot.sh][]: Though I have the [keybindings][] for screenshot, this tool still has a feature that the keybindings don't have--it can let you edit the screenshot after taking it. This script use [swappy][] as the editting tool.
+![](/screenshots/shotsh.png)
+![](/screenshots/edit.png)
+</details>
+
+[swappy]: https://github.com/jtheoof/swappy
+[keybindings]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/hypr/hyprland.conf#L160
+[shot.sh]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/shot.sh
+[double click]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/clipclean.sh
+[a custom module]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/waybar/config#L52
+[clientswitcher.sh]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/clientswitcher.sh
+[clip.sh]: https://github.com/tkuwill/dotfiles-on-arch/blob/master/.config/tofi/scripts/clip.sh
+
 
 <a name="Thanks"></a>
 ## Thanks ## 
