@@ -1,6 +1,6 @@
 * {
     /* `otf-font-awesome` is required to be installed for icons */
-    font-family: FontAwesome, Arial, sans-serif, SauceCodeProNerdFont;
+    font-family: FontAwesome, Arial, SauceCodeProNerdFont;
     font-size: 16px;
 }
 
