@@ -106,7 +106,11 @@ button:hover {
 #workspaces {
     margin: 0 4px;
 }
-
+#submap {
+    background-color: #f53c3c;
+    padding: 0 10px;
+    
+}
 /* If workspaces is the leftmost module, omit left margin */
 .modules-left > widget:first-child > #workspaces {
     margin-left: 0;
