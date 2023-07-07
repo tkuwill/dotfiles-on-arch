@@ -1,4 +1,4 @@
-" Plugins will be downloaded under the specified directory.
+" Plugins will be downloaded under the specified directory. {{{
 call plug#begin('~/.vim/plugged')
 " other plugins
 Plug 'mg979/vim-visual-multi', {'branch': 'master'}
@@ -7,12 +7,13 @@ Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
+Plug 'justinmk/vim-sneak'
 " colortheme
 Plug 'NLKNguyen/papercolor-theme'
 " vim-devicon SHOULD be the LAST one
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
-
+" }}}
 " indentline config (disable the conceal for JSON and markdown)
 let g:vim_json_conceal=0
 let g:markdown_syntax_conceal=0
@@ -49,7 +50,6 @@ set number
 syntax on
 " hi Search cterm=NONE ctermfg=232 ctermbg=70
 set hlsearch
-set ignorecase
 set smartcase
 set softtabstop=4
 set listchars=tab:>~,space:.
@@ -121,7 +121,7 @@ nnoremap <F8> :set nowrap<cr>
 nnoremap <F9> :set wrap<cr>
 " spelling check in English
 set spelllang=en,cjk
-nnoremap <F5> :set spell<cr>
+nnoremap <F3> :set spell<cr>
 nnoremap <F4> :set nospell<cr>
 
 " This will make esc key respond faster when having the config below.
