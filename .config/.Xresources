@@ -1,8 +1,7 @@
-! cursor setting
-!Xcursor.theme: ComixCursors-Blue
-!Xcursor.size: 48
-Xcursor.theme: Bibata-Modern-DodgerBlue
-Xcursor.size: 40
+Xcursor.theme: ComixCursors-Slim-Green
+Xcursor.size: 48
+!Xcursor.theme: Bibata-Modern-DodgerBlue
+!Xcursor.size: 40
 
 
 ! urxvt name
@@ -102,6 +101,70 @@ URxvt*color15: #3c3836
 URxvt.keysym.KP_Home: \033[1~
 URxvt.keysym.KP_End:  \033[4~
 
+! Configuration for uxterm
+
+UXTerm.termName: xterm-256color
+
+UXTerm.keysym.KP_Home: \033[1~
+UXTerm.keysym.KP_End:  \033[4~
+
+! Make alt work
+!UXTerm*eightBitInput:   false
+!UXTerm*eightBitOutput:  true
+UXTerm.vt100.metaSendsEscape: true
+
+! Make cursor blinking
+UXTerm*cursorBlink: true
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+UXTerm*loginshell: true
+
+! Scrollbacks
+UXTerm.vt100.saveLines: 14096
+
+! Double-click to select whole URLs :D
+UXTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+! Default font and size
+UXTerm*faceName: SauceCodePro Nerd Font:bold
+UXTerm*faceSize: 22
+
+
+! Colors
+UXTerm*foreground: rgb:ff/ff/ff
+UXTerm*background: rgb:22/22/22
+UXTerm*color0: rgb:00/00/00
+UXTerm*color1: rgb:ff/55/00
+UXTerm*color2: rgb:af/ff/00
+UXTerm*color3: rgb:f0/de/18
+! xterm*color4: rgb:00/00/a8
+UXTerm*color4: rgb:00/ae/d6
+UXTerm*color5: rgb:aa/00/aa
+UXTerm*color6: rgb:00/fc/fc
+UXTerm*color7: rgb:f4/f4/f4
+UXTerm*color8: rgb:54/54/54
+UXTerm*color9: rgb:fc/54/54
+UXTerm*color10: rgb:54/fc/54
+UXTerm*color11: rgb:fc/fc/54
+UXTerm*color12: rgb:55/ff/ff
+UXTerm*color13: rgb:fc/54/fc
+UXTerm*color14: rgb:54/fc/fc
+UXTerm*color15: rgb:fc/fc/fc
+
+! Right-side scrollbar
+UXTerm*ScrollBar: false
+
+! Stop output to terminal from jumping down to bottom of scroll again
+UXTerm*scrollTtyOutput: false
+
+UXTerm*ScrollKey: true
+
+! copy and paste to clipboard
+UXTerm*VT100.Translations: #override \
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)
+! End configuration for xterm
+
 ! Configuration for xterm
 
 XTerm.termName: xterm-256color
@@ -125,30 +188,36 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
 ! Default font and size
 XTerm*faceName: SauceCodePro Nerd Font:bold
-XTerm*faceSize: 24
+XTerm*faceSize: 20
 
 
 ! Colors
-XTerm*foreground: rgb:ff/ff/ff
-XTerm*background: rgb:22/22/22
-XTerm*color0: rgb:00/00/00
-XTerm*color1: rgb:ff/55/00
-XTerm*color2: rgb:af/ff/00
-XTerm*color3: rgb:f0/de/18
-! xterm*color4: rgb:00/00/a8
-XTerm*color4: rgb:00/ae/d6
-XTerm*color5: rgb:aa/00/aa
-XTerm*color6: rgb:00/fc/fc
-XTerm*color7: rgb:f4/f4/f4
-XTerm*color8: rgb:54/54/54
-XTerm*color9: rgb:fc/54/54
-XTerm*color10: rgb:54/fc/54
-XTerm*color11: rgb:fc/fc/54
-XTerm*color12: rgb:55/ff/ff
-XTerm*color13: rgb:fc/54/fc
-XTerm*color14: rgb:54/fc/fc
-XTerm*color15: rgb:fc/fc/fc
-
+XTerm*foreground: #3c3836
+XTerm*background: #f2e5bc
+! Black + DarkGrey
+XTerm*color0:  #fdf4c1
+XTerm*color8:  #928374
+! DarkRed + Red
+XTerm*color1:  #cc241d
+XTerm*color9:  #9d0006
+! DarkGreen + Green
+XTerm*color2:  #98971a
+XTerm*color10: #79740e
+! DarkYellow + Yellow
+XTerm*color3:  #d79921
+XTerm*color11: #b57614
+! DarkBlue + Blue
+XTerm*color4:  #458588
+XTerm*color12: #076678
+! DarkMagenta + Magenta
+XTerm*color5:  #b16286
+XTerm*color13: #8f3f71
+! DarkCyan + Cyan
+XTerm*color6:  #689d6a
+XTerm*color14: #427b58
+! LightGrey + White
+XTerm*color7:  #7c6f64
+XTerm*color15: #3c3836
 ! Right-side scrollbar
 XTerm*ScrollBar: false
 
