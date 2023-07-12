@@ -1,7 +1,7 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 24, // Waybar height (to be removed for auto height)
+    "height": 32, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -35,8 +35,7 @@
 	"tooltip": false
     },
     "hyprland/window": {
-        "max-length": 50,
-        "separate-outputs": true
+	"format": "{}",
     },
     "idle_inhibitor": {
         "format": "{icon}",

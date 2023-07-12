@@ -12,9 +12,6 @@ window#waybar {
     transition-duration: .5s;
 }
 
-window#waybar.hidden {
-    opacity: 0.2;
-}
 
 /*
 window#waybar.empty {
@@ -25,14 +22,6 @@ window#waybar.solo {
 }
 */
 
-window#waybar.termite {
-    background-color: #3F3F3F;
-}
-
-window#waybar.chromium {
-    background-color: #000000;
-    border: none;
-}
 
 button {
     /* Use box-shadow instead of border so the text isn't offset */
@@ -100,6 +89,9 @@ button:hover {
 
 #window {
     font-family: Noto Sans CJK TC;
+    padding-left: 10px;
+    padding-right: 10px;
+
     
 }
 #window,
