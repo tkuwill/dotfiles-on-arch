@@ -1,64 +1,9 @@
-# Description: Look up the word in the dict://dict.org
-function dict() {
-	echo -n "The word you want to search: "
-	read word
-	curl dict://dict.org/d:${word}
-}
-# Description: see the cheatsheet of a command.
-function cheatsheet() {
-	echo -n "Input the command that you want to see its cheatsheet: "
-	read com
-	curl cheat.sh/${com}
-}
-
-# Description: see weather locally or select a region.
-function weather() {
-	echo -n "Which region's weather do you want to know ? "
-	read region
-	curl https://wttr.in/${region}
-}
-
-# Description: reminder.
-function reminder() {    
-	echo -n "Input mins: "
-	read mins
-	echo -n "Input reminder messages: "
-	read msg
-	echo "Now time is $(date "+%T")"
-	echo "Set a timer for ${mins} minute(s)."
-	sleep ${mins}m && notify-send -u critical -t 10000 ${msg}
-	mpv ~/Pictures/sysicon/sysAudio/alarm.ogg --keep-open=no --no-resume-playback --no-terminal --no-video --volume=70
-
-}
-
-# Description: record the battery cycle into batterycycle.log, then show the batterycycle.log with bat.
-function batterycycle() {
-    echo -e "\e[34mWriting the battery record into batterycycle.log ..."
-    date "+%Y/%m/%d(%a) %T" >> /home/will/shellscripts/log/batterycycle.log && upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep 'charge-cycles' >> /home/will/shellscripts/log/batterycycle.log && upower --show-info /org/freedesktop/UPower/devices/battery_BAT0 | grep 'capacity' >> /home/will/shellscripts/log/batterycycle.log
-    echo -e "\e[34mfinished !"
-    sleep 1s
-    bat /home/will/shellscripts/log/batterycycle.log 
-}
-
-
 # Load version control information
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
 # Format the vcs_info_msg_0_ variable
 zstyle ':vcs_info:git:*' formats 'on branch %b %m%u%c'
-
-function battime {
-    STATUS=$(cat /sys/class/power_supply/BAT0/status)
-        if [ "$STATUS" = "Discharging" ]; then
-	    acpi | awk '{print "BAT-time : " $5,$6"."}'
-        elif [ "$STATUS" = "Charging" ]; then
-	    acpi | awk '{print "BAT-time : " $5,$6,$7"."}'
-        elif [ "$STATUS" = "Full" ]; then
-	    acpi | sed '1 s/,//g' | awk '{print "Now BAT is "$3"."}'
-        fi
-}
-
 setopt promptsubst
 
 # PROMPT='%F{231}%n@%f%F{38}%m%f%F{14} %~ ${vcs_info_msg_0_} %f
@@ -113,7 +58,9 @@ alias liveStream="/home/will/shellscripts/liveStream.sh"
 alias musicDownloadTui="/home/will/shellscripts/musicDownloadTui.sh"
 alias vpnLocation="curl ipinfo.io/country"
 alias vpnCountry="curl ifconfig.co/country"
-
+alias timer="/home/will/shellscripts/timer2.sh"
+alias batterycycle="/home/will/shellscripts/batterycycle.sh"
+alias reminder="/home/will/shellscripts/reminder.sh"
 
 TIMEFMT=$'real\t%E\nuser\t%U\nsys\t%S\ncpu\t%P'
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#f5f2f2,bg=#686868,bold,underline"
@@ -122,7 +69,6 @@ source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # fzf
 source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
-
 # npm package
 export PATH=~/.npm-packages/bin:$PATH
 export NODE_PATH=~/.npm-packages/lib/node_modules
@@ -137,7 +83,4 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
-# Use vim as a pager for man
-export MANPAGER="/bin/sh -c \"col -b | vim --noplugin -c 'set ft=man ts=8 nomod nolist nonu noma' -\""
-# For QT program font size
-#export QT_SCALE_FACTOR=1.25
+
