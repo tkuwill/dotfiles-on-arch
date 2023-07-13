@@ -1,0 +1,124 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 34, // Waybar height (to be removed for auto height)
+     "width": 1800, // Waybar width
+     "margin-top": 35,
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["wlr/workspaces", "hyprland/submap", "custom/copy", "pulseaudio"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["idle_inhibitor", "battery", "tray", "clock"],
+    // Modules configuration
+     "wlr/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "on-scroll-up": "hyprctl dispatch workspace e+1",
+      "on-scroll-down": "hyprctl dispatch workspace e-1",
+      "on-click": "activate",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+	"1": "1",
+	"2": "2",
+	"3": "3",
+	"4": "4",
+	"5": "5",
+	"6": "6",
+	"7": "7",
+	"8": "8",
+	"9": "9",
+     }
+    },
+    "hyprland/submap": {
+	"format": "{}",
+	"max-length": 30,
+	"tooltip": false
+    },
+    "hyprland/window": {
+	"format": "{}",
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": " 零",
+            "deactivated": " 鈴"
+        }
+    },
+    "tray": {
+	"icon-size": 21,
+        "spacing": 5
+    },
+    "custom/copy": {
+      "format": "🖇️", 
+      "tooltip": false,
+      "on-click-right": "/home/will/.config/tofi/scripts/clip.sh",
+      "on-double-click-middle": "/home/will/.config/tofi/scripts/clipclean.sh"
+    },
+
+    "clock": {
+        "timezone": "Asia/Taipei",
+	"interval": 1,
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"format": "{:%H:%M:%S}",
+        "format-alt": "{:%Y-%m-%d(%a)}"
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+	"interval": 20,
+        "states": {
+            // "good": 95,
+            "warning": 25,
+            "critical": 20
+        },
+        "format": "{time} {icon}",
+        "format-charging": "{capacity}% 🗲",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{capacity}% {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        // "scroll-step": 10, // %, can be a float
+        "format": "VOL {volume}%{icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth-muted": " {icon} {format_source}",
+        "format-muted": "VOL 🔇 {format_source}",
+        "format-source": "{volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "custom/updates": {
+        "format": "{} {icon}",
+        "return-type": "json",
+        "format-icons": {
+            "has-updates": "󱍷",
+            "updated": "󰂪"
+        },
+        "exec-if": "which waybar-module-pacman-updates",
+        "exec": "waybar-module-pacman-updates"
+    },
+}
+
