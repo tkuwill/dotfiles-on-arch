@@ -17,6 +17,7 @@ ASUS 'll be shutdown in 1 min. Use 'shutdown -c' to cancel." && shutdown
        sleep 1s && systemctl suspend
     elif [[ $selected = "Lock" ]]; then
        slock 
+       # physlock -p "Welcome Back will"
     elif [[ $selected = "Cancel" ]]; then 
         return
     fi
