@@ -3,19 +3,19 @@
 # pgrep -x sxhkd > /dev/null || sxhkd &
 sxhkd -c ~/.config/sxhkd/bspwm-sxhkdrc &
 
-# bspc monitor eDP-1 1 2 3 4 5 6 FL 8 9 
-bspc monitor DP-2 -d 1 2 3 4 5 6 FL 8 9
-xrandr --output eDP-1 --off
-bspc monitor eDP-1 --remove
+bspc monitor eDP-1 1 2 3 4 5 6 FL 8 9 
+# bspc monitor DP-2 -d 1 2 3 4 5 6 FL 8 9
+# xrandr --output eDP-1 --off
+# bspc monitor eDP-1 --remove
 
-# bspc config window_gap          0
+bspc config window_gap          0
 bspc config border_width        10
-bspc config window_gap          50
+# bspc config window_gap          50
 
 bspc config split_ratio          0.55
 bspc config borderless_monocle   false
-bspc config gapless_monocle      false
-# bspc config gapless_monocle      true
+# bspc config gapless_monocle      false
+bspc config gapless_monocle      true
 bspc config focus_follows_pointer   true
 bspc config removal_adjustment      false
 bspc config focused_border_color \#fcbf54
@@ -30,8 +30,8 @@ feh --bg-fill /home/will/Pictures/sysicon/wallpapersg.JPG
 xrdb -merge ~/.Xresources
 copyq &
 nm-applet &
-polybar -c ~/.config/polybar/TVconfig.ini &
-# polybar -c ~/.config/polybar/config.ini &
+# polybar -c ~/.config/polybar/TVconfig.ini &
+polybar -c ~/.config/polybar/config.ini &
 xsetroot -cursor_name left_ptr &
 
 
