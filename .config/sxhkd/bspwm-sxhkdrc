@@ -112,6 +112,9 @@ super + shift + k
 	/home/will/.scripts/dmenu/caffeine.sh
 super + shift + p 
 	/home/will/.scripts/dmenu/player.sh
+# windows switcher
+super + Tab
+	/home/will/.scripts/dmenu/switch
 # screenshot 
 super + shift + q 
 	flameshot launcher
