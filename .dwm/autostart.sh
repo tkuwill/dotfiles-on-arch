@@ -30,9 +30,11 @@ conky &
 print_caffeine(){
     MODE=$(xset -q | grep 'DPMS is' | awk '{print $3}')
     if [ "$MODE" = "Disabled" ]; then
-        printf ":零"
+        # printf ":零"
+        printf "Mon:☀"
     elif [ "$MODE" = "Enabled" ]; then
-        printf ":鈴"
+        # printf ":鈴"
+        printf "Mon:☁"
     fi
 }
 
@@ -58,9 +60,11 @@ dwm_battery () {
         fi
     else
         if [ "$STATUS" = "Charging" ]; then
-            printf "ﴞ %s%% %s" "$CHARGE" 
+            # printf "ﴞ🔌  %s%% %s" "$CHARGE" 
+            printf "🔌  %s%% %s" "$CHARGE" 
         else
-            printf " %s%% %s" "$CHARGE" 
+            # printf "🔋 %s%% %s" "$CHARGE" 
+            printf "🔋 %s%% %s" "$CHARGE" 
         fi
     fi
     printf "%s\n" "$SEP2"
@@ -93,13 +97,17 @@ dwm_alsa () {
     	else
 	        # removed this line because it may get confusing
 	        if [ "$VOL" -gt 0 ] && [ "$VOL" -le 33 ]; then
-	            printf "奔 %s%%" "$VOL"
+	            # printf "奔 %s%%" "$VOL"
+	            printf "🔈 %s%%" "$VOL"
 	        elif [ "$VOL" -gt 33 ] && [ "$VOL" -le 66 ]; then
-	            printf "墳 %s%%" "$VOL"
+	            # printf "墳 %s%%" "$VOL"
+	            printf "🔉 %s%%" "$VOL"
 	        elif [ "$VOL" = "0" ]; then
-	            printf "婢 %s%%" "$VOL"
+	            # printf "婢 %s%%" "$VOL"
+	            printf "🔇 %s%%" "$VOL"
 	        else
-	            printf " %s%%" "$VOL"
+	            # printf " %s%%" "$VOL"
+	            printf "🔊 %s%%" "$VOL"
         	fi
         fi
     fi
