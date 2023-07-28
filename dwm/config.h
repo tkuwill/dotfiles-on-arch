@@ -120,6 +120,9 @@ static const char *next[] = {"playerctl", "next", NULL};
 static const char *prev[] = {"playerctl", "previous", NULL};
 static const char *play[] = {"playerctl", "play-pause", NULL};
 
+/* windows switcher */
+static const char *winsw[] = {"/home/will/.scripts/dmenu/switch", NULL};
+
 /* Show keybindings */
 static const char *showkcmd[] = {"st", "-t", scratchpadname, "-g", "90x25", "-e", "zsh", "-c", "bat ~/Desktop/willdezenbookArch_dotfiles/memo/dwmKeybinding.md; zsh", NULL};
 
@@ -136,6 +139,7 @@ static const Key keys[] = {
 	{ 0, XF86XK_AudioMute, spawn, {.v = mutevol}},
 	{ 0, XF86XK_AudioLowerVolume, spawn, {.v = downvol}},
 	{ 0, XF86XK_AudioRaiseVolume, spawn, {.v = upvol}},
+	{ MODKEY,                       XK_Tab,    spawn,          {.v = winsw } },
 	{ MODKEY|ShiftMask,             XK_k,      spawn,          {.v = caffeine } },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          {.v = browser } },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          {.v = player } },
@@ -159,8 +163,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_Return, zoom,           {0} },
-	{ MODKEY,                       XK_Tab,    view,           {0} },
+	/* { MODKEY,                       XK_Return, zoom,           {0} }, */
+	/* { MODKEY,                       XK_Tab,    view,           {0} }, */
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
