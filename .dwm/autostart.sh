@@ -60,10 +60,10 @@ dwm_battery () {
         fi
     else
         if [ "$STATUS" = "Charging" ]; then
-            # printf "ﴞ🔌  %s%% %s" "$CHARGE" 
-            printf "🔌  %s%% %s" "$CHARGE" 
+            # printf "ﴞ %s%% %s" "$CHARGE" 
+            printf "🔌 %s%% %s" "$CHARGE" 
         else
-            # printf "🔋 %s%% %s" "$CHARGE" 
+            # printf " %s%% %s" "$CHARGE" 
             printf "🔋 %s%% %s" "$CHARGE" 
         fi
     fi
@@ -116,7 +116,7 @@ dwm_alsa () {
 
 while true
 do
-    xsetroot -name "|$(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)"
+    xsetroot -name "|$(print_caffeine)|$(dwm_alsa)|$(print_date)|$(dwm_battery)|"
     sleep 1 
 done
 
