@@ -222,11 +222,14 @@
 
 - [dwm-alwayscenter-20200625-f04cac6.diff](https://dwm.suckless.org/patches/alwayscenter/dwm-alwayscenter-20200625-f04cac6.diff)
 - [dwm-autostart-20210120-cb3f58a.diff](https://dwm.suckless.org/patches/autostart/dwm-autostart-20210120-cb3f58a.diff)
-- [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
 - [dwm-colorbar-6.3.diff](https://dwm.suckless.org/patches/colorbar/dwm-colorbar-6.3.diff)
+- [dwm-ewmhtags-6.2.diff](https://dwm.suckless.org/patches/ewmhtags/dwm-ewmhtags-6.2.diff)
+- [dwm-focusonnetactive-6.2.diff](https://dwm.suckless.org/patches/focusonnetactive/dwm-focusonnetactive-6.2.diff)
+- [dwm-pertag-6.2.diff](https://dwm.suckless.org/patches/pertag/dwm-pertag-6.2.diff)
 - [dwm-scratchpad-6.2.diff](https://dwm.suckless.org/patches/scratchpad/dwm-scratchpad-6.2.diff)
 - [dwm-systray-6.4.diff](https://dwm.suckless.org/patches/systray/dwm-systray-6.4.diff)
-  
+ 
+
 </details>
 
 <a name="Patch_used_in_st"></a> 
@@ -237,6 +240,7 @@
 
 - [st-anysize-0.8.4.diff](https://st.suckless.org/patches/anysize/st-anysize-0.8.4.diff)  
 - [st-delkey-20201112-4ef0cbd.diff](https://st.suckless.org/patches/delkey/st-delkey-20201112-4ef0cbd.diff)  
+- [st-font2-0.8.5.diff](https://st.suckless.org/patches/font2/st-font2-0.8.5.diff)
 - [st-w3m-0.8.3.diff](https://st.suckless.org/patches/w3m/st-w3m-0.8.3.diff)  
 - [st-gruvbox-light-0.8.5.diff](https://st.suckless.org/patches/gruvbox/st-gruvbox-light-0.8.5.diff)  
 ![](/screenshots/st.png)
@@ -284,7 +288,7 @@
 
 ![](/screenshots/calendar.png)
 
-- [donotdisturb.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/donotdisturb.sh): This script has options for **Do not disturb** and **Normal**. Required dependencies: `dunst` and `libnotify`. 
+- [donotdisturb.sh](https://github.com/tkuwill/willdezenbookArch_dotfiles/blob/master/.scripts/dmenu/donotdisturb.sh): This script has options for **Do not disturb**, **Normal**, **Notification center** for showing the history of all notification and **Clean all notifications** for deleting all history in notification. Required dependencies: `dunst` and `libnotify`. 
 
 ![](/screenshots/donotdisturbsh.png)
 
@@ -331,6 +335,10 @@
 ![](/screenshots/caffeinesh1.png)
 
 ![](/screenshots/caffeinesh2.png)
+
+- [switch](https://github.com/tkuwill/dotfiles-on-arch/blob/master/.scripts/dmenu/switch): This script can let you switch windows just like *Alt-tab* in windows. You can also use other keybindings if you want, just do that in your WM's config. Credit from [Scripts using dmenu](https://tools.suckless.org/dmenu/scripts/).
+
+![](/screenshots/switch.png)
 
 </details>
 
@@ -383,6 +391,12 @@ No matter which situation you face, you should all enable the `slock@user.servic
 ```sh
 systemctl enable slock@user.service
 ```
+
+**Also, slock is for X11. If you want to use a screen-lock that can be use in both X11 and Wayland, see `physlock`.**
+To make physlock lock screen on suspend, you should config [physlock@user.service](https://github.com/tkuwill/dotfiles-on-arch/blob/master/etc/systemd/system/physlock%40will.service) in the same way above like slock.
+
+
+
 
 </details>
 
