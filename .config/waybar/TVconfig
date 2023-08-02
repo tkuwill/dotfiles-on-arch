@@ -1,9 +1,8 @@
 {
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
-    "height": 34, // Waybar height (to be removed for auto height)
-     "width": 1800, // Waybar width
-     "margin-top": 35,
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["wlr/workspaces", "hyprland/submap", "custom/copy", "pulseaudio"],
@@ -58,10 +57,20 @@
 
     "clock": {
         "timezone": "Asia/Taipei",
-	"interval": 1,
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"format": "{:%H:%M:%S}",
-        "format-alt": "{:%Y-%m-%d(%a)}"
+	"interval": 60,
+	"format": "{:%H:%M}",
+        "format-alt": "{:%Y-%m-%d(%a)}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+	"calendar": {
+                  "mode"          : "months",
+                  "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                  },
     },
     "backlight": {
         // "device": "acpi_video1",
