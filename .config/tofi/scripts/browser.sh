@@ -9,7 +9,7 @@ else
     exit 0
     ;;
   "Firefox")
-    firefox
+    MOZ_ENABLE_WAYLAND=1 firefox
     ;;
   "Chromium")
     chromium --gtk-version=4    
