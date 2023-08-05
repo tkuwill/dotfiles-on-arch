@@ -18,7 +18,7 @@ function burls {
 if (ps -a | grep tofi >/dev/null); then
   killall -q tofi
 else
-  case $(printf "%s\n" "Cancel" "Now playing" "Open with mpv Yt" "Open with mpv BiliBili" "Play-pause" "Next" "Prev" | tofi -c ~/.config/tofi/soy-milkTV) in
+  case $(printf "%s\n" "Cancel" "Now playing" "Open with mpv Yt" "Yt live" "Open with mpv BiliBili" "BLive" "Play-pause" "Next" "Prev" | tofi -c ~/.config/tofi/soy-milkTV) in
   "Cancel")
     exit 0
     ;;
@@ -26,10 +26,16 @@ else
         dunstify -a "changeVolume" -i /home/will/Pictures/sysicon/music.png -t 5000 "$(now_play)"
     ;;
   "Open with mpv Yt")
-	mpv $(urls)
+	mpv --profile=yt $(urls)
+    ;;
+  "Yt live")
+	mpv --profile=live $(urls)
     ;;
   "Open with mpv BiliBili")
-	mpv --referrer="https://www.bilibili.com" $(burls)
+	mpv --profile=bvideo $(burls)
+    ;;
+  "BLive")
+	mpv --profile=blive $(burls)
     ;;
   "Play-pause")
 	playerctl play-pause
