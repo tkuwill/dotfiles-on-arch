@@ -124,6 +124,8 @@ nnoremap <F9> :set wrap<cr>
 set spelllang=en,cjk
 nnoremap <F3> :set spell<cr>
 nnoremap <F4> :set nospell<cr>
+" For relative-number-toggke.
+nnoremap <silent> <F1> :set relativenumber!<cr>
 
 " This will make esc key respond faster when having the config below.
 set ttimeoutlen=100
