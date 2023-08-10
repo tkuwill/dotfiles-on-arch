@@ -8,6 +8,7 @@ Plug 'ap/vim-css-color'
 Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
+Plug 'jeffkreeftmeijer/vim-numbertoggle'
 " colortheme
 Plug 'NLKNguyen/papercolor-theme'
 " vim-devicon SHOULD be the LAST one
