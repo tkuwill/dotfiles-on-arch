@@ -115,17 +115,21 @@ au FileType markdown setlocal foldlevel=1
 " keymapping
 
 nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <C-L> :noh<cr>
+nnoremap <C-L> :noh<CR>
 " nnoremap <F11> :set paste<cr>
 " nnoremap <F12> :set nopaste<cr>
-nnoremap <F8> :set nowrap<cr>
-nnoremap <F9> :set wrap<cr>
+nnoremap <F8> :set nowrap<CR>
+nnoremap <F9> :set wrap<CR>
 " spelling check in English
 set spelllang=en,cjk
-nnoremap <F3> :set spell<cr>
-nnoremap <F4> :set nospell<cr>
+nnoremap <F3> :set spell<CR>
+nnoremap <F4> :set nospell<CR>
 " For relative-number-toggke.
-nnoremap <silent> <F1> :set relativenumber!<cr>
+nnoremap <silent> <F1> :set relativenumber!<CR>
+" For insert numbers <99 in the lines selected 
+vnoremap <F6> :!nl -ba -w 2 -s '. '<CR>
+" For insert numbers <999 in the lines selected 
+vnoremap <F7> :!nl -ba -w 3 -s '. '<CR>
 
 " This will make esc key respond faster when having the config below.
 set ttimeoutlen=100
