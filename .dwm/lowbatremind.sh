@@ -24,14 +24,14 @@ while true; do
     fi
 
     # If low and discharging
-    if [ "$last" != "LOW" ] && [ "$status" = "Discharging" ] && \
-       [ $capacity -le $low ]; then
+    if [ "$last" != "LOW" ] && [ "$status" = "Discharging" ] &&
+      [ "$capacity" -le $low ]; then
       notify-send "Battery low: $capacity%"
       last=LOW
     fi
 
     # If critical and discharging
-    if [ "$status" = "Discharging" ] && [ $capacity -le $critical ]; then
+    if [ "$status" = "Discharging" ] && [ "$capacity" -le "$critical" ]; then
       notify-send -u critical "Battery very low: $capacity%"
       last=CRITICAL
     fi
