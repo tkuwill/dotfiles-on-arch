@@ -9,11 +9,30 @@ Plug 'Yggdroot/indentLine'
 Plug 'preservim/nerdtree'
 Plug 'justinmk/vim-sneak'
 Plug 'jeffkreeftmeijer/vim-numbertoggle'
+" Add maktaba and codefmt to the runtimepath.
+" (The latter must be installed before it can be used.)
+Plug 'google/vim-maktaba'
+Plug 'google/vim-codefmt'
+" Also add Glaive, which is used to configure codefmt's maktaba flags. See
+" `:help :Glaive` for usage.
+Plug 'google/vim-glaive'
 " colortheme
 Plug 'NLKNguyen/papercolor-theme'
 " vim-devicon SHOULD be the LAST one
 Plug 'ryanoasis/vim-devicons'
 call plug#end()
+" the glaive#Install() should go after the call plug#end()"
+call glaive#Install()
+" Optional: Enable codefmt's default mappings on the <Leader>= prefix.
+Glaive codefmt plugin[mappings]
+Glaive codefmt google_java_executable="java -jar /path/to/google-java-format-VERSION-all-deps.jar"
+" auto formatting
+augroup autoformat_settings
+  autocmd FileType sh AutoFormatBuffer shfmt
+  autocmd FileType html,css,sass,scss,less,json AutoFormatBuffer js-beautify
+augroup END
+
+
 " }}}
 " indentline config (disable the conceal for JSON and markdown)
 let g:vim_json_conceal=0
