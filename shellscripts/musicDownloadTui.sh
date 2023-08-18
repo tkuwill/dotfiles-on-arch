@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/sh
 # Description: Download music from YouTube.
 
 OK=0
@@ -12,13 +12,13 @@ ESC=255
         if [ $result -eq $OK ]; then
 	    # while : 
 	    # do {
-		cd ~/Downloads
+		cd ~/Downloads || exit
 		dialog --msgbox  "cd ~/Downloads" 15 70
 		dialog --prgbox   "Downloading..." "yt-dlp -f 'ba' -x --audio-format mp3 $URL -o 'name.%(ext)s'"  30 70
                 while nam=$(dialog --inputbox "Song name:" 10 70 \
 	        2>&1 >/dev/tty)
 	        do
-		mv ~/Downloads/name.mp3 ${nam}.mp3
+		mv ~/Downloads/name.mp3 "${nam}".mp3
 		dialog --prgbox "Files in ~/Downloads" "ls -la ~/Downloads" 30 100
 		break
 		done
