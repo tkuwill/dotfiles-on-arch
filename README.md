@@ -1,3 +1,4 @@
+# Now I use hyprland on NixOS only. So this repository won't update anymore. Here is my NixOS & home-manager's config: [dotfiles-NixOS-ZenBook](https://github.com/tkuwill/dotfiles-NixOS-ZenBook).
 <div align="center">
 	<img src="/screenshots/dwm.png">
 	<img width="100pt" src="/screenshots/i3.png">
